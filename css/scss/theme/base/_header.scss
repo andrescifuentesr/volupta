@@ -1,0 +1,35 @@
+.site-header {
+	position: absolute;
+	left: 50%;
+	z-index: 999;
+	transform: translate(-50%, 0);
+	height: 200px;
+	width: 100%;
+	background: url('img/bg-nav-bar.png') no-repeat center center;
+	@include mq(desk) { max-width: $max-width; margin: 0 auto; padding-bottom: 3em;}
+
+	.site-title {
+		background: url('img/logo-volupta.svg') no-repeat center center;
+		text-indent: -9999px;
+		height:64px;
+		width:115px;
+		margin: 2.5em 0 0 2em;
+	}
+
+	.site-description {
+		text-indent: -9999px;
+	}
+
+	.site-branding {
+		width: 25%;
+		display: inline-block;
+	}
+
+	.main-navigation {
+		width: 75%;
+		display: inline-block;
+	    vertical-align: top;
+    	margin-top: 2em;
+	}
+
+}

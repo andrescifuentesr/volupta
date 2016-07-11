@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+5.1 Menus social
+--------------------------------------------------------------*/
+.menu-social {
+
+	ul {
+		margin: 0 auto;
+		padding: 0;
+		list-style:none;
+		margin: 2em 0; 
+		@include mq(lap) { }
+	}
+
+
+	li {
+		display: inline-block;
+		margin-left: 2em;
+		// @include mq(tablet) {width:100%;}
+		// @include mq(lap) {width:25%; margin-bottom: 0;}
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
+
+	a[href*="twitter.com"] {
+		background: url('img/menu-social/icon-twitter.svg') no-repeat center center;
+		text-align: center;
+	}
+
+	a[href*="facebook.com"] {
+		background: url('img/menu-social/icon-facebook.svg') no-repeat center center;
+		text-align: center;
+	}
+
+	a[href*="instagram.com"] {
+		background: url('img/menu-social/icon-instagram.svg') no-repeat center center;
+		text-align: center;
+	}
+
+	a {
+		text-indent: -9999px;
+		display: block;
+		height: 38px;
+		width: 38px;
+		border-radius:50%;
+		border: 2px solid $secondary;
+		transition: 0.2s all ease-in;
+	}
+
+	a:hover {
+		background-color: lighten($secondary, 35%);
+	}
+}

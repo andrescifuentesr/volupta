@@ -1,0 +1,18 @@
+.page-content-wrapper {
+	padding: 0 .5em;
+	@include mq(tablet) { padding: 0 1em; }
+}
+
+.page-title-wrapper {
+	text-align: center;
+	margin: 1.5em 0 1em;
+	@include mq(lap) { margin: 3em 0 2em; }
+}
+
+.page-title {
+	display: inline-block;
+	padding: .5em 2em;
+	margin: 0;
+	@extend %border;
+	@include mq(tablet) { min-width: 200px; }
+}
