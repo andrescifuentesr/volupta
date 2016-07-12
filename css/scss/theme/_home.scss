@@ -35,15 +35,11 @@
 	padding: 2em 10%;
 
 	.home-products__image {
-		display: inline-block;
-		vertical-align: top;
-		width:40%;
+		@extend %col-2-5;
 	}
 
 	.home-products__content {
-		display: inline-block;
-		vertical-align: top;
-		width:60%;
+		@extend %col-3-5;
 	}
 
 	.home-products__title {

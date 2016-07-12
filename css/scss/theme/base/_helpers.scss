@@ -1,70 +1,17 @@
-//========================
-// legend
-//========================
-
-%legend {
-	font-family: 'gotham_bookregular';
-	border: 2px solid;
-	border-color: currentColor;
-	padding: 1em 2em;
-	text-transform: uppercase;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	@include mq(tablet) { min-width: 200px; }
-}
-
-.legend-white {
-	color: #fff;
-	@extend %legend;
-}
-
-.legend--inline-block {
-	color: #666;
-	display: inline-block;
-	width: auto;
-	margin: 0 auto;
-	border-top: 1px solid;
-	border-bottom: 1px solid;
-	border-color: inherit;
-	padding: 1em 0;
-	text-transform: uppercase;
-	transition: .3s all;
-
-	&:hover {
-		padding: 1.5em 0;
-	}
-}
-
-.legend--button {
-	font-family: 'gotham_mediumregular';
-	font-size: 1.1em;
-	@include mq(tablet) { font-size: 1.35em;}
-}
-
-.button--arrow {
-	padding-left:1em;
+.line-separator {
 	position: relative;
-	text-align: center;
-
-	&::before {
-		content : '';
-		position: absolute;
-		left:0;
-		border-top: 5px solid transparent;
-		border-bottom: 5px solid transparent;
-		border-left: 5px solid #000;
-		transition: .2s all;
-		@extend %vertical-center;
-	}	
+	padding-bottom: 1em;
+	width: 100%;
+	border-top: 1px solid;	
 }
 
-%border {
-	border: 2px solid;
-	text-transform: uppercase;
+.point-separator {
+	// position: absolute;
+	// top: 50%;
+	// left: -30%;
+	// width: 8em;
+ //    border-top: 1px dotted;
 }
-
 
 .separator {
 	position: relative;

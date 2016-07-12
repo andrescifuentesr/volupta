@@ -1,0 +1,113 @@
+// Section product-hero
+.product-hero {
+	background: url('img/bg-product-hero.png') no-repeat center center;
+	height: 650px;
+	color:#fff;
+	text-align: center;
+	padding: 15em 0;
+
+	.product-hero__content {
+		width:50%;
+		display: inline-block;
+		vertical-align: middle;
+		float: left;
+		padding: 0 4em; 
+	}
+
+	.product-hero__title {
+		font-size: 4em;
+		text-transform: uppercase;
+	}
+
+	.product-hero__sub-title {
+		font-size: 1.5em;
+	}
+}
+
+// Section product-description
+.product-description {
+	background: #efede4;
+	padding: 2em 10%;
+
+	.product-description__image {
+		padding: 0 2em;
+		@extend %col-2-5;
+	}
+
+	.product-description__content {
+		padding: 0 2em;
+		@extend %col-3-5;
+	}
+}
+
+.product-banner {
+	border-bottom: 14px solid $primary;
+	position: relative;
+
+	.product-ingredients__title {
+		color:#fff;
+		@extend %center;
+	}
+}
+
+
+// Section product-ingredients
+.product-ingredients {
+	background: url('img/bg-product-ingredients.png') no-repeat bottom left;
+	padding: 4em 10% 4em 30%;
+
+	img {
+		display: inline-block;
+		width:15%;
+		vertical-align: top;
+	}
+
+	.product-ingredients__item-content {
+		display: inline-block;
+		vertical-align: middle;
+		width:65%;
+		margin-left: 20%;
+		position:relative;
+
+		&::before {
+			// content:"\2022   \2022    \2022    \2022    \2022   \2022    \2022    \2022    \2022    \2022";
+			// font-size: 1.5em;
+			content:"";
+			position: absolute;
+			top: 20%;
+			left: -30%;
+			width: 8em;
+			background: url(img/bg-line-dot-separator.png) no-repeat;
+    		height: 5px;
+		}
+
+	}
+
+	.product-ingredients__item-title {
+		color: $primary;
+		font-size: 2.5em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	.product-ingredients__item-description {
+		font-size: .95em;
+	}
+}
+
+
+// Section product-nutrition
+.product-nutrition {
+	background: #efede4;
+	padding: 2em 10%;
+
+	.product-nutrition__image {
+		padding: 0 2em;
+		@extend %col-2-5;
+	}
+
+	.product-nutrition__content {
+		padding: 0 2em;
+		@extend %col-3-5;
+	}
+}
