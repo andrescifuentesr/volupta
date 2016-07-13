@@ -83,6 +83,55 @@ get_header(); ?>
 				<h3 class="product-ingredients__title">Kitchen</h3>
 			</section><!-- .product-kitchen -->
 
+			<section class="product-kitchen">
+				<div class="product-kitchen__content">
+					
+					<h3 class="product-kitchen__title title_dotted">Organic quinoa & ancient grains</h3>
+
+					<div>
+						<img src="<?php bloginfo('template_directory'); ?>/img/product-nutriotion-image.jpg" alt=""><!--
+					
+					--><div class="product-kitchen__description">
+							<p>
+								Place 1 cup of grains and 2 cups of water or broth in a saucepan and bring to boil. (for fluffier/looser texture, use less liquid)
+							</p>
+
+							<br>
+
+							<p>Reduce heat to low and cover.</p>
+
+							<br><br>
+
+							<p>Cook for 15-20 minutes and remove from heat. (frequent stirring is recommended)</p>
+
+							<br>
+
+							<p>Fluff with a fork and serve. </p>
+
+						</div>
+
+						<div class="line-separator"></div>
+
+					</div>
+
+					<p class="product-kitchen__disclaimer">STORAGE INFORMATION: TO PRESERVE FRESHNESS AND QUALITY,  THIS PRODUCT SHOULD BE STORED IN A COOL, DRY PLACE AWAY FROM SUNLIGHT PRIOR TO COOKING.</p>
+				</div><!--
+
+			--><div class="product-kitchen__recipes">
+
+					<h3 class="product-kitchen__title title_dotted">Featured recipes</h3>
+
+					<div class="product-kitchen__recipes-wrapper">
+						<div class="product-kitchen__recipes-item">
+							<a href="test.php">
+								<img class="product-kitchen__recipes-image" src="<?php bloginfo('template_directory'); ?>/img/produc-recipe-item.png" alt="">
+								<span>Ancient Grains and Vegetable Salad</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section><!-- .product-kitchen -->	
+
 			<?php
 				$args = array(
 					'post_type' 		=> 'products', 	//Costum type Proyectos			

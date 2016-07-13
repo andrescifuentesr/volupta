@@ -15,28 +15,11 @@
 
 }
 
-//normal
-@font-face {
-    font-family: 'gotham_bookregular';
-    src: url('../../fonts/gotham-book-webfont.eot');
-    src: url('../../fonts/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/gotham-book-webfont.woff2') format('woff2'),
-         url('../../fonts/gotham-book-webfont.woff') format('woff'),
-         url('../../fonts/gotham-book-webfont.ttf') format('truetype'),
-         url('../../fonts/gotham-book-webfont.svg#gotham_bookregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 @font-face {
-    font-family: 'gotham_lightregular';
-    src: url('../../fonts/gotham-light-webfont.eot');
-    src: url('../../fonts/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/gotham-light-webfont.woff2') format('woff2'),
-         url('../../fonts/gotham-light-webfont.woff') format('woff'),
-         url('../../fonts/gotham-light-webfont.ttf') format('truetype'),
-         url('../../fonts/gotham-light-webfont.svg#gotham_lightregular') format('svg');
+    font-family: 'veneerregular';
+    src: url('css/fonts/veneer-webfont.woff2') format('woff2'),
+         url('css/fonts/veneer-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -92,6 +75,16 @@
 		&:nth-child( #{$nombre-items}n) {
 			margin-right: 0;
 		}
+}
+
+//mixing for creating a dot line
+@mixin dot-line($width, $top, $left) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	width: $width;
+	height: 4px;
+	background: url(img/bg-line-dot-separator.png) x-repeat;
 }
 
 
