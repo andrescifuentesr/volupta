@@ -8,77 +8,60 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main site-recipes" role="main">
 
-			<?php
-				$args = array(
-					'post_type' 		=> 'recipes', 	//Costum type Proyectos			
-					'order'				=> 'ASC',		// List in ascending order
-					'orderby'      		=> 'id',		// List them in their menu order
-					'posts_per_page'	=>   -1, 		// Show the last one
-				);
+			<article id="post-<?php the_ID(); ?>" <?php post_class('recipe__item'); ?>>
 
-				$QueryRecipes = new WP_Query($args);
-			?>
+				<div class="flexslider-wrapper loading">
 
-			<?php //while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?>
+					<div class="spinner">
+						<div class="bounce1"></div>
+						<div class="bounce2"></div>
+						<div class="bounce3"></div>
+					</div>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('recipe__item'); ?>>
+					<div id="flexslider-recipes" class="flexslider">
+						<ul class="slides">
 
-					<div class="flexslider-wrapper loading">
+							<?php
+								$args = array(
+									'post_type' 		=> 'recipe', 	//Costum type Proyectos			
+									'order'				=> 'ASC',		// List in ascending order
+									'orderby'      		=> 'id',		// List them in their menu order
+									'posts_per_page'	=>   -1, 		// Show the last one
+								);
 
-						<div class="spinner">
-							<div class="bounce1"></div>
-							<div class="bounce2"></div>
-							<div class="bounce3"></div>
-						</div>
+								$QueryRecipes = new WP_Query($args);
+							?>
 
-						<div id="flexslider-recipes" class="flexslider">
-							<ul class="slides">
-							    <li data-thumb="<?php bloginfo('template_directory'); ?>/img/home-dish.png">
-							    	<a class="slides-img" href="">
-								    	<img src="<?php bloginfo('template_directory'); ?>/img/home-dish.png" alt="">
-								    </a><!--
-								   --><div class="home-recipes__description">
-										<h2 class="home-recipes__title">Ancient grains & vegetable salad</h2>
-										<p class="home-recipes__subtitle">Prep Time: 10 mins  |  Cook Time: 25 mins |  Servings: 4</p>
-										<p class="home-recipes__content">
-											INGREDIENTS<br>
-											1  cup Volupta Organic Quinoa & Ancient Grains<br>
-											1  carrot <br>
-											1  handful cherry tomatoes or 1 medium tomato<br>
-											1  small broccoli chopped into small florets <br>
-											½  bell pepper<br>
-											 2  tbsp. olive oil <br>
-											 ½  lemton <br>
-										</p>
-									</div>				    	
-							    </li>
+							<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?>
 
-							    <li data-thumb="<?php bloginfo('template_directory'); ?>/img/home-dish.png">
-							    	<a class="slides-img" href="">
-								    	<img src="<?php bloginfo('template_directory'); ?>/img/home-dish.png" alt="">
-								    </a><!--
-								   --><div class="home-recipes__description">
-										<h2 class="home-recipes__title">Ancient grains & vegetable salad</h2>
-										<p class="home-recipes__subtitle">Prep Time: 10 mins  |  Cook Time: 25 mins |  Servings: 4</p>
-										<p class="home-recipes__content">
-											INGREDIENTS<br>
-											1  cup Volupta Organic Quinoa & Ancient Grains<br>
-											1  carrot <br>
-											1  handful cherry tomatoes or 1 medium tomato<br>
-											1  small broccoli chopped into small florets <br>
-											½  bell pepper<br>
-											 2  tbsp. olive oil <br>
-											 ½  lemton <br>
-										</p>
-									</div>				    	
-							    </li>
-							</ul>
-						</div>
-					</div><!-- .flexslider-wrapper -->
+							<li data-thumb="<?php the_post_thumbnail_url( 'medium' ); ?>">
+								<div class="slides-img">
+									<?php the_post_thumbnail( 'full' ); ?>
+								</div><!--
+							   --><div class="recipes__description">
+									<?php the_title( '<h2 class="recipes__title">', '</h2>' ); ?>
+									<p class="recipes__overview">
+										<?php
+											//call of custom field recipes-overview											
+											$page_recipes_overview = types_render_field( "recipes-overview", array( ) );
+											if( !empty( $page_recipes_overview ) ) {
+												echo $page_recipes_overview;
+											}
+										?>
+									</p>
+									<div class="recipes__content">
+										<?php the_content(); ?>
+									</div>
+								</div>				    	
+							</li>
 
-				</article>
-			
-			<?php //endwhile; // End of the loop. ?>
+							<?php endwhile; // End of the loop. ?>
+
+						</ul>
+					</div>
+				</div><!-- .flexslider-wrapper -->
+
+			</article>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

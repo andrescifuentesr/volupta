@@ -5,12 +5,11 @@
 	border-top: 1px solid;	
 }
 
-.point-separator {
-	// position: absolute;
-	// top: 50%;
-	// left: -30%;
-	// width: 8em;
- //    border-top: 1px dotted;
+.dot-separator--brown {
+	width: 100%;
+	height: 4px;
+	margin: 1em 0;
+	background: url(img/bg-line-dot-separator--brown.png) x-repeat;
 }
 
 .separator {

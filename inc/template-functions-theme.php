@@ -16,6 +16,15 @@ function content_separator_shortcode( $atts ) {
 }
 add_shortcode( 'separator', 'content_separator_shortcode' );
 
+//-------------------------------------------------  
+//function separator: dot brown
+//-------------------------------------------------
+function content_separator_dot_brown_shortcode( $atts ) {
+    return '
+        <div class="dot-separator--brown"></div>';
+}
+add_shortcode( 'separator_dot_brown', 'content_separator_dot_brown_shortcode' );
+
 
 //-------------------------------------------------  
 //Upload svg via Media library

@@ -1,6 +1,6 @@
 .site-recipes {
 	background: url('img/bg-recipe-wood.png') repeat;
-	padding: 12em 0 2em;
+	padding: 11em 0 1em;
 
 
 	.flexslider .slides .slides-img {
@@ -15,30 +15,36 @@
 		}
 	}
 
-	.home-recipes__description {
+	.recipes__description {
 		display: inline-block;
 		width:50%;
 		vertical-align: top;
 		padding: 0 7.5%;
+		font-size: .85em;
 	}
 
-	.home-recipes__title {
-		color:$primary;
+	.recipes__title {
+		color:$heading-color;
 		font-size: 3em;
 		text-transform: uppercase;
 	}
 
-	.home-recipes__subtitle {
-		color:$primary;
+	.recipes__overview {
+		color:$heading-color;
+		font-weight: 700;
 	}
 
-	.home-recipes__content {
+	.recipes__content {
 		color: #4a2904;
+
+		p {
+			margin: 0;
+		}
 	}
 
 	//modifications CSS flexslider
 	.flex-direction-nav a {
-		top: 40%;
+		top: 30%;
 	}
 
 	.flex-direction-nav .flex-prev {
@@ -54,6 +60,16 @@
 	}
 	.flexslider:hover .flex-direction-nav .flex-next {
 		right: 52%;
+	}
+
+	.flex-control-thumbs {
+		width:50%;
+
+		li {
+			display: inline-block;
+			float: none;
+			padding: 0 1em;
+		}
 	}
 
 }
