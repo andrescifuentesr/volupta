@@ -1,0 +1,70 @@
+//hero section at the top of everypage
+.section-hero {
+	height: 650px;
+	color:#fff;
+	text-align: center;
+	padding: 20em 0;
+
+	.section-hero__content {
+		width:100%;
+		display: inline-block;
+		vertical-align: middle;
+		// float: left;
+		background: url('img/bg-line-dot-separator-white.png') no-repeat bottom center;
+	}
+
+	.section-hero__title {
+		font-size: 4em;
+		text-transform: uppercase;
+		text-shadow: 2px 2px 3px rgba(0,0,0,.5)
+	}
+
+	.section-hero__sub-title {
+		font-size: 1.5em;
+		text-shadow: 2px 2px 3px rgba(0,0,0,.5)
+	}
+
+}
+
+// Section home page Hero
+.home-hero { 
+	background: url('img/home-hero.jpg') no-repeat center center;
+}
+
+// Section product-hero
+.product-hero {
+	background: url('img/bg-product-hero.png') no-repeat center center;
+	padding: 15em 0;
+
+	.product-hero__content {
+		width:50%;
+		float: left;
+		padding: 0 4em; 
+	}
+
+	.product-hero__title {
+		font-size: 4em;
+		text-transform: uppercase;
+	}
+
+	.product-hero__sub-title {
+		font-size: 1.5em;
+	}
+}
+
+// Section About-hero
+.about-hero {
+	background: url('img/bg-about-hero.png') no-repeat bottom center;
+}
+
+// Section Quality-hero
+.quality-hero {
+	background: url('img/bg-quality-top.jpg') no-repeat bottom center;
+	padding: 16em 0;
+
+	//quality page
+	.quality-hero__content {
+		width:50%;
+		margin: auto;
+	}
+}

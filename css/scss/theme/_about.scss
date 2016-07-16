@@ -1,0 +1,185 @@
+// Section about-description
+.about-description {
+	background: #efede4;
+	padding: 2em 10%;
+
+	.about-description__image {
+		padding: 0 2em;
+		@extend %col-2-5;
+	}
+
+	.about-description__content {
+		padding: 0 2em;
+		@extend %col-3-5;
+	}
+}
+
+.about-banner {
+	border-bottom: 14px solid $primary;
+	position: relative;
+
+	.about-question__title {
+		color:#fff;
+		@extend %center;
+		font-family: 'nexa_rust_script_l0regular';
+		font-size: 3em;
+		top: 25%;
+	}
+}
+
+
+// Section about-vision
+.about-vision {
+	background: #efede4;
+	padding: 4em 20%;
+	text-align: center;
+
+	.about-vision__item-content {
+		display: inline-block;
+		vertical-align: middle;
+		position:relative;
+	}
+
+	.about-vision__item-title {
+		color: $primary;
+		font-size: 2.5em;
+		text-transform: uppercase;
+		margin: 0 0 2em 0;
+	}
+
+	.about-vision__item-description {
+		font-size: .95em;
+
+		&::before {
+			// content:"\2022   \2022    \2022    \2022    \2022   \2022    \2022    \2022    \2022    \2022";
+			// font-size: 1.5em;
+			content:"";
+			@include dot-line(10em, 25%, calc(50% - 5em));
+		}
+
+	}
+}
+
+
+// Section banner about-question
+
+.about-question {
+	background: #efede4;
+	padding: 4em 10%;
+}
+
+
+// Section about-questions
+.about-questions{
+	background: #efede4;
+	padding: 5em 10% ;
+
+	.about-thequestion__wrapper{
+		margin-bottom: 1em;
+	}
+
+	.about-thequestion__item {
+		position:relative;
+		color: $primary;
+		@extend %col-2-5;
+
+		.about-thequestion__number {
+			border: 3px solid $primary;
+		    border-radius: 20px;
+		    display: inline-block;
+		    margin: 0 2em;
+		    text-align: center;
+		    width: 33px;
+		    height: 33px;
+		}
+
+		p{
+			@extend %col-2-3;
+			font-size: 1em;
+		}
+	}
+
+	.about-thequestion__answer {
+		padding:  0 4em 0 2em;
+		position:relative;
+		@extend %col-3-5;	
+	}
+
+	.title_dotted {
+		&::before {
+			content:'';
+			@include dot-line(80%, -15px, 2em);
+		}
+	}
+	.title_dotted-bas {
+		&::after {
+			content:'';
+			@include dot-line(80%, 0px, 2em);
+		}
+	}	
+}
+
+
+//Section Contact us
+
+.about-contact {
+	background-color: #fff;
+	padding: 4em 10%;
+	
+	.about-contact__item-content{
+		@extend %col-2-5;
+		padding: 0 5em 0 2em;
+		position: relative;
+
+		.about-contact__text{
+			padding-top: 3em;
+			position: relative;
+			font-size: 1em;
+		}
+
+		.title_dotted {
+			&::before {
+				content:'';
+				@include dot-line(100%, 0px, 0px);
+			}
+		}
+
+		.about-contact__adresses, .about-contact__adresses a  {
+		    color: $primary;
+		    font-size: 1em;
+		    font-weight: bold;
+		    margin-top: 1.5em;
+		    position: relative;
+		}
+		
+		.about-contact__title {
+		    font-size: 1.1em;
+		    font-weight: normal;
+		}
+	}
+	.title_dotted-bas {
+		padding-bottom: 2em;
+		&::after {
+			content:'';
+			@include dot-line(100%,100%, 0px);
+		}
+	}	
+
+	.about-contact__form {
+		@extend %col-3-5;
+		padding:  0 4em 0 2em;
+
+		input[type="text"], input[type="email"], textarea, input[type="submit"] {
+		    background-color: #fff;
+		    border: 2px solid $secondary;
+		    color: $secondary;
+		    padding: 10px;
+		    width: 100%;
+		}
+
+		input[type="submit"]{ 
+			background-color: $secondary; 
+			color: #FFF;
+		}
+	}	
+}

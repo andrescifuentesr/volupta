@@ -1,20 +1,19 @@
 //========================================== 
  // Font Face
  //==========================================
-//Bold
-@font-face {
-    font-family: 'gotham_mediumregular';
-    src: url('../../fonts/gotham-medium-webfont.eot');
-    src: url('../../fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/gotham-medium-webfont.woff2') format('woff2'),
-         url('../../fonts/gotham-medium-webfont.woff') format('woff'),
-         url('../../fonts/gotham-medium-webfont.ttf') format('truetype'),
-         url('../../fonts/gotham-medium-webfont.svg#gotham_mediumregular') format('svg');
+
+ @font-face {
+    font-family: 'nexa_rust_script_l0regular';
+    src: url('css/fonts/nexarustscriptl-0-webfont.eot');
+    src: url('css/fonts/nexarustscriptl-0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/nexarustscriptl-0-webfont.woff2') format('woff2'),
+         url('css/fonts/nexarustscriptl-0-webfont.woff') format('woff'),
+         url('css/fonts/nexarustscriptl-0-webfont.ttf') format('truetype'),
+         url('css/fonts/nexarustscriptl-0-webfont.svg#nexa_rust_script_l0regular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
-
 
 @font-face {
     font-family: 'veneerregular';

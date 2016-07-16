@@ -21,9 +21,9 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 @font-face {
-  font-family: 'gotham_mediumregular';
-  src: url("../../fonts/gotham-medium-webfont.eot");
-  src: url("../../fonts/gotham-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/gotham-medium-webfont.woff2") format("woff2"), url("../../fonts/gotham-medium-webfont.woff") format("woff"), url("../../fonts/gotham-medium-webfont.ttf") format("truetype"), url("../../fonts/gotham-medium-webfont.svg#gotham_mediumregular") format("svg");
+  font-family: 'nexa_rust_script_l0regular';
+  src: url("css/fonts/nexarustscriptl-0-webfont.eot");
+  src: url("css/fonts/nexarustscriptl-0-webfont.eot?#iefix") format("embedded-opentype"), url("css/fonts/nexarustscriptl-0-webfont.woff2") format("woff2"), url("css/fonts/nexarustscriptl-0-webfont.woff") format("woff"), url("css/fonts/nexarustscriptl-0-webfont.ttf") format("truetype"), url("css/fonts/nexarustscriptl-0-webfont.svg#nexa_rust_script_l0regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1638,25 +1638,25 @@ html[xmlns] .flexslider .slides {
   }
 }
 
-.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .product-kitchen .product-kitchen__recipes {
+.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .product-kitchen .product-kitchen__recipes, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality-description .quality-description__image {
   display: inline-block;
   vertical-align: top;
   width: 40%;
 }
 
-.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .product-kitchen .product-kitchen__content {
+.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .product-kitchen .product-kitchen__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content, .quality-description .quality-description__content {
   display: inline-block;
   vertical-align: top;
   width: 60%;
 }
 
-.product-kitchen .product-kitchen__content img {
+.product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle img {
   display: inline-block;
   vertical-align: top;
   width: 33.33333%;
 }
 
-.product-kitchen .product-kitchen__content .product-kitchen__description {
+.product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item p, .quality-certifications .quality__title {
   display: inline-block;
   vertical-align: top;
   width: 66.66667%;
@@ -1679,11 +1679,14 @@ html[xmlns] .flexslider .slides {
   }
 }
 .site-header .site-title {
-  background: url("img/logo-volupta.svg") no-repeat center center;
   text-indent: -9999px;
+  margin: 2.5em 0 0 2em;
+}
+.site-header .site-title a {
+  display: block;
+  background: url("img/logo-volupta.svg") no-repeat center center;
   height: 64px;
   width: 115px;
-  margin: 2.5em 0 0 2em;
 }
 .site-header .site-description {
   text-indent: -9999px;
@@ -1915,7 +1918,7 @@ html[xmlns] .flexslider .slides {
   background: transparent;
 }
 
-.product-banner .product-ingredients__title, .product-kitchen .product-kitchen__recipes-item span {
+.product-banner .product-ingredients__title, .product-kitchen .product-kitchen__recipes-item span, .about-banner .about-question__title, .quality-banner .quality-banner__title {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1988,6 +1991,11 @@ html[xmlns] .flexslider .slides {
   width: 200px;
 }
 
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+  color: #459790;
+}
+
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
@@ -2020,6 +2028,62 @@ html[xmlns] .flexslider .slides {
     display: block;
   }
 }
+.section-hero {
+  height: 650px;
+  color: #fff;
+  text-align: center;
+  padding: 20em 0;
+}
+.section-hero .section-hero__content {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("img/bg-line-dot-separator-white.png") no-repeat bottom center;
+}
+.section-hero .section-hero__title {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.section-hero .section-hero__sub-title {
+  font-size: 1.5em;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home-hero {
+  background: url("img/home-hero.jpg") no-repeat center center;
+}
+
+.product-hero {
+  background: url("img/bg-product-hero.png") no-repeat center center;
+  padding: 15em 0;
+}
+.product-hero .product-hero__content {
+  width: 50%;
+  float: left;
+  padding: 0 4em;
+}
+.product-hero .product-hero__title {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+.product-hero .product-hero__sub-title {
+  font-size: 1.5em;
+}
+
+.about-hero {
+  background: url("img/bg-about-hero.png") no-repeat bottom center;
+}
+
+.quality-hero {
+  background: url("img/bg-quality-top.jpg") no-repeat bottom center;
+  padding: 16em 0;
+}
+.quality-hero .quality-hero__content {
+  width: 50%;
+  margin: auto;
+}
+
 .spinner {
   position: absolute;
   top: 50%;
@@ -2111,21 +2175,6 @@ html[xmlns] .flexslider .slides {
 
 .content-area {
   position: relative;
-}
-
-.home-hero {
-  background: url("img/home-hero.jpg") no-repeat center center;
-  height: 650px;
-  color: #fff;
-  text-align: center;
-  padding: 20em 0;
-}
-.home-hero .home-hero__title {
-  font-size: 4em;
-  text-transform: uppercase;
-}
-.home-hero .home-hero__sub-title {
-  font-size: 1.5em;
 }
 
 .home-description {
@@ -2230,28 +2279,6 @@ html[xmlns] .flexslider .slides {
   display: inline-block;
   float: none;
   padding: 0 1em;
-}
-
-.product-hero {
-  background: url("img/bg-product-hero.png") no-repeat center center;
-  height: 650px;
-  color: #fff;
-  text-align: center;
-  padding: 15em 0;
-}
-.product-hero .product-hero__content {
-  width: 50%;
-  display: inline-block;
-  vertical-align: middle;
-  float: left;
-  padding: 0 4em;
-}
-.product-hero .product-hero__title {
-  font-size: 4em;
-  text-transform: uppercase;
-}
-.product-hero .product-hero__sub-title {
-  font-size: 1.5em;
 }
 
 .product-description {
@@ -2382,6 +2409,262 @@ html[xmlns] .flexslider .slides {
 }
 .product-kitchen .product-kitchen__recipes-item img {
   width: 100%;
+}
+
+.about-description {
+  background: #efede4;
+  padding: 2em 10%;
+}
+.about-description .about-description__image {
+  padding: 0 2em;
+}
+.about-description .about-description__content {
+  padding: 0 2em;
+}
+
+.about-banner {
+  border-bottom: 14px solid #459790;
+  position: relative;
+}
+.about-banner .about-question__title {
+  color: #fff;
+  font-family: 'nexa_rust_script_l0regular';
+  font-size: 3em;
+  top: 25%;
+}
+
+.about-vision {
+  background: #efede4;
+  padding: 4em 20%;
+  text-align: center;
+}
+.about-vision .about-vision__item-content {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.about-vision .about-vision__item-title {
+  color: #459790;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 0 0 2em 0;
+}
+.about-vision .about-vision__item-description {
+  font-size: .95em;
+}
+.about-vision .about-vision__item-description::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 5em);
+  width: 10em;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+
+.about-question {
+  background: #efede4;
+  padding: 4em 10%;
+}
+
+.about-questions {
+  background: #efede4;
+  padding: 5em 10%;
+}
+.about-questions .about-thequestion__wrapper {
+  margin-bottom: 1em;
+}
+.about-questions .about-thequestion__item {
+  position: relative;
+  color: #459790;
+}
+.about-questions .about-thequestion__item .about-thequestion__number {
+  border: 3px solid #459790;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0 2em;
+  text-align: center;
+  width: 33px;
+  height: 33px;
+}
+.about-questions .about-thequestion__item p {
+  font-size: 1em;
+}
+.about-questions .about-thequestion__answer {
+  padding: 0 4em 0 2em;
+  position: relative;
+}
+.about-questions .title_dotted::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 2em;
+  width: 80%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+.about-questions .title_dotted-bas::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 2em;
+  width: 80%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+
+.about-contact {
+  background-color: #fff;
+  padding: 4em 10%;
+}
+.about-contact .about-contact__item-content {
+  padding: 0 5em 0 2em;
+  position: relative;
+}
+.about-contact .about-contact__item-content .about-contact__text {
+  padding-top: 3em;
+  position: relative;
+  font-size: 1em;
+}
+.about-contact .about-contact__item-content .title_dotted::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+.about-contact .about-contact__item-content .about-contact__adresses, .about-contact .about-contact__item-content .about-contact__adresses a {
+  color: #459790;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  position: relative;
+}
+.about-contact .about-contact__item-content .about-contact__title {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+.about-contact .title_dotted-bas {
+  padding-bottom: 2em;
+}
+.about-contact .title_dotted-bas::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+.about-contact .about-contact__form {
+  padding: 0 4em 0 2em;
+}
+.about-contact .about-contact__form input[type="text"], .about-contact .about-contact__form input[type="email"], .about-contact .about-contact__form textarea, .about-contact .about-contact__form input[type="submit"] {
+  background-color: #fff;
+  border: 2px solid #818285;
+  color: #818285;
+  padding: 10px;
+  width: 100%;
+}
+.about-contact .about-contact__form input[type="submit"] {
+  background-color: #818285;
+  color: #FFF;
+}
+
+.quality {
+  background: #efede4;
+  padding: 5em 10%;
+}
+.quality .quality-description__wrapper {
+  margin-bottom: 2em;
+}
+.quality .quality-description__image {
+  padding: 1em 2em;
+}
+.quality .quality-description__content {
+  padding: 0 2em;
+}
+.quality .quality__title {
+  color: #459790;
+  position: relative;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  margin: 0em 0 0.7em;
+  padding-bottom: 0.2em;
+}
+.quality .title_dotted::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+
+.quality-description {
+  background: #efede4;
+  padding: 2em 12%;
+}
+.quality-description .quality-description__image {
+  padding: 0 2em;
+}
+.quality-description .quality-description__content {
+  padding: 0 2em;
+}
+
+.quality-banner {
+  border-bottom: 14px solid #459790;
+  position: relative;
+}
+.quality-banner .quality-banner__title {
+  color: #fff;
+  font-family: 'nexa_rust_script_l0regular';
+  font-size: 3em;
+  top: 25%;
+}
+
+.quality-certifications {
+  background: #efede4;
+  padding: 5em 8%;
+}
+.quality-certifications .quality-certifications__wrapper {
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+.quality-certifications .quality-certifications__pictitle {
+  margin-bottom: 1.5em;
+  position: relative;
+}
+.quality-certifications .quality-certifications__pictitle img {
+  padding-right: 1em;
+}
+.quality-certifications .quality-certifications__pictitle h3 {
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+.quality-certifications .quality__title {
+  color: #459790;
+  position: relative;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  margin: 0em 0 0.7em;
+  padding-bottom: 0.2em;
+}
+.quality-certifications .title_dotted::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+
+p {
+  font-size: 0.9em;
 }
 
 *,

@@ -8,10 +8,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<section class="product-hero">
-				<div class="product-hero__content">
-					<h2 class="product-hero__title">lorem ipsum dolor</h2>
-					<p class="product-hero__sub-title">Lorem ipsum dolor sit, consectetur adipiscing elit. Suspendisse hendrerit mauris a efficitur consequat. Sed ex nibh, ultricies in nisl eget, tempor lorem.</p>
+			<section class="section-hero product-hero">
+				<div class="section-hero product-hero__content">
+					<h2 class="section-hero__title">lorem ipsum dolor</h2>
+					<p class="section-hero__sub-title">Lorem ipsum dolor sit, consectetur adipiscing elit. Suspendisse hendrerit mauris a efficitur consequat. Sed ex nibh, ultricies in nisl eget, tempor lorem.</p>
 				</div>
 			</section><!-- .product-hero -->
 

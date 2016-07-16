@@ -2,24 +2,6 @@
 	position: relative;
 }
 
-// Section home-hero
-.home-hero {
-	background: url('img/home-hero.jpg') no-repeat center center;
-	height: 650px;
-	color:#fff;
-	text-align: center;
-	padding: 20em 0;
-
-	.home-hero__title {
-		font-size: 4em;
-		text-transform: uppercase;
-	}
-
-	.home-hero__sub-title {
-		font-size: 1.5em;
-	}
-}
-
 // Section home-description
 .home-description {
 	background: $primary;

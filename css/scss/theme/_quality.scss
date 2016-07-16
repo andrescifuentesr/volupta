@@ -1,0 +1,122 @@
+// Section origin - packing
+
+.quality {
+	background: #efede4;
+	padding: 5em 10%;
+
+	.quality-description__wrapper {
+	    margin-bottom: 2em;
+	}
+
+	.quality-description__image {
+		padding: 1em 2em;
+		@extend %col-2-5;
+	}
+
+	.quality-description__content {
+		padding: 0 2em;
+		@extend %col-3-5;
+	}
+
+	.quality__title {
+		color:$primary;
+		position:relative;
+		font-size: 2.4em;
+		text-transform: uppercase;
+		margin: 0em 0 0.7em;
+		padding-bottom: 0.2em;
+	}
+
+	.title_dotted {
+		&::before {
+			content:'';
+			@include dot-line(100%, 100%, 0);
+		}
+	}
+	
+}
+
+
+
+// Section quality-description
+
+.quality-description {
+	background: #efede4;
+	padding: 2em 12%;
+
+	.quality-description__image {
+		padding: 0 2em;
+		@extend %col-2-5;
+	}
+
+	.quality-description__content {
+		padding: 0 2em;
+		@extend %col-3-5;
+	}
+}
+
+// Section quality-banner
+
+.quality-banner {
+	border-bottom: 14px solid $primary;
+	position: relative;
+
+	.quality-banner__title {
+		color:#fff;
+		@extend %center;
+		font-family: 'nexa_rust_script_l0regular';
+		font-size: 3em;
+		top: 25%;
+
+	}
+}
+
+// Section quality-certifications
+
+.quality-certifications {
+	background: #efede4;
+	padding: 5em 8%;
+
+	.quality-certifications__wrapper {
+	    margin-bottom: 2em;
+	    padding: 0 1em;
+	    @extend %col-1-3;
+	}
+
+	.quality-certifications__pictitle {
+		margin-bottom: 1.5em;
+		position: relative;
+		img {
+			@extend %col-1-3;
+			padding-right: 1em;
+		}
+
+		h3 {
+			line-height: 1;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	.quality__title {
+		color:$primary;
+		position:relative;
+		font-size: 2.4em;
+		text-transform: uppercase;
+		margin: 0em 0 0.7em;
+		padding-bottom: 0.2em;
+		@extend %col-2-3;
+	}
+
+	.title_dotted {
+		&::before {
+			content:'';
+			@include dot-line(100%, 100%, 0);
+		}
+	}
+	
+}
+
+// Je pense que c'est mieux comme réglage de taille 
+//par rapport à la maquette 
+// mais je voulais pas toucher un autre fichier général ^^
+p {font-size: 0.9em;}

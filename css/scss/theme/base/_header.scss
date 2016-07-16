@@ -9,11 +9,15 @@
 	@include mq(desk) { max-width: $max-width; margin: 0 auto; padding-bottom: 3em;}
 
 	.site-title {
-		background: url('img/logo-volupta.svg') no-repeat center center;
 		text-indent: -9999px;
-		height:64px;
-		width:115px;
 		margin: 2.5em 0 0 2em;
+
+		a {
+			display: block;
+			background: url('img/logo-volupta.svg') no-repeat center center;
+			height:64px;
+			width:115px;
+		}
 	}
 
 	.site-description {

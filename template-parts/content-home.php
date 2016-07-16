@@ -9,10 +9,11 @@
 
 ?>
 
-<section class="home-hero">
-	<h2 class="home-hero__title">lorem ipsum dolor</h2>
-
-	<p class="home-hero__sub-title">sit amet conasectetur adipiscing elit</p>
+<section class="section-hero home-hero">
+	<div class="section-hero__content">
+		<h2 class="section-hero__title">lorem ipsum dolor</h2>
+		<p class="section-hero__sub-title">sit amet conasectetur adipiscing elit</p>
+	</div>
 </section><!-- .home-hero -->
 
 <section class="home-description">
