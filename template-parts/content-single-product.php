@@ -74,8 +74,8 @@
 		//call of custom field ingredient_image-nutrition-product-image
 		$ingredient_image = types_render_field( "ingredient-image", array( ) );
 	?>
-	<section class="section-banner product-banner">
-		<img src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="">
+
+	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_ingredients_product_title ); ?></h3>
 	</section><!-- .product-ingredients -->
 
@@ -127,8 +127,7 @@
 		//call of custom field section-nutrition-product-image
 		$section_nutrition_product_image = types_render_field( "section-nutrition-product-image", array( ) );
 	?>
-	<section class="section-banner product-banner">
-		<img src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="">
+	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
 			<?php if( !empty( $section_nutrition_product_title ) ) { ?>
 				<h3 class="section-banner__title"><?php echo esc_html( $section_nutrition_product_title ); ?></h3>
 			<?php } ?>
@@ -164,8 +163,7 @@
 		//call of custom field section-kitchen-product-image
 		$section_kitchen_product_image = types_render_field( "section-kitchen-product-image", array( "alt" => "Kitchen instructions", "title" => "" ) );
 	?>
-	<section class="section-banner product-banner">
-		<img src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="">
+	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
 	</section><!-- .product-kitchen -->
 

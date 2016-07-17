@@ -1595,6 +1595,10 @@ html[xmlns] .flexslider .slides {
 }
 
 .section-banner {
+  background-repeat: no-repeat;
+  height: 160px;
+  z-index: 100;
+  width: 100%;
   border-bottom: 14px solid #459790;
   position: relative;
 }
