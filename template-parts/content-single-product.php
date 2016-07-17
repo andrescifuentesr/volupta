@@ -94,7 +94,12 @@
 		?>
 
 			<div class="product-ingredients__item">
-				<img src="<?php echo $child_post->fields['ingredient-image']; ?>" alt="<?php echo $child_post->post_title; ?>"><!--
+				<!-- have to change 
+					<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg
+					for
+					<?php echo $child_post->fields['ingredient-image']; ?>
+				 -->
+				<img class="zoom" src="<?php echo $child_post->fields['ingredient-image']; ?>" data-magnify-src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="<?php echo $child_post->post_title; ?>"><!--
 			
 			--><div class="product-ingredients__item-content">
 					<div class="point-separator"></div>

@@ -23,6 +23,11 @@ jQuery(window).load(function(){
 			jQuery(".spinner").hide();
 		}
 	});
+
+	//https://github.com/thdoan/magnify
+	//we launch the magnify effect
+	jQuery('.zoom').magnify();
+
 });
 
 //https://github.com/Prinzhorn/skrollr
