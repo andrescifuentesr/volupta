@@ -14,13 +14,14 @@
 // Section home-products
 .home-products {
 	background: url('img/bg-home-product.png') no-repeat bottom right $tertiary;
-	padding: 2em 10%;
+	padding: 3em 10%;
 
 	.home-products__image {
 		@extend %col-2-5;
 	}
 
 	.home-products__content {
+		padding-right: 4em;
 		@extend %col-3-5;
 	}
 
@@ -28,6 +29,7 @@
 		color: $primary;
 		font-size: 3em;
 		text-transform: uppercase;
+		margin-bottom: 0;
 	}
 
 	.home-products__description {
@@ -40,6 +42,7 @@
 		color:#fff;
 		padding: 1em 3em;
 		border-radius: 20px;
+		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 	}
 
 }
@@ -50,11 +53,11 @@
 	padding: 5em 0 2em;
 
 	.home-recipes__description {
-		margin-top: 2em;
+		margin-top: 1.5em;
 		color:#fff;
 		text-align: center;
 		background: transparentize($primary, .2);
-		padding: 2em 0;
+		padding: 1.5em 0;
 	}
 
 	.home-recipes__title {
@@ -63,7 +66,7 @@
 	}
 
 	.home-recipes__content {
-
+		padding:0 25%;
 	}
 
 }

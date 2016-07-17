@@ -26,9 +26,9 @@ get_header(); ?>
 			</div>
 			</section><!-- .about-ingredients -->
 
-			<section class="about-banner">
+			<section class="section-banner about-banner">
 				<img src="<?php bloginfo('template_directory'); ?>/img/bg-question-banner.jpg" alt="">
-				<h3 class="about-question__title">Frequently Asked Questions</h3>
+				<h3 class="section-banner__title">Frequently Asked Questions</h3>
 			</section><!-- .about-nutrition -->
 
 			<section class="about-questions"><!--
@@ -119,9 +119,10 @@ get_header(); ?>
 
 			</section><!-- .about-questions -->	
 
-			<section class="about-banner">
+			<section class="section-banner about-banner">
 				<img src="<?php bloginfo('template_directory'); ?>/img/bg-question-banner.jpg" alt="">
-				<h3 class="about-question__title">Contact Us</h3>
+				<h3 class="section-banner__title
+				">Contact Us</h3>
 			</section><!-- .about-questions -->
 			<section class="about-contact">
 				<div class="about-contact__item-content ">

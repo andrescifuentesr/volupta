@@ -9,9 +9,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="section-hero product-hero">
-				<div class="section-hero product-hero__content">
+				<div class="section-hero__content product-hero__content">
 					<h2 class="section-hero__title">lorem ipsum dolor</h2>
-					<p class="section-hero__sub-title">Lorem ipsum dolor sit, consectetur adipiscing elit. Suspendisse hendrerit mauris a efficitur consequat. Sed ex nibh, ultricies in nisl eget, tempor lorem.</p>
+					<p class="section-hero__sub-title product-hero__sub-title">Lorem ipsum dolor sit, consectetur adipiscing elit. Suspendisse hendrerit mauris a efficitur consequat. Sed ex nibh, ultricies in nisl eget, tempor lorem.</p>
 				</div>
 			</section><!-- .product-hero -->
 
@@ -22,7 +22,7 @@ get_header(); ?>
 				</div><!--
 				
 			--><div class="product-description__content">
-					<h3 class="product-description__title">lorem ipsum sit</h3>
+					<?php the_title( '<h3 class="product-description__title">', '</h3>' ); ?>
 					<p class="product-description__description">
 						Our Organic Quinoa & Ancient Grains is gluten free and combines the nutrients of white and red quinoa, amaranth and millet, offering about45 grams of whole grains per serving. Volupta’s Quinoa and Ancient Grains blend has a fluffy, light consistency when cooked and a chewy, nutty texture that pairs well with stews and sauces. It can also be used to enhance salad. Despite the use of modern cleaning equipment, we recommend to rinse before cooking to remove any powder residue. <br><br>
 
@@ -36,9 +36,9 @@ get_header(); ?>
 				</div>
 			</section><!-- .product-description -->
 
-			<section class="product-banner">
+			<section class="section-banner product-banner">
 				<img src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="">
-				<h3 class="product-ingredients__title">Ingredients</h3>
+				<h3 class="section-banner__title">Ingredients</h3>
 			</section><!-- .product-ingredients -->
 
 			<section class="product-ingredients">
@@ -53,9 +53,9 @@ get_header(); ?>
 				</div>
 			</section><!-- .product-ingredients -->
 
-			<section class="product-banner">
+			<section class="section-banner product-banner">
 				<img src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="">
-				<h3 class="product-ingredients__title">Nutrition</h3>
+				<h3 class="section-banner__title">Nutrition</h3>
 			</section><!-- .product-nutrition -->
 
 			<section class="product-nutrition">
@@ -78,9 +78,9 @@ get_header(); ?>
 				</div>
 			</section><!-- .product-nutrition -->
 
-			<section class="product-banner">
+			<section class="section-banner product-banner">
 				<img src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="">
-				<h3 class="product-ingredients__title">Kitchen</h3>
+				<h3 class="section-banner__title">Kitchen</h3>
 			</section><!-- .product-kitchen -->
 
 			<section class="product-kitchen">
@@ -122,13 +122,30 @@ get_header(); ?>
 					<h3 class="product-kitchen__title title_dotted">Featured recipes</h3>
 
 					<div class="product-kitchen__recipes-wrapper">
-						<div class="product-kitchen__recipes-item">
-							<a href="test.php">
-								<img class="product-kitchen__recipes-image" src="<?php bloginfo('template_directory'); ?>/img/produc-recipe-item.png" alt="">
-								<span>Ancient Grains and Vegetable Salad</span>
-							</a>
-						</div>
-					</div>
+
+						<?php
+							$args = array(
+								'post_type' 		=> 'recipe', 	//Costum type Recipe			
+								'order'				=> 'ASC',		// List in ascending order
+								'orderby'      		=> 'id',		// List them in their menu order
+								'posts_per_page'	=>   -1, 		// Show the last one
+							);
+
+							$QueryRecipes = new WP_Query($args);
+						?>
+						<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?>
+
+							<div class="product-kitchen__recipes-item">
+								<a href="<?php the_permalink(); ?>">
+									<img class="product-kitchen__recipes-image" src="<?php bloginfo('template_directory'); ?>/img/produc-recipe-item.png" alt="">
+									<?php the_title( '<span>', '</span>' ); ?>
+								</a>
+							</div>
+
+						<?php endwhile; // End of the loop. ?>
+
+					</div><!-- .product-kitchen__recipes-wrapper -->
+
 				</div>
 			</section><!-- .product-kitchen -->	
 

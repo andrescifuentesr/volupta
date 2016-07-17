@@ -20,10 +20,9 @@ get_header(); ?>
 
 					<div id="flexslider-recipes" class="flexslider">
 						<ul class="slides">
-
 							<?php
 								$args = array(
-									'post_type' 		=> 'recipe', 	//Costum type Proyectos			
+									'post_type' 		=> 'recipe', 	//Costum type Recipe			
 									'order'				=> 'ASC',		// List in ascending order
 									'orderby'      		=> 'id',		// List them in their menu order
 									'posts_per_page'	=>   -1, 		// Show the last one
@@ -31,29 +30,28 @@ get_header(); ?>
 
 								$QueryRecipes = new WP_Query($args);
 							?>
-
 							<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?>
 
-							<li data-thumb="<?php the_post_thumbnail_url( 'medium' ); ?>">
-								<div class="slides-img">
-									<?php the_post_thumbnail( 'full' ); ?>
-								</div><!--
-							   --><div class="recipes__description">
-									<?php the_title( '<h2 class="recipes__title">', '</h2>' ); ?>
-									<p class="recipes__overview">
-										<?php
-											//call of custom field recipes-overview											
-											$page_recipes_overview = types_render_field( "recipes-overview", array( ) );
-											if( !empty( $page_recipes_overview ) ) {
-												echo $page_recipes_overview;
-											}
-										?>
-									</p>
-									<div class="recipes__content">
-										<?php the_content(); ?>
-									</div>
-								</div>				    	
-							</li>
+								<li data-thumb="<?php the_post_thumbnail_url( 'medium' ); ?>">
+									<div class="slides-img">
+										<?php the_post_thumbnail( 'full' ); ?>
+									</div><!--
+								   --><div class="recipes__description">
+										<?php the_title( '<h2 class="recipes__title">', '</h2>' ); ?>
+										<p class="recipes__overview">
+											<?php
+												//call of custom field recipes-overview
+												$page_recipes_overview = types_render_field( "recipes-overview", array( ) );
+												if( !empty( $page_recipes_overview ) ) {
+													echo $page_recipes_overview;
+												}
+											?>
+										</p>
+										<div class="recipes__content">
+											<?php the_content(); ?>
+										</div>
+									</div>				    	
+								</li>
 
 							<?php endwhile; // End of the loop. ?>
 

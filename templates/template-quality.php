@@ -47,9 +47,9 @@ get_header(); ?>
 				</div>
 			</section><!-- .quality-description -->
 
-			<section class="quality-banner">
+			<section class="section-banner quality-banner">
 				<img src="<?php bloginfo('template_directory'); ?>/img/bg-quality-banner.jpg" alt="">
-				<h3 class="quality-banner__title">Certifications</h3>
+				<h3 class="section-banner__title">Certifications</h3>
 			</section><!-- .quality-questions -->
 
 			<section class="quality-certifications">

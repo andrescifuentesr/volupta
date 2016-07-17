@@ -36,7 +36,6 @@
 	</div>
 </section><!-- .home-products -->
 
-
 <section class="home-recipes">
 
 	<?php //aquí va el loop ?>
@@ -54,25 +53,29 @@
 
 			<div id="flexslider-home" class="flexslider">
 				<ul class="slides">
-				    <li>
-				    	<a href="">
-					    	<img src="<?php bloginfo('template_directory'); ?>/img/home-dish.png" alt="">
-					    </a>
-						<div class="home-recipes__description">
-							<h2 class="home-recipes__title">Ancient grains & vegetable salad</h2>
-							<p class="home-recipes__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos laborum, velit quae eaque tempore, explicabo</p>
-						</div>				    	
-				    </li>
+					<?php
+						$args = array(
+							'post_type' 		=> 'recipe', 	//Costum type Recipe			
+							'order'				=> 'ASC',		// List in ascending order
+							'orderby'      		=> 'id',		// List them in their menu order
+							'posts_per_page'	=>   -1, 		// Show the last one
+						);
 
-				    <li>
-				    	<a href="">
-					    	<img src="<?php bloginfo('template_directory'); ?>/img/home-dish.png" alt="">
-					    </a>
-						<div class="home-recipes__description">
-							<h2 class="home-recipes__title">Ancient grains & vegetable salad</h2>
-							<p class="home-recipes__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos laborum, velit quae eaque tempore, explicabo</p>
-						</div>				    	
-				    </li>
+						$QueryRecipes = new WP_Query($args);
+					?>
+					<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?>				
+						
+						<li>
+							<a href="<?php echo esc_url( get_permalink(9) ); ?>" rel="bookmark">
+								<?php the_post_thumbnail( 'full' ); ?>
+						    </a>
+							<div class="home-recipes__description">
+								<?php the_title( '<h2 class="home-recipes__title">', '</h2>' ); ?>
+								<p class="home-recipes__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos laborum, velit quae eaque tempore, explicabo</p>
+							</div>				    	
+						</li>
+
+					<?php endwhile; // End of the loop. ?>
 				</ul>
 			</div>
 		</div><!-- .flexslider-wrapper -->	
@@ -89,7 +92,7 @@
 			?> -->
 		</header><!-- .entry-header -->
 
-		<div class="entry-content">
+		<!-- <div class="entry-content"> -->
 <!-- 			<?php
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
@@ -97,7 +100,8 @@
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 			?> -->
-		</div><!-- .entry-content -->
+		<!-- </div> -->
+		<!-- .entry-content -->
 
 	</article><!-- #post-## -->
 

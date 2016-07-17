@@ -14,20 +14,6 @@
 	}
 }
 
-.about-banner {
-	border-bottom: 14px solid $primary;
-	position: relative;
-
-	.about-question__title {
-		color:#fff;
-		@extend %center;
-		font-family: 'nexa_rust_script_l0regular';
-		font-size: 3em;
-		top: 25%;
-	}
-}
-
-
 // Section about-vision
 .about-vision {
 	background: #efede4;

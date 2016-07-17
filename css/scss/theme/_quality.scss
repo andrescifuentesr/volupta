@@ -55,22 +55,6 @@
 	}
 }
 
-// Section quality-banner
-
-.quality-banner {
-	border-bottom: 14px solid $primary;
-	position: relative;
-
-	.quality-banner__title {
-		color:#fff;
-		@extend %center;
-		font-family: 'nexa_rust_script_l0regular';
-		font-size: 3em;
-		top: 25%;
-
-	}
-}
-
 // Section quality-certifications
 
 .quality-certifications {
@@ -119,4 +103,4 @@
 // Je pense que c'est mieux comme réglage de taille 
 //par rapport à la maquette 
 // mais je voulais pas toucher un autre fichier général ^^
-p {font-size: 0.9em;}
+// p {font-size: 0.9em;}

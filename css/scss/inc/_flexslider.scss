@@ -42,8 +42,8 @@
 .flexslider .slides img {
   // width: 100%;
   display: block;
-  margin:0 25%;
-  width:50%;
+  margin:0 30%;
+  width:40%;
 }
 .flexslider .slides:after {
   display: block;
@@ -105,22 +105,22 @@ html[xmlns] .flexslider .slides {
   display: inline-block;
 }
 .flex-direction-nav .flex-prev {
-  left: 15%;
+  left: 23%;
 }
 .flex-direction-nav .flex-next {
-  right: 15%;
+  right: 23%;
   transform: rotate(180deg);
 }
 .flexslider:hover .flex-direction-nav .flex-prev {
   opacity: 0.7;
-  left: 10%;
+  left: 18%;
 }
 .flexslider:hover .flex-direction-nav .flex-prev:hover {
   opacity: 1;
 }
 .flexslider:hover .flex-direction-nav .flex-next {
   opacity: 0.7;
-  right: 10%;
+  right: 18%;
 }
 .flexslider:hover .flex-direction-nav .flex-next:hover {
   opacity: 1;
