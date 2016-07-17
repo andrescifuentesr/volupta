@@ -1,0 +1,11 @@
+.search-input {
+	border: 1px solid $secondary;
+	width: 10em;
+}
+
+input[type=submit].icon-search {
+	color: #fff;
+	background: url('img/icon-search.svg') no-repeat center center;
+	z-index: 90;
+	text-indent: -9999px;
+}

@@ -32,7 +32,9 @@
 		<p class="home-products__description">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit mauris a efficitur consequat. Sed ex nibh, ultricies in nisl eget, commodo tempor lorem. Mauris enim mi, ornare non euismod vitae, pretium eget lorem. 
 		</p>
-		<button class="home-products__button">View products</button>
+		<a class="home-products__button" href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
+			<?php _e('View products', 'volupta') ?>
+		</a>
 	</div>
 </section><!-- .home-products -->
 

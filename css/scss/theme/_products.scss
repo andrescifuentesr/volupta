@@ -15,7 +15,6 @@
 
 // Section product-description
 .product-description {
-	background: #efede4;
 	padding: 2em 10% 4em;
 
 	.product-description__image {
@@ -43,7 +42,7 @@
 
 // Section product-ingredients
 .product-ingredients {
-	background: url('img/bg-product-ingredients.png') no-repeat bottom left;
+	background: url('img/bg-product-ingredients.png') no-repeat bottom left #efede4;
 	padding: 4em 10% 4em 30%;
 
 	img {
@@ -85,7 +84,6 @@
 
 // Section product-nutrition
 .product-nutrition {
-	background: #efede4;
 	padding: 4em 10%;
 
 	.product-nutrition__image {
@@ -110,7 +108,6 @@
 
 // Section product-kitchen
 .product-kitchen {
-	background: #efede4;
 	padding: 2em 10%;
 
 	.product-kitchen__recipes {

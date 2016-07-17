@@ -7,6 +7,10 @@
 	@include mq(desk) { max-width: $max-width; margin: 0 auto; position: relative;}
 }
 
+.site-main {
+	background: $backgroung-color;
+}
+
 %col-2-5 {
 	display: inline-block;
 	vertical-align: top;

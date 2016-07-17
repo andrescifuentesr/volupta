@@ -1,5 +1,5 @@
 .site-header {
-	position: absolute;
+	position: fixed;
 	left: 50%;
 	z-index: 999;
 	transform: translate(-50%, 0);
@@ -30,10 +30,16 @@
 	}
 
 	.main-navigation {
-		width: 75%;
+		width:50%;
 		display: inline-block;
-	    vertical-align: top;
-    	margin-top: 2em;
+		vertical-align: top;
+		margin-top: 2em;
 	}
-
+	
+	.site-search {
+		width: 25%;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 1.5em;
+	}
 }

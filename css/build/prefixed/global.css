@@ -583,12 +583,6 @@ textarea {
   display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -1358,6 +1352,10 @@ html[xmlns] .flexslider .slides {
   }
 }
 
+.site-main {
+  background: #efede4;
+}
+
 .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality-description .quality-description__image {
   display: inline-block;
   vertical-align: top;
@@ -1383,7 +1381,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   left: 50%;
   z-index: 999;
   -ms-transform: translate(-50%, 0);
@@ -1417,10 +1415,16 @@ html[xmlns] .flexslider .slides {
   display: inline-block;
 }
 .site-header .main-navigation {
-  width: 75%;
+  width: 50%;
   display: inline-block;
   vertical-align: top;
   margin-top: 2em;
+}
+.site-header .site-search {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1.5em;
 }
 
 .site-footer {
@@ -1469,34 +1473,25 @@ html[xmlns] .flexslider .slides {
   text-decoration: underline;
 }
 
-.page-content-wrapper {
-  padding: 0 .5em;
+.site-page .section-hero {
+  height: 450px;
 }
-@media (min-width: 600px) {
-  .page-content-wrapper {
-    padding: 0 1em;
-  }
+.site-page .page-wrapper {
+  padding: 4em 4em 2em;
 }
-
-.page-title-wrapper {
-  text-align: center;
-  margin: 1.5em 0 1em;
+.site-page .page-header {
+  margin-bottom: 2em;
 }
-@media (min-width: 800px) {
-  .page-title-wrapper {
-    margin: 3em 0 2em;
-  }
+.site-page h1, .site-page h2 {
+  font-size: 2.5em;
 }
-
-.page-title {
-  display: inline-block;
-  padding: .5em 2em;
-  margin: 0;
+.site-page .entry-title a {
+  color: #459790;
+  font-size: .75em;
+  transition: .2s all;
 }
-@media (min-width: 600px) {
-  .page-title {
-    min-width: 200px;
-  }
+.site-page .entry-title a:hover {
+  color: #818285;
 }
 
 .actus-post--single {
@@ -1781,6 +1776,7 @@ html[xmlns] .flexslider .slides {
   background: url("img/bg-line-dot-separator-white.png") no-repeat bottom center;
 }
 .section-hero .section-hero__title {
+  color: #fff;
   font-size: 4em;
   text-transform: uppercase;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -1925,6 +1921,7 @@ html[xmlns] .flexslider .slides {
   margin-bottom: 2em;
 }
 .home-products .home-products__button {
+  display: inline-block;
   background: #459790;
   text-transform: uppercase;
   color: #fff;
@@ -1947,6 +1944,7 @@ html[xmlns] .flexslider .slides {
 .home-recipes .home-recipes__title {
   text-transform: uppercase;
   font-size: 2.5em;
+  color: #fff;
 }
 .home-recipes .home-recipes__content {
   padding: 0 25%;
@@ -2023,7 +2021,6 @@ html[xmlns] .flexslider .slides {
 }
 
 .product-description {
-  background: #efede4;
   padding: 2em 10% 4em;
 }
 .product-description .product-description__image {
@@ -2043,7 +2040,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .product-ingredients {
-  background: url("img/bg-product-ingredients.png") no-repeat bottom left;
+  background: url("img/bg-product-ingredients.png") no-repeat bottom left #efede4;
   padding: 4em 10% 4em 30%;
 }
 .product-ingredients img {
@@ -2080,7 +2077,6 @@ html[xmlns] .flexslider .slides {
 }
 
 .product-nutrition {
-  background: #efede4;
   padding: 4em 10%;
 }
 .product-nutrition .product-nutrition__image {
@@ -2098,7 +2094,6 @@ html[xmlns] .flexslider .slides {
 }
 
 .product-kitchen {
-  background: #efede4;
   padding: 2em 10%;
 }
 .product-kitchen .product-kitchen__recipes {
@@ -2393,6 +2388,18 @@ html[xmlns] .flexslider .slides {
   background: url(img/bg-line-dot-separator.png) x-repeat;
 }
 
+.search-input {
+  border: 1px solid #818285;
+  width: 10em;
+}
+
+input[type=submit].icon-search {
+  color: #fff;
+  background: url("img/icon-search.svg") no-repeat center center;
+  z-index: 90;
+  text-indent: -9999px;
+}
+
 *,
 *:after,
 *:before {
@@ -2411,23 +2418,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'veneerregular';
   font-weight: normal;
+  color: #459790;
 }
 
 a {
   text-decoration: none;
   color: #818285;
   font-weight: normal;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-@media (min-width: 800px) {
-  .page-content,
-  .entry-content,
-  .entry-summary {
-    margin: 1.5em 15% 0 0;
-  }
 }

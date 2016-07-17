@@ -49,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'theme/products';
 @import 'theme/about';
 @import 'theme/quality';
+@import 'theme/searchbox';
 
 *,
 *:after,
@@ -72,6 +73,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'veneerregular';
 	font-weight: normal;
+	color: $primary;
 }
 
 a {
@@ -80,10 +82,5 @@ a {
 	font-weight: normal;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-	@include mq(lap) { margin: 1.5em 15% 0 0; }
-}
+
 
