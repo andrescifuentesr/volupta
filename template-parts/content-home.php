@@ -38,12 +38,13 @@
 	</div>
 </section><!-- .home-products -->
 
-<section class="home-recipes">
+<section class="home-recipes" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-recipe-wood.png');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px -150px;">
+	
+<!-- <section class="home-recipes"> -->
 
 	<?php //aquí va el loop ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-0-top="transform:translate3d(0px, 0px, 0px)" data-800-top="transform:translate3d(0px, 150px, 0px)">
 
 		<div class="flexslider-wrapper loading">
 
@@ -81,29 +82,6 @@
 				</ul>
 			</div>
 		</div><!-- .flexslider-wrapper -->	
-		
-
-
-		<header class="entry-header">
-<!-- 			<?php
-				if ( is_single() ) {
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				} else {
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				}
-			?> -->
-		</header><!-- .entry-header -->
-
-		<!-- <div class="entry-content"> -->
-<!-- 			<?php
-				the_content( sprintf(
-					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'volupta' ), array( 'span' => array( 'class' => array() ) ) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
-			?> -->
-		<!-- </div> -->
-		<!-- .entry-content -->
 
 	</article><!-- #post-## -->
 

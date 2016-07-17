@@ -50,8 +50,9 @@
 
 // Section home-recipes
 .home-recipes {
-	background: url('img/bg-recipe-wood.png') repeat;
+	// background: url('img/bg-recipe-wood.png') repeat;
 	padding: 5em 0 2em;
+	background-repeat: no-repeat;
 
 	.home-recipes__description {
 		margin-top: 1.5em;

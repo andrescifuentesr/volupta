@@ -28,6 +28,6 @@ jQuery(window).load(function(){
 //https://github.com/Prinzhorn/skrollr
 //initialise skrollr
 skrollr.init({
-	smoothScrolling: false,
+	// smoothScrolling: false,
 	mobileDeceleration: 0.004
 });

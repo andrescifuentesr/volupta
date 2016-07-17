@@ -1189,7 +1189,7 @@ html[xmlns] .flexslider .slides {
   width: 59px;
   height: 59px;
   position: absolute;
-  top: 35%;
+  top: 30%;
   z-index: 10;
   overflow: hidden;
   cursor: pointer;
@@ -1953,8 +1953,8 @@ html[xmlns] .flexslider .slides {
 }
 
 .home-recipes {
-  background: url("img/bg-recipe-wood.png") repeat;
   padding: 5em 0 2em;
+  background-repeat: no-repeat;
 }
 .home-recipes .home-recipes__description {
   margin-top: 1.5em;
