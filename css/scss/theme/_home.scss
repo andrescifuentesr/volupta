@@ -7,29 +7,42 @@
 	background: $primary;
 	color: #fff;
 	text-align: center;
-	padding: 3em 20%;
+	padding: 1em .5em;
 	font-size: 1.25em;
+	@include mq(tablet) { padding: 3em 20%; }
+	@include mq(lap) { }
+	@include mq(desk) { }
 }
 
 // Section home-products
 .home-products {
 	background: url('img/bg-home-product.png') no-repeat bottom right $tertiary;
-	padding: 3em 10%;
+	padding: 1em .5em 5em;
+	@include mq(tablet) { padding: 3em 10%; }
+	@include mq(lap) { }
+	@include mq(desk) { }   
 
 	.home-products__image {
 		@extend %col-2-5;
 	}
 
 	.home-products__content {
-		padding-right: 4em;
+		text-align: center;
 		@extend %col-3-5;
+		@include mq(tablet) { padding-right: 4em; text-align: left;}
+		@include mq(lap) { }
+		@include mq(desk) { }
 	}
 
 	.home-products__title {
 		color: $primary;
-		font-size: 3em;
+		font-size: 2em;
 		text-transform: uppercase;
 		margin-bottom: 0;
+		text-align: center;
+		@include mq(tablet) { font-size: 3em; text-align: left; }
+		@include mq(lap) { }
+		@include mq(desk) { }		
 	}
 
 	.home-products__description {
@@ -50,26 +63,37 @@
 
 // Section home-recipes
 .home-recipes {
-	// background: url('img/bg-recipe-wood.png') repeat;
-	padding: 5em 0 2em;
 	background-repeat: no-repeat;
+	padding: 1em 0 .5em;
+	@include mq(tablet) { padding: 5em 0 2em;  }
+	@include mq(lap) { }
+	@include mq(desk) { }
 
 	.home-recipes__description {
 		margin-top: 1.5em;
 		color:#fff;
 		text-align: center;
 		background: transparentize($primary, .2);
-		padding: 1.5em 0;
+		padding: 1em 0;
+		@include mq(tablet) { padding: 1.5em 0;  }
+		@include mq(lap) { }
+		@include mq(desk) { }
 	}
 
 	.home-recipes__title {
 		text-transform: uppercase;
-		font-size: 2.5em;
+		font-size: 1.5em;
 		color:#fff;
+		@include mq(tablet) { font-size: 2.5em;  }
+		@include mq(lap) { }
+		@include mq(desk) { }
 	}
 
 	.home-recipes__content {
-		padding:0 25%;
+		padding:0 1em;
+		@include mq(tablet) { padding:0 25%; }
+		@include mq(lap) { }
+		@include mq(desk) { }
 	}
 
 }

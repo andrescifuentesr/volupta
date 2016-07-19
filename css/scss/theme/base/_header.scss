@@ -3,14 +3,22 @@
 	left: 50%;
 	z-index: 999;
 	transform: translate(-50%, 0);
-	height: 196px;
+	height: 150px;
 	width: 100%;
-	background: url('img/bg-nav-bar.png') no-repeat center center;
+	background: url('img/bg-nav-bar.png') no-repeat left bottom;
+	@include mq(tablet) { background: url('img/bg-nav-bar.png') no-repeat center center; height: 196px;}
+	@include mq(lap) { }	
 	@include mq(desk) { max-width: $max-width; margin: 0 auto; padding-bottom: 3em;}
 
 	.site-title {
 		text-indent: -9999px;
-		margin: 2.5em 0 0 2em;
+		margin: 1.5em 0 0 1.5em;
+		@include mq(tablet) { margin: 2.5em 0 0 2em;}
+		@include mq(lap) { }
+		@include mq(desk) { }	
+
+		
+
 
 		a {
 			display: block;
@@ -25,21 +33,32 @@
 	}
 
 	.site-branding {
-		width: 25%;
+		width: 50%;
 		display: inline-block;
+		@include mq(tablet) { width: 25%;}
+		@include mq(lap) { }
+		@include mq(desk) { }	
 	}
 
 	.main-navigation {
 		width:50%;
 		display: inline-block;
 		vertical-align: top;
-		margin-top: 2em;
+		margin-top: 0em;
+    	text-align: right;
+    	padding-right: 1em;
+		@include mq(tablet) { margin-top: 2em; }
+		@include mq(lap) { }
+		@include mq(desk) { }	
 	}
 	
 	.site-search {
 		width: 25%;
-		display: inline-block;
+		display: none;
 		vertical-align: top;
 		margin-top: 1.5em;
+		@include mq(tablet) { display: inline-block; }
+		@include mq(lap) { }	
+		@include mq(desk) {}
 	}
 }

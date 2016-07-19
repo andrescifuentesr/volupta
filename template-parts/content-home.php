@@ -24,7 +24,9 @@
 
 <section class="home-products">
 	<div class="home-products__image">
-		<img src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="">
+		<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
+			<img src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="">
+		</a>
 	</div><!--
 	
 --><div class="home-products__content">

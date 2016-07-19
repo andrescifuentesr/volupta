@@ -1,9 +1,12 @@
 //hero section at the top of everypage
 .section-hero {
-	height: 650px;
+	height: 350px;
 	color:#fff;
 	text-align: center;
-	padding: 20em 0 0;
+	padding: 10em 0 0;
+	@include mq(tablet) { padding: 20em 0 0; height: 650px;}
+	@include mq(lap) { }
+	@include mq(desk) { }	
 
 	.section-hero__content {
 		width:100%;
@@ -15,9 +18,12 @@
 
 	.section-hero__title {
 		color:#fff;
-		font-size: 4em;
+		font-size: 2.5em;
 		text-transform: uppercase;
-		text-shadow: 2px 2px 3px rgba(0,0,0,.5)
+		text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+		@include mq(tablet) { font-size: 4em;}
+		@include mq(lap) { }
+		@include mq(desk) { }	
 	}
 
 	.section-hero__sub-title {

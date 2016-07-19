@@ -15,16 +15,23 @@
 }
 
 .main-navigation li {
-	float: left;
 	position: relative;
-	padding: 0 2em;
+	width:100%;
+	text-align: center;
+
+	@include mq(tablet) { padding: 0 2em; float: left;}
+	@include mq(lap) { }
+	@include mq(desk) { }	
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
 	font-size: 0.8em;
-	color:$base-color;
+	color:#fff;
+	@include mq(tablet) { color:$base-color;}
+	@include mq(lap) { }
+	@include mq(desk) { }		
 }
 
 .main-navigation ul ul {
@@ -85,7 +92,46 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.nav-menu {
+	position:absolute;
+	@extend %center;
+}
+
+.menu-menu-principal-container {
+	
+	transition: .2s all;
+}
+
+.menu-toggle {
+	font-size: 1.5em;
+	display: inline-block;
+	color: $secondary;
+	padding: 0;
+}
+
+.toggled {
+
+	.menu-menu-principal-container {
+		background: rgba(0,0,0,.5);
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		display: block;
+		height: 100vh;
+		z-index: -1;
+	}
+
+	.menu-toggle {
+		color:#fff;
+	}
+}
+
+
+
+@media screen and (min-width: $break-point-tablet) {
 	.menu-toggle {
 		display: none;
 	}

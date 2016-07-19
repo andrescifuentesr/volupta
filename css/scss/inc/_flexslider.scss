@@ -42,8 +42,11 @@
 .flexslider .slides img {
   // width: 100%;
   display: block;
-  margin:0 30%;
-  width:40%;
+  margin:0 10%;
+  width:80%;
+  @include mq(tablet) { width:40%; margin:0 30%; }
+  @include mq(lap) { }
+  @include mq(desk) { }
 }
 .flexslider .slides:after {
   display: block;
@@ -93,34 +96,49 @@ html[xmlns] .flexslider .slides {
   width: 59px;
   height: 59px;
   position: absolute;
-  top: 30%;
+  top: 40%;
   z-index: 10;
   overflow: hidden;
   cursor: pointer;
   text-indent: -9999px;
   background: url('img/slider-arrow.svg') repeat;
   transition: all 0.3s ease-in-out;
+  @include mq(tablet) { top: 30%; }
+  @include mq(lap) { }
+  @include mq(desk) { }  
 }
 .flex-direction-nav a {
   display: inline-block;
 }
 .flex-direction-nav .flex-prev {
-  left: 23%;
+  left: 3%;
+  @include mq(tablet) { left: 23%; }
+  @include mq(lap) { }
+  @include mq(desk) { }  
 }
 .flex-direction-nav .flex-next {
-  right: 23%;
+  right: 3%;
   transform: rotate(180deg);
+  @include mq(tablet) { right: 23%; }
+  @include mq(lap) { }
+  @include mq(desk) { }    
 }
 .flexslider:hover .flex-direction-nav .flex-prev {
   opacity: 0.7;
-  left: 18%;
+  left: 1%;
+  @include mq(tablet) { left: 18%; }
+  @include mq(lap) { }
+  @include mq(desk) { }    
 }
 .flexslider:hover .flex-direction-nav .flex-prev:hover {
   opacity: 1;
 }
 .flexslider:hover .flex-direction-nav .flex-next {
   opacity: 0.7;
-  right: 18%;
+  right: 1%;
+  @include mq(tablet) { right: 18%; }
+  @include mq(lap) { }
+  @include mq(desk) { }      
 }
 .flexslider:hover .flex-direction-nav .flex-next:hover {
   opacity: 1;

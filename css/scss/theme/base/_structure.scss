@@ -14,13 +14,19 @@
 %col-2-5 {
 	display: inline-block;
 	vertical-align: top;
-	width:40%;	
+	width:100%;
+	@include mq(tablet) { width:40%;}
+	@include mq(lap) { }
+	@include mq(desk) { }
 }
 
 %col-3-5 {
 	display: inline-block;
 	vertical-align: top;
-	width:60%;	
+	width:100%;
+	@include mq(tablet) { width:40%;}
+	@include mq(lap) { }
+	@include mq(desk) { }
 }
 
 
