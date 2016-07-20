@@ -24,7 +24,7 @@
 	display: inline-block;
 	vertical-align: top;
 	width:100%;
-	@include mq(tablet) { width:40%;}
+	@include mq(tablet) { width:60%;}
 	@include mq(lap) { }
 	@include mq(desk) { }
 }

@@ -14,6 +14,21 @@
 		vertical-align: middle;
 		// float: left;
 		background: url('img/bg-line-dot-separator-white.png') no-repeat bottom center;
+
+		h2 {
+			color:#fff;
+			font-size: 2.5em;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+			@include mq(tablet) { font-size: 4em;}
+			@include mq(lap) { }
+			@include mq(desk) { }	
+		}
+
+		p {
+			font-size: 1.5em;
+			text-shadow: 2px 2px 3px rgba(0,0,0,.5)
+		}
 	}
 
 	.section-hero__title {

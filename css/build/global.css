@@ -1456,7 +1456,7 @@ html.magnifying > body {
 }
 @media (min-width: 600px) {
   .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content, .quality-description .quality-description__content {
-    width: 40%;
+    width: 60%;
   }
 }
 
@@ -1466,7 +1466,7 @@ html.magnifying > body {
   width: 33.33333%;
 }
 
-.product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item p, .quality-certifications .quality__title {
+.product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div, .quality-certifications .quality__title {
   display: inline-block;
   vertical-align: top;
   width: 66.66667%;
@@ -1821,10 +1821,15 @@ html.magnifying > body {
   position: relative;
   width: 100%;
   text-align: center;
+  padding: 1em 0;
+  font-size: 2em;
 }
 @media (min-width: 600px) {
   .main-navigation li {
     padding: 0 2em;
+    float: left;
+    font-size: 1em;
+    width: auto;
     float: left;
   }
 }
@@ -1890,6 +1895,12 @@ html.magnifying > body {
 .nav-menu {
   position: absolute;
 }
+@media (min-width: 600px) {
+  .nav-menu {
+    position: static;
+    transform: translate(0, 0);
+  }
+}
 
 .menu-menu-principal-container {
   transition: .2s all;
@@ -1944,6 +1955,21 @@ html.magnifying > body {
   display: inline-block;
   vertical-align: middle;
   background: url("img/bg-line-dot-separator-white.png") no-repeat bottom center;
+}
+.section-hero .section-hero__content h2 {
+  color: #fff;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 600px) {
+  .section-hero .section-hero__content h2 {
+    font-size: 4em;
+  }
+}
+.section-hero .section-hero__content p {
+  font-size: 1.5em;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .section-hero .section-hero__title {
   color: #fff;
@@ -2463,7 +2489,7 @@ html.magnifying > body {
   width: 33px;
   height: 33px;
 }
-.about-questions .about-thequestion__item p {
+.about-questions .about-thequestion__item .about-thequestion__number--div {
   font-size: 1em;
 }
 .about-questions .about-thequestion__answer {

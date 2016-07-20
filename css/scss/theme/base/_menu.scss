@@ -19,7 +19,10 @@
 	width:100%;
 	text-align: center;
 
-	@include mq(tablet) { padding: 0 2em; float: left;}
+	padding: 1em 0;
+	font-size: 2em;
+
+	@include mq(tablet) { padding: 0 2em; float: left; font-size: 1em; width:auto; float:left;}
 	@include mq(lap) { }
 	@include mq(desk) { }	
 }
@@ -95,6 +98,9 @@
 .nav-menu {
 	position:absolute;
 	@extend %center;
+	@include mq(tablet) { position:static; transform: translate(0, 0); }
+	@include mq(lap) { }
+	@include mq(desk) { }		
 }
 
 .menu-menu-principal-container {
