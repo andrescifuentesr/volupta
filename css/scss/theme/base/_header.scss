@@ -3,22 +3,19 @@
 	left: 50%;
 	z-index: 999;
 	transform: translate(-50%, 0);
-	height: 150px;
+	height: 110px;
 	width: 100%;
-	background: url('img/bg-nav-bar.png') no-repeat left bottom;
-	@include mq(tablet) { background: url('img/bg-nav-bar.png') no-repeat center center; height: 196px;}
+	background: url('img/bg-nav-bar.png') no-repeat left bottom rgba(255,255,255,0.9);
+	@include mq(tablet) { }
 	@include mq(lap) { }	
-	@include mq(desk) { max-width: $max-width; margin: 0 auto; padding-bottom: 3em;}
+	@include mq(desk) { max-width: $max-width; margin: 0 auto; padding-bottom: 3em; height: 196px; background-color: transparent;}
 
 	.site-title {
 		text-indent: -9999px;
-		margin: 1.5em 0 0 1.5em;
-		@include mq(tablet) { margin: 2.5em 0 0 2em;}
+		margin: .4em 0 0 1.5em;
+		@include mq(tablet) { }
 		@include mq(lap) { }
-		@include mq(desk) { }	
-
-		
-
+		@include mq(desk) { margin: 2.5em 0 0 2em; }
 
 		a {
 			display: block;
@@ -46,10 +43,9 @@
 		vertical-align: top;
 		margin-top: 0em;
     	text-align: right;
-    	padding-right: 1em;
-		@include mq(tablet) { margin-top: 2em; }
-		@include mq(lap) { }
-		@include mq(desk) { }	
+		@include mq(tablet) { margin-top: 1.5em; padding-left: 5em; width:55%; padding-right: 0; }
+		@include mq(lap) { padding-left: 2em; padding-right: 4em;}
+		@include mq(desk) { margin-top: 2em; padding-left: 0; width:50%; padding-right: 1em;  }	
 	}
 	
 	.site-search {
@@ -57,8 +53,8 @@
 		display: none;
 		vertical-align: top;
 		margin-top: 1.5em;
-		@include mq(tablet) { display: inline-block; }
-		@include mq(lap) { }	
-		@include mq(desk) {}
+		@include mq(tablet) { display: inline-block; width:20%; padding: 0 .5em;}
+		@include mq(lap) {  }	
+		@include mq(desk) { width:25%; padding: 0;}
 	}
 }

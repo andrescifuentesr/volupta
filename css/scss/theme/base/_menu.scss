@@ -18,13 +18,11 @@
 	position: relative;
 	width:100%;
 	text-align: center;
-
 	padding: 1em 0;
-	font-size: 2em;
-
-	@include mq(tablet) { padding: 0 2em; float: left; font-size: 1em; width:auto; float:left;}
-	@include mq(lap) { }
-	@include mq(desk) { }	
+	font-size: 1.5em;
+	@include mq(tablet) { width:50%; font-size: 1em; float:left; padding: .5em 0;}
+	@include mq(lap) {  }
+	@include mq(desk) { padding: 0 2em; float: left; width:auto;  }	
 }
 
 .main-navigation a {
@@ -32,6 +30,7 @@
 	text-decoration: none;
 	font-size: 0.8em;
 	color:#fff;
+	transition:.2s all;
 	@include mq(tablet) { color:$base-color;}
 	@include mq(lap) { }
 	@include mq(desk) { }		
@@ -95,6 +94,10 @@
 	display: block;
 }
 
+.main-navigation.toggled ul {
+	width:100%;
+}
+
 .nav-menu {
 	position:absolute;
 	@extend %center;
@@ -109,7 +112,8 @@
 }
 
 .menu-toggle {
-	font-size: 1.5em;
+	font-size: 2em;
+	margin-top: 0.7em;
 	display: inline-block;
 	color: $secondary;
 	padding: 0;
@@ -118,7 +122,7 @@
 .toggled {
 
 	.menu-menu-principal-container {
-		background: rgba(0,0,0,.5);
+		background: rgba(0,0,0,.8);
 		position: absolute;
 		top: 0;
 		width: 100%;

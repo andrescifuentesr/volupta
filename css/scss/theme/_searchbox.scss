@@ -1,6 +1,8 @@
 .search-input {
 	border: 1px solid $secondary;
-	width: 10em;
+	@include mq(tablet) { margin-top: 0.5em; width:100%;}
+	@include mq(lap) { margin-top: 0; width:75%; }	
+	@include mq(desk) { width: 10em; }
 }
 
 input[type=submit].icon-search {
@@ -8,4 +10,7 @@ input[type=submit].icon-search {
 	background: url('img/icon-search.svg') no-repeat center center;
 	z-index: 90;
 	text-indent: -9999px;
+	@include mq(tablet) { float:right; }
+	@include mq(lap) { float:none;  }	
+	@include mq(desk) {}
 }
