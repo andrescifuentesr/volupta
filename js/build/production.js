@@ -1523,6 +1523,13 @@
 	}
 })();
 
+//https://github.com/Prinzhorn/skrollr
+//initialise skrollr
+skrollr.init({
+	// smoothScrolling: false,
+	mobileDeceleration: 0.004
+});
+
 //========================
 //  Flexslider
 //========================
@@ -1553,11 +1560,4 @@ jQuery(window).load(function(){
 	//we launch the magnify effect
 	jQuery('.zoom').magnify();
 
-});
-
-//https://github.com/Prinzhorn/skrollr
-//initialise skrollr
-skrollr.init({
-	// smoothScrolling: false,
-	mobileDeceleration: 0.004
 });

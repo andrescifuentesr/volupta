@@ -96,15 +96,15 @@ html[xmlns] .flexslider .slides {
   width: 59px;
   height: 59px;
   position: absolute;
-  top: 40%;
+  top: 45%;
   z-index: 10;
   overflow: hidden;
   cursor: pointer;
   text-indent: -9999px;
   background: url('img/slider-arrow.svg') repeat;
   transition: all 0.3s ease-in-out;
-  @include mq(tablet) { top: 25%;  }
-  @include mq(lap) { top: 30%; }
+  @include mq(tablet) { top: 30%;  }
+  @include mq(lap) {  }
   @include mq(desk) { }  
 }
 .flex-direction-nav a {

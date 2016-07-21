@@ -1129,7 +1129,7 @@ p {
   margin: 0 10%;
   width: 80%;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .flexslider .slides img {
     width: 70%;
     margin: 0 15%;
@@ -1201,7 +1201,7 @@ html[xmlns] .flexslider .slides {
   width: 59px;
   height: 59px;
   position: absolute;
-  top: 40%;
+  top: 45%;
   z-index: 10;
   overflow: hidden;
   cursor: pointer;
@@ -1209,12 +1209,7 @@ html[xmlns] .flexslider .slides {
   background: url("img/slider-arrow.svg") repeat;
   transition: all 0.3s ease-in-out;
 }
-@media (min-width: 600px) {
-  .flex-direction-nav a {
-    top: 25%;
-  }
-}
-@media (min-width: 850px) {
+@media (min-width: 700px) {
   .flex-direction-nav a {
     top: 30%;
   }
@@ -1397,8 +1392,8 @@ html.magnifying > body {
 .magnify .magnify-lens {
   /* Create the magnifying lens */
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   box-shadow: 0 0 0 3px #459790, 0 0 3px 4px rgba(0, 0, 0, 0.25);
   /* Hide the mouse pointer */
@@ -1432,14 +1427,14 @@ html.magnifying > body {
   width: 100%;
   position: relative;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .site {
     width: 100%;
   }
 }
 @media (min-width: 1100px) {
   .site {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     position: relative;
   }
@@ -1454,7 +1449,7 @@ html.magnifying > body {
   vertical-align: top;
   width: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality-description .quality-description__image {
     width: 40%;
   }
@@ -1465,7 +1460,7 @@ html.magnifying > body {
   vertical-align: top;
   width: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content, .quality-description .quality-description__content {
     width: 60%;
   }
@@ -1488,27 +1483,20 @@ html.magnifying > body {
   left: 50%;
   z-index: 999;
   transform: translate(-50%, 0);
-  height: 110px;
+  height: 147px;
   width: 100%;
-  background: url("img/bg-nav-bar.png") no-repeat left bottom rgba(255, 255, 255, 0.9);
+  background: url("img/bg-nav-bar.png") no-repeat left bottom;
 }
 @media (min-width: 1100px) {
   .site-header {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     padding-bottom: 3em;
-    height: 196px;
-    background-color: transparent;
   }
 }
 .site-header .site-title {
   text-indent: -9999px;
-  margin: .4em 0 0 1.5em;
-}
-@media (min-width: 1100px) {
-  .site-header .site-title {
-    margin: 2.5em 0 0 2em;
-  }
+  margin: 1.4em 0 0 1em;
 }
 .site-header .site-title a {
   display: block;
@@ -1523,7 +1511,7 @@ html.magnifying > body {
   width: 50%;
   display: inline-block;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .site-header .site-branding {
     width: 25%;
   }
@@ -1535,10 +1523,10 @@ html.magnifying > body {
   margin-top: 0em;
   text-align: right;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .site-header .main-navigation {
-    margin-top: 1.5em;
-    padding-left: 5em;
+    margin-top: 1em;
+    padding-left: 1em;
     width: 55%;
     padding-right: 0;
   }
@@ -1551,7 +1539,7 @@ html.magnifying > body {
 }
 @media (min-width: 1100px) {
   .site-header .main-navigation {
-    margin-top: 2em;
+    margin-top: 1.5em;
     padding-left: 0;
     width: 50%;
     padding-right: 1em;
@@ -1561,9 +1549,9 @@ html.magnifying > body {
   width: 25%;
   display: none;
   vertical-align: top;
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .site-header .site-search {
     display: inline-block;
     width: 20%;
@@ -1599,7 +1587,7 @@ html.magnifying > body {
   display: inline-block;
   text-align: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .site-footer__nav li {
     width: auto;
     padding: 0 1em;
@@ -1648,7 +1636,7 @@ html.magnifying > body {
   border-bottom: 1px solid currentColor;
   margin: 0 .5em 1em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .actus-post--single {
     margin: 0 1em 2.5em;
   }
@@ -1695,7 +1683,7 @@ html.magnifying > body {
 .post-navigation {
   margin: 0 .5em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .post-navigation {
     margin: 0 1em;
   }
@@ -1718,7 +1706,7 @@ html.magnifying > body {
 .nav-previous {
   display: block;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .nav-previous {
     float: left;
   }
@@ -1733,7 +1721,7 @@ html.magnifying > body {
   display: block;
   text-align: right;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .nav-next {
     float: right;
   }
@@ -1746,7 +1734,7 @@ html.magnifying > body {
 
 .section-banner {
   background-repeat: no-repeat;
-  height: 160px;
+  height: 200px;
   z-index: 100;
   width: 100%;
   border-bottom: 14px solid #459790;
@@ -1847,6 +1835,12 @@ html.magnifying > body {
   margin: 0;
   padding-left: 0;
 }
+@media (min-width: 700px) {
+  .main-navigation ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .main-navigation li {
   position: relative;
@@ -1855,12 +1849,12 @@ html.magnifying > body {
   padding: 1em 0;
   font-size: 1.5em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .main-navigation li {
-    width: 50%;
-    font-size: 1em;
     float: left;
-    padding: .5em 0;
+    width: auto;
+    font-size: 1em;
+    padding: .5em 0.5em;
   }
 }
 @media (min-width: 1100px) {
@@ -1878,7 +1872,7 @@ html.magnifying > body {
   color: #fff;
   transition: .2s all;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .main-navigation a {
     color: #818285;
   }
@@ -1937,7 +1931,7 @@ html.magnifying > body {
 .nav-menu {
   position: absolute;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .nav-menu {
     position: static;
     transform: translate(0, 0);
@@ -1950,7 +1944,7 @@ html.magnifying > body {
 
 .menu-toggle {
   font-size: 2em;
-  margin-top: 0.7em;
+  margin-top: 0.2em;
   display: inline-block;
   color: #818285;
   padding: 0;
@@ -1972,13 +1966,9 @@ html.magnifying > body {
   color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .menu-toggle {
     display: none;
-  }
-
-  .main-navigation ul {
-    display: block;
   }
 }
 .section-hero {
@@ -1987,7 +1977,13 @@ html.magnifying > body {
   text-align: center;
   padding: 10em 0 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
+  .section-hero {
+    padding: 17em 0 0;
+    height: 550px;
+  }
+}
+@media (min-width: 850px) {
   .section-hero {
     padding: 20em 0 0;
     height: 650px;
@@ -2005,27 +2001,12 @@ html.magnifying > body {
   text-transform: uppercase;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .section-hero .section-hero__content h2 {
     font-size: 4em;
   }
 }
 .section-hero .section-hero__content p {
-  font-size: 1.5em;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-}
-.section-hero .section-hero__title {
-  color: #fff;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-}
-@media (min-width: 600px) {
-  .section-hero .section-hero__title {
-    font-size: 4em;
-  }
-}
-.section-hero .section-hero__sub-title {
   font-size: 1.5em;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
@@ -2035,7 +2016,7 @@ html.magnifying > body {
 }
 
 .product-hero {
-  background: url("img/bg-product-hero.png") no-repeat center center;
+  background: url("img/bg-product-hero.jpg") no-repeat center center;
   padding: 18em 0 0;
 }
 .product-hero .product-hero__content {
@@ -2043,7 +2024,7 @@ html.magnifying > body {
   float: left;
   padding: 0 3em;
 }
-.product-hero .product-hero__sub-title {
+.product-hero .product-hero__content p {
   font-size: 1.2em;
 }
 
@@ -2117,7 +2098,7 @@ html.magnifying > body {
   list-style: none;
   margin: .5em 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .menu-social ul {
     margin: 2em 0;
   }
@@ -2126,7 +2107,7 @@ html.magnifying > body {
   display: inline-block;
   margin-left: .5em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .menu-social li {
     margin-left: 2em;
   }
@@ -2170,7 +2151,12 @@ html.magnifying > body {
   padding: 1em .5em;
   font-size: 1.25em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
+  .home-description {
+    padding: 2em 10%;
+  }
+}
+@media (min-width: 850px) {
   .home-description {
     padding: 3em 20%;
   }
@@ -2180,18 +2166,31 @@ html.magnifying > body {
   background: url("img/bg-home-product.png") no-repeat bottom right #e5e3d4;
   padding: 1em .5em 5em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
+  .home-products {
+    padding: 2em 10%;
+  }
+}
+@media (min-width: 850px) {
   .home-products {
     padding: 3em 10%;
   }
 }
+.home-products .home-products__image {
+  padding: 2em;
+}
 .home-products .home-products__content {
   text-align: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
+  .home-products .home-products__content {
+    text-align: left;
+    padding-bottom: 3em;
+  }
+}
+@media (min-width: 1100px) {
   .home-products .home-products__content {
     padding-right: 4em;
-    text-align: left;
   }
 }
 .home-products .home-products__title {
@@ -2201,10 +2200,16 @@ html.magnifying > body {
   margin-bottom: 0;
   text-align: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .home-products .home-products__title {
     font-size: 3em;
     text-align: left;
+    margin: 0;
+  }
+}
+@media (min-width: 850px) {
+  .home-products .home-products__title {
+    margin: 1em 0 0;
   }
 }
 .home-products .home-products__description {
@@ -2224,7 +2229,7 @@ html.magnifying > body {
   background-repeat: no-repeat;
   padding: 1em 0 .5em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .home-recipes {
     padding: 5em 0 2em;
   }
@@ -2236,7 +2241,7 @@ html.magnifying > body {
   background: rgba(69, 151, 144, 0.8);
   padding: 1em 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .home-recipes .home-recipes__description {
     padding: 1.5em 0;
   }
@@ -2246,7 +2251,7 @@ html.magnifying > body {
   font-size: 1.5em;
   color: #fff;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .home-recipes .home-recipes__title {
     font-size: 2.5em;
   }
@@ -2254,7 +2259,7 @@ html.magnifying > body {
 .home-recipes .home-recipes__content {
   padding: 0 1em;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .home-recipes .home-recipes__content {
     padding: 0 25%;
   }
@@ -2356,7 +2361,7 @@ html.magnifying > body {
 .product-ingredients img {
   display: inline-block;
   vertical-align: top;
-  margin-top: -1.5em;
+  margin-bottom: 1.5em;
 }
 .product-ingredients .product-ingredients__item-content {
   display: inline-block;
@@ -2700,10 +2705,10 @@ html.magnifying > body {
 .search-input {
   border: 1px solid #818285;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .search-input {
     margin-top: 0.5em;
-    width: 100%;
+    width: 74%;
   }
 }
 @media (min-width: 850px) {
@@ -2724,7 +2729,7 @@ input[type=submit].icon-search {
   z-index: 90;
   text-indent: -9999px;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   input[type=submit].icon-search {
     float: right;
   }

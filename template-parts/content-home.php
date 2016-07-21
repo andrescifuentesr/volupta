@@ -40,7 +40,7 @@
 	</div>
 </section><!-- .home-products -->
 
-<section class="home-recipes" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-recipe-wood.png');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px -150px;">
+<section class="home-recipes" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-recipe-wood.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px -150px;">
 	
 <!-- <section class="home-recipes"> -->
 

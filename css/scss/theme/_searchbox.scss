@@ -1,6 +1,6 @@
 .search-input {
 	border: 1px solid $secondary;
-	@include mq(tablet) { margin-top: 0.5em; width:100%;}
+	@include mq(tablet) { margin-top: 0.5em; width: 74%;}
 	@include mq(lap) { margin-top: 0; width:75%; }	
 	@include mq(desk) { width: 10em; }
 }

@@ -12,6 +12,7 @@
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	@include mq(tablet) { display:flex; justify-content: space-between; }
 }
 
 .main-navigation li {
@@ -20,7 +21,7 @@
 	text-align: center;
 	padding: 1em 0;
 	font-size: 1.5em;
-	@include mq(tablet) { width:50%; font-size: 1em; float:left; padding: .5em 0;}
+	@include mq(tablet) { float: left; width:auto; font-size: 1em; padding: .5em 0.5em;}
 	@include mq(lap) {  }
 	@include mq(desk) { padding: 0 2em; float: left; width:auto;  }	
 }
@@ -113,7 +114,7 @@
 
 .menu-toggle {
 	font-size: 2em;
-	margin-top: 0.7em;
+	margin-top: 0.2em;
 	display: inline-block;
 	color: $secondary;
 	padding: 0;
@@ -145,7 +146,7 @@
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
-		display: block;
-	}
+	// .main-navigation ul {
+	// 	display: block;
+	// }
 }

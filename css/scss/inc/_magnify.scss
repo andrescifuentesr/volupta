@@ -10,8 +10,8 @@ html.magnifying > body {
 .magnify .magnify-lens {
 	/* Create the magnifying lens */
 	position: absolute;
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	border-radius: 100%;
 	box-shadow: 0 0 0 3px transparentize($primary,0),
 		0 0 3px 4px rgba(0, 0, 0, 0.25);

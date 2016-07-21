@@ -9,8 +9,8 @@
 	text-align: center;
 	padding: 1em .5em;
 	font-size: 1.25em;
-	@include mq(tablet) { padding: 3em 20%; }
-	@include mq(lap) { }
+	@include mq(tablet) { padding: 2em 10%; }
+	@include mq(lap) { padding: 3em 20%; }
 	@include mq(desk) { }
 }
 
@@ -18,20 +18,23 @@
 .home-products {
 	background: url('img/bg-home-product.png') no-repeat bottom right $tertiary;
 	padding: 1em .5em 5em;
-	@include mq(tablet) { padding: 3em 10%; }
-	@include mq(lap) { }
+	@include mq(tablet) { padding: 2em 10%; }
+	@include mq(lap) { padding: 3em 10%; }
 	@include mq(desk) { }   
 
 	.home-products__image {
+		// a modifier
+		padding: 2em;
+		// a modifier
 		@extend %col-2-5;
 	}
 
 	.home-products__content {
 		text-align: center;
 		@extend %col-3-5;
-		@include mq(tablet) { padding-right: 4em; text-align: left;}
+		@include mq(tablet) { text-align: left; padding-bottom: 3em;}
 		@include mq(lap) { }
-		@include mq(desk) { }
+		@include mq(desk) { padding-right: 4em; }
 	}
 
 	.home-products__title {
@@ -40,8 +43,8 @@
 		text-transform: uppercase;
 		margin-bottom: 0;
 		text-align: center;
-		@include mq(tablet) { font-size: 3em; text-align: left; }
-		@include mq(lap) { }
+		@include mq(tablet) { font-size: 3em; text-align: left; margin: 0; }
+		@include mq(lap) { margin: 1em 0 0;}
 		@include mq(desk) { }		
 	}
 

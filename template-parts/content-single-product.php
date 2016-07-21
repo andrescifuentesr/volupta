@@ -75,7 +75,7 @@
 		$ingredient_image = types_render_field( "ingredient-image", array( ) );
 	?>
 
-	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
+	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner-ingredients.jpg');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_ingredients_product_title ); ?></h3>
 	</section><!-- .product-ingredients -->
 
@@ -94,12 +94,7 @@
 		?>
 
 			<div class="product-ingredients__item">
-				<!-- have to change 
-					<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg
-					for
-					<?php echo $child_post->fields['ingredient-image']; ?>
-				 -->
-				<img class="zoom" src="<?php echo $child_post->fields['ingredient-image']; ?>" data-magnify-src="<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg" alt="<?php echo $child_post->post_title; ?>"><!--
+				<img class="zoom" src="<?php echo $child_post->fields['ingredient-image']; ?>" data-magnify-src="<?php echo $child_post->fields['ingredient-image']; ?>" alt="<?php echo $child_post->post_title; ?>"><!--
 			
 			--><div class="product-ingredients__item-content">
 					<div class="point-separator"></div>
@@ -132,7 +127,7 @@
 		//call of custom field section-nutrition-product-image
 		$section_nutrition_product_image = types_render_field( "section-nutrition-product-image", array( ) );
 	?>
-	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
+	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner-nutrition.jpg');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 			<?php if( !empty( $section_nutrition_product_title ) ) { ?>
 				<h3 class="section-banner__title"><?php echo esc_html( $section_nutrition_product_title ); ?></h3>
 			<?php } ?>
@@ -168,7 +163,7 @@
 		//call of custom field section-kitchen-product-image
 		$section_kitchen_product_image = types_render_field( "section-kitchen-product-image", array( "alt" => "Kitchen instructions", "title" => "" ) );
 	?>
-	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
+	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner-kitchen.jpg');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
 	</section><!-- .product-kitchen -->
 

@@ -35,9 +35,12 @@
 	}
 	@if $mq == lap {
 		@media (min-width: $break-point-lap) { @content; }
-	} 
+	}
 	@if $mq == tablet {
 		@media (min-width: $break-point-tablet) { @content; }
+	}
+	@if $mq == mobile {
+		@media (min-width: $break-point-mobile) { @content; }
 	}
 }
 
