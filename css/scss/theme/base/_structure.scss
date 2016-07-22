@@ -15,18 +15,18 @@
 	display: inline-block;
 	vertical-align: top;
 	width:100%;
-	@include mq(tablet) { width:40%;}
-	@include mq(lap) { }
-	@include mq(desk) { }
+	@include mq(tablet) { }
+	@include mq(lap) { width:50%; }
+	@include mq(desk) { width:40%; }
 }
 
 %col-3-5 {
 	display: inline-block;
 	vertical-align: top;
 	width:100%;
-	@include mq(tablet) { width:60%;}
-	@include mq(lap) { }
-	@include mq(desk) { }
+	@include mq(tablet) { }
+	@include mq(lap) { width:50%; }
+	@include mq(desk) { width:60%; }
 }
 
 
@@ -39,12 +39,18 @@
 %col-1-3 {
 	display: inline-block;
 	vertical-align: top;
-	width: percentage(1/3);
+	width:100%;
+	@include mq(tablet) { width:50%; }
+	@include mq(lap) { width: percentage(1/3); }
+	@include mq(desk) { }
 }
 
 %col-2-3 {
 	display: inline-block;
 	vertical-align: top;
-	width: percentage(2/3);
+	width:100%;
+	@include mq(tablet) { width:50%; }
+	@include mq(lap) {width: percentage(2/3);  }
+	@include mq(desk) { }
 }
 

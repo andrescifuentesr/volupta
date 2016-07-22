@@ -28,7 +28,7 @@ get_header(); ?>
 				</div>
 				</section><!-- .about-ingredients -->
 
-				<section class="section-banner about-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-question-banner.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
+				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-thefaq-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 					<h3 class="section-banner__title">Frequently Asked Questions</h3>
 				</section><!-- .about-nutrition -->
 
@@ -72,7 +72,7 @@ get_header(); ?>
 
 				<?php wp_reset_postdata(); ?>
 
-				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-contact-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px 50px;">
+				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-contact-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 					<h3 class="section-banner__title
 					"><?php echo types_render_field( "section-contact-title", array( ) ); ?></h3>
 				</section><!-- .about-questions -->

@@ -1437,38 +1437,68 @@ html.magnifying > body {
   background: #efede4;
 }
 
-.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality-description .quality-description__image {
+.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality .quality-description__content {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
-@media (min-width: 700px) {
-  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality-description .quality-description__image {
+@media (min-width: 850px) {
+  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality .quality-description__content {
+    width: 50%;
+  }
+}
+@media (min-width: 1100px) {
+  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality .quality-description__content {
     width: 40%;
   }
 }
 
-.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content, .quality-description .quality-description__content {
+.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form {
+    width: 50%;
+  }
+}
+@media (min-width: 1100px) {
+  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form {
+    width: 60%;
+  }
+}
+
+.product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 700px) {
-  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content, .quality-description .quality-description__content {
-    width: 60%;
+  .product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+    width: 50%;
   }
 }
-
-.product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle img {
-  display: inline-block;
-  vertical-align: top;
-  width: 33.33333%;
+@media (min-width: 850px) {
+  .product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+    width: 33.33333%;
+  }
 }
 
 .product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div, .quality-certifications .quality__title {
   display: inline-block;
   vertical-align: top;
-  width: 66.66667%;
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div, .quality-certifications .quality__title {
+    width: 50%;
+  }
+}
+@media (min-width: 850px) {
+  .product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div, .quality-certifications .quality__title {
+    width: 66.66667%;
+  }
 }
 
 .site-header {
@@ -2011,10 +2041,12 @@ html.magnifying > body {
 
 .home-hero {
   background: url("img/home-hero.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .product-hero {
   background: url("img/bg-product-hero.jpg") no-repeat center center;
+  background-size: cover;
   padding: 18em 0 0;
 }
 .product-hero .product-hero__content {
@@ -2027,16 +2059,44 @@ html.magnifying > body {
 }
 
 .about-hero {
-  background: url("img/bg-about-hero.png") no-repeat bottom center;
+  background: url("img/bg-about-hero.jpg") no-repeat bottom center;
+  background-size: cover;
 }
 
 .quality-hero {
   background: url("img/bg-quality-top.jpg") no-repeat bottom center;
-  padding: 16em 0;
+  background-size: cover;
+  height: 500px;
+  padding: 10em 0 0;
+}
+@media (min-width: 700px) {
+  .quality-hero {
+    padding: 12em 0 0;
+  }
+}
+@media (min-width: 850px) {
+  .quality-hero {
+    padding: 16em 0;
+    height: 650px;
+  }
 }
 .quality-hero .quality-hero__content {
-  width: 50%;
-  margin: auto;
+  padding: 0 .5em;
+}
+@media (min-width: 850px) {
+  .quality-hero .quality-hero__content {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media (min-width: 1100px) {
+  .quality-hero .quality-hero__content {
+    width: 50%;
+    margin: auto;
+  }
+}
+.quality-hero .quality-hero__content p {
+  font-size: 1.25em;
 }
 
 .spinner {
@@ -2251,7 +2311,7 @@ html.magnifying > body {
 }
 
 .site-recipes {
-  background: url("img/bg-recipe-wood.png") repeat;
+  background: url("img/bg-recipe-wood.jpg") repeat;
   padding: 11em 0 1em;
 }
 .site-recipes .flexslider .slides .slides-img {
@@ -2287,7 +2347,7 @@ html.magnifying > body {
   margin: 0;
 }
 .site-recipes .flex-direction-nav a {
-  top: 30%;
+  top: 35%;
 }
 .site-recipes .flex-direction-nav .flex-prev {
   left: 2.5%;
@@ -2610,24 +2670,69 @@ html.magnifying > body {
 
 .quality {
   background: #efede4;
-  padding: 5em 10%;
+  padding: 1em .5em;
+}
+@media (min-width: 700px) {
+  .quality {
+    padding: 2em 2.5%;
+  }
+}
+@media (min-width: 850px) {
+  .quality {
+    padding: 3em 10%;
+  }
+}
+@media (min-width: 1100px) {
+  .quality {
+    padding: 5em 10%;
+  }
 }
 .quality .quality-description__wrapper {
-  margin-bottom: 2em;
+  margin-bottom: .5em;
+}
+@media (min-width: 700px) {
+  .quality .quality-description__wrapper {
+    margin-bottom: 2em;
+  }
 }
 .quality .quality-description__image {
-  padding: 1em 2em;
+  padding: 0 .5em .5em;
+}
+@media (min-width: 700px) {
+  .quality .quality-description__image {
+    padding: 1em 2em;
+  }
+}
+.quality .quality-description__image img {
+  margin: 0 auto;
 }
 .quality .quality-description__content {
-  padding: 0 2em;
+  padding: 0 .5em;
+}
+@media (min-width: 700px) {
+  .quality .quality-description__content {
+    padding: 0 2em;
+  }
 }
 .quality .quality__title {
   color: #459790;
   position: relative;
-  font-size: 2.4em;
-  text-transform: uppercase;
   margin: 0em 0 0.7em;
   padding-bottom: 0.2em;
+  line-height: 1.15em;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .quality .quality__title {
+    line-height: inherit;
+  }
+}
+@media (min-width: 850px) {
+  .quality .quality__title {
+    text-align: left;
+  }
 }
 .quality .title_dotted::before {
   content: '';
@@ -2639,31 +2744,55 @@ html.magnifying > body {
   background: url(img/bg-line-dot-separator.png) x-repeat;
 }
 
-.quality-description {
-  background: #efede4;
-  padding: 2em 12%;
-}
-.quality-description .quality-description__image {
-  padding: 0 2em;
-}
-.quality-description .quality-description__content {
-  padding: 0 2em;
-}
-
 .quality-certifications {
   background: #efede4;
-  padding: 5em 8%;
+  padding: 1em .5em;
+}
+@media (min-width: 700px) {
+  .quality-certifications {
+    padding: 2em 2.5% 1em;
+  }
+}
+@media (min-width: 850px) {
+  .quality-certifications {
+    padding: 5em 8%;
+  }
 }
 .quality-certifications .quality-certifications__wrapper {
-  margin-bottom: 2em;
-  padding: 0 1em;
+  margin-bottom: 1em;
+  padding: 0;
+}
+@media (min-width: 700px) {
+  .quality-certifications .quality-certifications__wrapper {
+    padding: 0 1em;
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 850px) {
+  .quality-certifications .quality-certifications__wrapper {
+    margin-bottom: 2em;
+  }
 }
 .quality-certifications .quality-certifications__pictitle {
   margin-bottom: 1.5em;
   position: relative;
+  text-align: center;
 }
-.quality-certifications .quality-certifications__pictitle img {
-  padding-right: 1em;
+@media (min-width: 700px) {
+  .quality-certifications .quality-certifications__pictitle {
+    text-align: left;
+  }
+}
+.quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+  margin-bottom: 1em;
+}
+@media (min-width: 700px) {
+  .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+    padding-right: 1em;
+  }
+}
+.quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img img {
+  margin: 0 auto;
 }
 .quality-certifications .quality-certifications__pictitle h3 {
   line-height: 1;

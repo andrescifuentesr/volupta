@@ -35,11 +35,13 @@
 // Section home page Hero
 .home-hero { 
 	background: url('img/home-hero.jpg') no-repeat center center;
+	background-size: cover;
 }
 
 // Section product-hero
 .product-hero {
 	background: url('img/bg-product-hero.jpg') no-repeat center center;
+	background-size: cover;
 	padding: 18em 0 0;
 
 	.product-hero__content {
@@ -55,17 +57,29 @@
 
 // Section About-hero
 .about-hero {
-	background: url('img/bg-about-hero.png') no-repeat bottom center;
+	background: url('img/bg-about-hero.jpg') no-repeat bottom center;
+	background-size: cover;
 }
 
 // Section Quality-hero
 .quality-hero {
 	background: url('img/bg-quality-top.jpg') no-repeat bottom center;
-	padding: 16em 0;
+	background-size: cover;
+	height: 500px;
+	padding: 10em 0 0;
+	@include mq(tablet) { padding: 12em 0 0; }
+	@include mq(lap) { padding: 16em 0; height: 650px; }
+	@include mq(desk) { }		
 
 	//quality page
 	.quality-hero__content {
-		width:50%;
-		margin: auto;
+		padding:0 .5em;
+		@include mq(tablet) { }
+		@include mq(lap) {  width:60%; margin: auto; }
+		@include mq(desk) { width:50%; margin: auto; }
+
+		p {
+			font-size: 1.25em;
+		}
 	}
 }
