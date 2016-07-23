@@ -52,6 +52,10 @@ get_header(); ?>
 				</section><!-- .quality-questions -->
 
 				<section class="quality-certifications">
+					<div class="quality-certifications__introduction">
+						<p><?php echo types_render_field( "section-certification-introduction", array( ) ); ?></p>
+					</div>
+
 					<div class="quality-certifications__wrapper">
 						<div class="quality-certifications__pictitle title_dotted">
 							<div class="quality-certifications__pictitle--img">
@@ -90,6 +94,10 @@ get_header(); ?>
 							<?php echo types_render_field( "section-certif-kosher-content", array("output" => "raw" ) ); ?>
 							</p>
 						</div>
+					</div>
+
+					<div class="quality-certifications__disclaimer">
+						<p><?php echo types_render_field( "section-certification-disclaimer", array( ) ); ?></p>
 					</div>
 				</section>
 

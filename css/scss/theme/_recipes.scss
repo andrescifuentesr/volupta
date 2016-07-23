@@ -1,32 +1,50 @@
 .site-recipes {
 	background: url('img/bg-recipe-wood.jpg') repeat;
-	padding: 11em 0 1em;
+	background-size: cover;
+	padding: 9em 0 1em;
+	@include mq(mobile) { padding: 6em 0 1em; }
+	@include mq(tablet) {  }
+	@include mq(lap) { padding: 11em 0 1em; }
+	@include mq(desk) { }
 
 
 	.flexslider .slides .slides-img {
 		display: inline-block;
-		width:50%;
 		vertical-align: top;
-		padding: 0 7.5%;
+		width:100%;
+		@include mq(tablet) { }
+		@include mq(lap) { width:50%; padding: 0 7.5%; }
+		@include mq(desk) { }
 
 		img {
-			width:100%;
-			margin:0;
+			width: auto;
+			max-width: 80%;
+			margin: 0 auto;
+			@include mq(mobile) { max-width: 60%; }
+			@include mq(tablet) { width:50%; }
+			@include mq(lap) { width: auto; max-width: 100%; }
+			@include mq(desk) { width: auto; }
 		}
 	}
 
 	.recipes__description {
-		display: inline-block;
-		width:50%;
-		vertical-align: top;
+		margin-top: 1em;
 		padding: 0 7.5%;
 		font-size: .85em;
+		vertical-align: top;
+		display: inline-block;
+		width:100%;
+		@include mq(tablet) { }
+		@include mq(lap) { width:50%; margin-top: 0; padding: 0 2.5%;}
+		@include mq(desk) { padding: 0 7.5%; }
 	}
 
 	.recipes__title {
 		color:$heading-color;
 		font-size: 3em;
 		text-transform: uppercase;
+		text-align: center;
+		@include mq(tablet) { text-align: left; }
 	}
 
 	.recipes__overview {
@@ -43,8 +61,18 @@
 	}
 
 	//modifications CSS flexslider
+	.flex-direction-nav {
+		display: none;
+		@include mq(tablet) { }
+		@include mq(lap) { display:block; }
+		@include mq(desk) { }	
+	}
+
 	.flex-direction-nav a {
-		top: 35%;
+		top: 48%;
+		@include mq(tablet) { }
+		@include mq(lap) {  }
+		@include mq(desk) {top: 35%; }	
 	}
 
 	.flex-direction-nav .flex-prev {
@@ -63,12 +91,18 @@
 	}
 
 	.flex-control-thumbs {
-		width:50%;
+		width: 100%;
+		@include mq(tablet) { }
+		@include mq(lap) { margin-top: 2em; width: 80%;}
+		@include mq(desk) { width: 50%; margin-top: .5em;}	
 
 		li {
 			display: inline-block;
 			float: none;
-			padding: 0 1em;
+			padding: 0 .25em;
+			@include mq(tablet) { padding: 0 1em; }
+			@include mq(lap) { }
+			@include mq(desk) { }
 		}
 	}
 

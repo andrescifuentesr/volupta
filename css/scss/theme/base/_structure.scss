@@ -54,3 +54,21 @@
 	@include mq(desk) { }
 }
 
+
+%col-1-4 {
+	display: inline-block;
+	vertical-align: top;
+	width:100%;
+	@include mq(tablet) { }
+	@include mq(lap) { width: percentage(1/4); }
+	@include mq(desk) { }
+}
+
+%col-3-4 {
+	display: inline-block;
+	vertical-align: top;
+	width:100%;
+	@include mq(tablet) { }
+	@include mq(lap) { width: percentage(3/4); }
+	@include mq(desk) { }
+}

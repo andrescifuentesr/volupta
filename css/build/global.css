@@ -1444,67 +1444,89 @@ html.magnifying > body {
   background: #efede4;
 }
 
-.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality .quality-description__content {
+.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 850px) {
-  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality .quality-description__content {
+  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
     width: 50%;
   }
 }
 @media (min-width: 1100px) {
-  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image, .quality .quality-description__content {
+  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
     width: 40%;
   }
 }
 
-.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form {
+.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 850px) {
-  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form {
+  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
     width: 50%;
   }
 }
 @media (min-width: 1100px) {
-  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form {
+  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
     width: 60%;
   }
 }
 
-.product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+.product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 700px) {
-  .product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+  .product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper {
     width: 50%;
   }
 }
 @media (min-width: 850px) {
-  .product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper, .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+  .product-kitchen .product-kitchen__recipes, .product-kitchen .product-kitchen__content img, .quality-certifications .quality-certifications__wrapper {
     width: 33.33333%;
   }
 }
 
-.product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div, .quality-certifications .quality__title {
+.product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 700px) {
-  .product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div, .quality-certifications .quality__title {
+  .product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div {
     width: 50%;
   }
 }
 @media (min-width: 850px) {
-  .product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div, .quality-certifications .quality__title {
+  .product-kitchen .product-kitchen__content, .product-kitchen .product-kitchen__content .product-kitchen__description, .about-questions .about-thequestion__item .about-thequestion__number--div {
     width: 66.66667%;
+  }
+}
+
+.quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
+    width: 25%;
+  }
+}
+
+.quality-certifications .quality__title {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .quality-certifications .quality__title {
+    width: 75%;
   }
 }
 
@@ -2068,8 +2090,6 @@ html.magnifying > body {
 .quality-hero {
   background: url("img/bg-quality-top.jpg") no-repeat bottom center;
   background-size: cover;
-  height: 500px;
-  padding: 10em 0 0;
 }
 @media (min-width: 700px) {
   .quality-hero {
@@ -2327,29 +2347,86 @@ html.magnifying > body {
 
 .site-recipes {
   background: url("img/bg-recipe-wood.jpg") repeat;
-  padding: 11em 0 1em;
+  background-size: cover;
+  padding: 9em 0 1em;
+}
+@media (min-width: 440px) {
+  .site-recipes {
+    padding: 6em 0 1em;
+  }
+}
+@media (min-width: 850px) {
+  .site-recipes {
+    padding: 11em 0 1em;
+  }
 }
 .site-recipes .flexslider .slides .slides-img {
   display: inline-block;
-  width: 50%;
   vertical-align: top;
-  padding: 0 7.5%;
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .site-recipes .flexslider .slides .slides-img {
+    width: 50%;
+    padding: 0 7.5%;
+  }
 }
 .site-recipes .flexslider .slides .slides-img img {
-  width: 100%;
-  margin: 0;
+  width: auto;
+  max-width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 440px) {
+  .site-recipes .flexslider .slides .slides-img img {
+    max-width: 60%;
+  }
+}
+@media (min-width: 700px) {
+  .site-recipes .flexslider .slides .slides-img img {
+    width: 50%;
+  }
+}
+@media (min-width: 850px) {
+  .site-recipes .flexslider .slides .slides-img img {
+    width: auto;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1100px) {
+  .site-recipes .flexslider .slides .slides-img img {
+    width: auto;
+  }
 }
 .site-recipes .recipes__description {
-  display: inline-block;
-  width: 50%;
-  vertical-align: top;
+  margin-top: 1em;
   padding: 0 7.5%;
   font-size: .85em;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .site-recipes .recipes__description {
+    width: 50%;
+    margin-top: 0;
+    padding: 0 2.5%;
+  }
+}
+@media (min-width: 1100px) {
+  .site-recipes .recipes__description {
+    padding: 0 7.5%;
+  }
 }
 .site-recipes .recipes__title {
   color: #006e63;
   font-size: 3em;
   text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .site-recipes .recipes__title {
+    text-align: left;
+  }
 }
 .site-recipes .recipes__overview {
   color: #006e63;
@@ -2361,8 +2438,21 @@ html.magnifying > body {
 .site-recipes .recipes__content p {
   margin: 0;
 }
+.site-recipes .flex-direction-nav {
+  display: none;
+}
+@media (min-width: 850px) {
+  .site-recipes .flex-direction-nav {
+    display: block;
+  }
+}
 .site-recipes .flex-direction-nav a {
-  top: 35%;
+  top: 48%;
+}
+@media (min-width: 1100px) {
+  .site-recipes .flex-direction-nav a {
+    top: 35%;
+  }
 }
 .site-recipes .flex-direction-nav .flex-prev {
   left: 2.5%;
@@ -2377,12 +2467,29 @@ html.magnifying > body {
   right: 52%;
 }
 .site-recipes .flex-control-thumbs {
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .site-recipes .flex-control-thumbs {
+    margin-top: 2em;
+    width: 80%;
+  }
+}
+@media (min-width: 1100px) {
+  .site-recipes .flex-control-thumbs {
+    width: 50%;
+    margin-top: .5em;
+  }
 }
 .site-recipes .flex-control-thumbs li {
   display: inline-block;
   float: none;
-  padding: 0 1em;
+  padding: 0 .25em;
+}
+@media (min-width: 700px) {
+  .site-recipes .flex-control-thumbs li {
+    padding: 0 1em;
+  }
 }
 
 .site-product .section-hero__title {
@@ -2694,7 +2801,7 @@ html.magnifying > body {
 }
 @media (min-width: 850px) {
   .quality {
-    padding: 3em 10%;
+    padding: 3em 5%;
   }
 }
 @media (min-width: 1100px) {
@@ -2770,7 +2877,23 @@ html.magnifying > body {
 }
 @media (min-width: 850px) {
   .quality-certifications {
-    padding: 5em 8%;
+    padding: 5em 5%;
+  }
+}
+@media (min-width: 1100px) {
+  .quality-certifications {
+    padding: 5em 10%;
+  }
+}
+.quality-certifications .quality-certifications__introduction {
+  color: #459790;
+  font-size: 1.1em;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .quality-certifications .quality-certifications__introduction {
+    width: 70%;
+    margin: 0 auto 3em;
   }
 }
 .quality-certifications .quality-certifications__wrapper {
@@ -2789,7 +2912,7 @@ html.magnifying > body {
   }
 }
 .quality-certifications .quality-certifications__pictitle {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   position: relative;
   text-align: center;
 }
@@ -2801,9 +2924,10 @@ html.magnifying > body {
 .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
   margin-bottom: 1em;
 }
-@media (min-width: 700px) {
+@media (min-width: 850px) {
   .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img {
     padding-right: 1em;
+    margin-bottom: 0;
   }
 }
 .quality-certifications .quality-certifications__pictitle .quality-certifications__pictitle--img img {
@@ -2811,15 +2935,21 @@ html.magnifying > body {
 }
 .quality-certifications .quality-certifications__pictitle h3 {
   line-height: 1;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
 }
 .quality-certifications .quality__title {
   color: #459790;
   position: relative;
+  margin: 0em 0 0.25em;
+  padding-bottom: 0.2em;
   font-size: 2.4em;
   text-transform: uppercase;
-  margin: 0em 0 0.7em;
-  padding-bottom: 0.2em;
+  text-align: center;
+}
+@media (min-width: 850px) {
+  .quality-certifications .quality__title {
+    text-align: left;
+  }
 }
 .quality-certifications .title_dotted::before {
   content: '';
@@ -2829,6 +2959,13 @@ html.magnifying > body {
   width: 100%;
   height: 4px;
   background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+.quality-certifications .quality-certifications__disclaimer {
+  margin: 2em auto 0;
+  font-size: .9em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
 }
 
 .search-input {

@@ -4,7 +4,7 @@
 	background: #efede4;
 	padding: 1em .5em;
 	@include mq(tablet) { padding: 2em 2.5%; }
-	@include mq(lap) { padding: 3em 10%; }
+	@include mq(lap) { padding: 3em 5%; }
 	@include mq(desk) { padding: 5em 10%; }
 
 
@@ -32,7 +32,7 @@
 
 	.quality-description__content {
 		padding: 0 .5em;
-		@extend %col-2-5;
+		@extend %col-3-5;
 		@include mq(tablet) { padding: 0 2em; }
 		@include mq(lap) { }
 		@include mq(desk) { }
@@ -61,33 +61,23 @@
 	
 }
 
-
-
-// // Section quality-description
-
-// .quality-description {
-// 	background: #efede4;
-// 	padding: 2em 12%;
-
-// 	.quality-description__image {
-// 		padding: 0 2em;
-// 		@extend %col-2-5;
-// 	}
-
-// 	.quality-description__content {
-// 		padding: 0 2em;
-// 		@extend %col-3-5;
-// 	}
-// }
-
 // Section quality-certifications
 
 .quality-certifications {
 	background: #efede4;
 	padding: 1em .5em;
 	@include mq(tablet) { padding: 2em 2.5% 1em; }
-	@include mq(lap) { padding: 5em 8%; }
-	@include mq(desk) { }
+	@include mq(lap) { padding: 5em 5%; }
+	@include mq(desk) { padding: 5em 10%; }
+
+	.quality-certifications__introduction {
+		color: $primary;
+		font-size: 1.1em;
+		text-align: center;
+		@include mq(tablet) { width:70%; margin:0 auto 3em; }
+		@include mq(lap) {  }
+		@include mq(desk) { }		
+	}
 
 	.quality-certifications__wrapper {
 		margin-bottom: 1em;
@@ -99,7 +89,8 @@
 	}
 
 	.quality-certifications__pictitle {
-		margin-bottom: 1.5em;
+		margin-bottom: 1em;
+		// padding-bottom: .5em;
 		position: relative;
 		text-align: center;
 		@include mq(tablet) { text-align: left;}
@@ -108,9 +99,9 @@
 
 		.quality-certifications__pictitle--img {
 			margin-bottom: 1em;
-			@extend %col-1-3;
-			@include mq(tablet) { padding-right: 1em;}
-			@include mq(lap) { }
+			@extend %col-1-4;
+			@include mq(tablet) { }
+			@include mq(lap) { padding-right: 1em; margin-bottom: 0; }
 			@include mq(desk) { }
 
 			img {
@@ -123,18 +114,22 @@
 
 		h3 {
 			line-height: 1;
-			margin-bottom: 0.5em;
+			margin-bottom: 0.25em;
 		}
 	}
 
 	.quality__title {
 		color:$primary;
 		position:relative;
+		margin: 0em 0 0.25em;
+		padding-bottom: 0.2em;
 		font-size: 2.4em;
 		text-transform: uppercase;
-		margin: 0em 0 0.7em;
-		padding-bottom: 0.2em;
-		@extend %col-2-3;
+		text-align: center;
+		@extend %col-3-4;
+		@include mq(tablet) { }
+		@include mq(lap) { text-align: left;  }
+		@include mq(desk) { }
 	}
 
 	.title_dotted {
@@ -143,10 +138,14 @@
 			@include dot-line(100%, 100%, 0);
 		}
 	}
+
+	.quality-certifications__disclaimer {
+		// width:80%;
+		margin:2em auto 0;
+		font-size: .9em;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+	}
 	
 }
-
-// Je pense que c'est mieux comme réglage de taille 
-//par rapport à la maquette 
-// mais je voulais pas toucher un autre fichier général ^^
-// p {font-size: 0.9em;}

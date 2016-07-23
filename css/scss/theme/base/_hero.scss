@@ -65,8 +65,8 @@
 .quality-hero {
 	background: url('img/bg-quality-top.jpg') no-repeat bottom center;
 	background-size: cover;
-	height: 500px;
-	padding: 10em 0 0;
+	// height: 500px;
+	// padding: 10em 0 0;
 	@include mq(tablet) { padding: 12em 0 0; }
 	@include mq(lap) { padding: 16em 0; height: 650px; }
 	@include mq(desk) { }		
