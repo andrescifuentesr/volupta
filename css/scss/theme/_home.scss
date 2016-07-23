@@ -8,10 +8,10 @@
 	color: #fff;
 	text-align: center;
 	padding: 1em .5em;
-	font-size: 1.25em;
-	@include mq(tablet) { padding: 2em 10%; }
-	@include mq(lap) { padding: 3em 20%; }
-	@include mq(desk) { }
+	font-size: 1em;
+	@include mq(tablet) { padding: 2em 10%; font-size: 1.25em; }
+	@include mq(lap) { padding: 2em 10%; }
+	@include mq(desk) { padding: 3em 20%;  }
 }
 
 // Section home-products

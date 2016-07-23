@@ -22,24 +22,34 @@ get_header(); ?>
 				</section><!-- .home-description -->
 				<section class="about-vision">
 					<div class="about-vision__item-content">
-						<h3 class="about-vision__item-title"><?php echo types_render_field( "section-vision-title", array("output" => "raw") ); ?></h3>
-						<p class="about-vision__item-description"><?php echo types_render_field( "section-vison-content", array( ) ); ?>
-						</p>
-				</div>
+						<h3 class="about-vision__item-title"><?php echo types_render_field( "section-mission-title", array() ); ?>
+						</h3><!--
+					
+					--><div class="about-vision__item-description">
+							<?php echo types_render_field( "section-mission-content", array( ) ); ?>
+						</div>
+					</div>
+
+					<div class="about-vision__item-content">
+						<h3 class="about-vision__item-title"><?php echo types_render_field( "section-vision-title", array() ); ?>
+						</h3><!--
+					
+					--><div class="about-vision__item-description">
+							<?php echo types_render_field( "section-vison-content", array( ) ); ?>
+						</div>
+					</div>
 				</section><!-- .about-ingredients -->
 
 				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-thefaq-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
-					<h3 class="section-banner__title">Frequently Asked Questions</h3>
+					<h3 class="section-banner__title">
+						<?php echo types_render_field( "section-thefaq-title", array( ) ); ?>
+					</h3>
 				</section><!-- .about-nutrition -->
 
-				<section class="about-questions"><!--
-				--><div class="about-thequestion__wrapper"><!--
-					 --><div class="about-thequestion__item title_dotted "></div><!--
-					 --><div class="about-thequestion__answer title_dotted"></div><!--
-				--></div>
+				<section class="about-questions">
 					<?php
 						$args = array(
-							'post_type' 		=> 'faq', 	//Costum type child of FAQs			
+							'post_type' 		=> 'faq', 	//Costum type child of FAQs		
 							'order'				=> 'ASC',		// List in ascending order
 							'orderby'      		=> 'id',		// List them in their menu order
 						);
@@ -63,11 +73,6 @@ get_header(); ?>
 				 --></div>
 					<?php endwhile; // End of the loop. ?>
 
-					<div class="about-thequestion__wrapper"><!--
-					 --><div class="about-thequestion__item title_dotted-bas "></div><!--
-					 --><div class="about-thequestion__answer title_dotted-bas"></div><!--
-				--></div>
-
 				</section><!-- .about-questions -->	
 
 				<?php wp_reset_postdata(); ?>
@@ -78,17 +83,17 @@ get_header(); ?>
 				</section><!-- .about-questions -->
 				<section class="about-contact">
 					<div class="about-contact__item-content ">
-						<p class="about-contact__text title_dotted">
+						<div class="about-contact__text title_dotted">
 							<?php echo types_render_field( "section-contact-content", array( ) ); ?>
-						</p>
-						<p class="about-contact__adresses">
+						</div>
+						<div class="about-contact__adresses">
 							<span class="about-contact__title"><?php echo types_render_field( "section-contact-adress-title", array( ) ); ?></span><br/>
 							<?php echo types_render_field( "section-contact-adress-content", array( ) ); ?>
-						</p>
-						<p class="about-contact__adresses title_dotted-bas">
+						</div>
+						<div class="about-contact__adresses title_dotted-bas">
 							<span class="about-contact__title"><?php echo types_render_field( "section-email-title", array( ) ); ?></span><br/>
 							<a href="mailto:info@volupta.com"><?php echo types_render_field( "section-email-adress", array( ) ); ?></a>
-						</p>
+						</div>
 					</div><!--
 					--><div class="about-contact__form">
 						    <?php echo do_shortcode('[contact-form-7 id="41" title="Contact form 1"]'); ?>

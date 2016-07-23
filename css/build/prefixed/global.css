@@ -1437,34 +1437,34 @@ html.magnifying > body {
   background: #efede4;
 }
 
-.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
+.home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-vision .about-vision__item-title, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 850px) {
-  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
+  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-vision .about-vision__item-title, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
     width: 50%;
   }
 }
 @media (min-width: 1100px) {
-  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-description .about-description__image, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
+  .home-products .home-products__image, .product-description .product-description__image, .product-nutrition .product-nutrition__image, .about-vision .about-vision__item-title, .about-questions .about-thequestion__item, .about-contact .about-contact__item-content, .quality .quality-description__image {
     width: 40%;
   }
 }
 
-.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
+.home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-vision .about-vision__item-description, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 850px) {
-  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
+  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-vision .about-vision__item-description, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
     width: 50%;
   }
 }
 @media (min-width: 1100px) {
-  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-description .about-description__content, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
+  .home-products .home-products__content, .product-description .product-description__content, .product-nutrition .product-nutrition__content, .about-vision .about-vision__item-description, .about-questions .about-thequestion__answer, .about-contact .about-contact__form, .quality .quality-description__content {
     width: 60%;
   }
 }
@@ -1789,8 +1789,14 @@ html.magnifying > body {
 .section-banner .section-banner__title {
   color: #fff;
   font-family: 'nexa_rust_script_l0regular';
-  font-size: 3em;
+  font-size: 2em;
   margin: 0;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .section-banner .section-banner__title {
+    font-size: 3em;
+  }
 }
 
 .line-separator {
@@ -2083,21 +2089,32 @@ html.magnifying > body {
 .about-hero {
   background: url("img/bg-about-hero.jpg") no-repeat bottom center;
   background-size: cover;
+  padding: 12em 0 0;
+}
+@media (min-width: 700px) {
+  .about-hero {
+    height: 350px;
+  }
+}
+@media (min-width: 850px) {
+  .about-hero {
+    padding: 16em 0;
+  }
 }
 
 .quality-hero {
   background: url("img/bg-quality-top.jpg") no-repeat bottom center;
   background-size: cover;
+  padding: 12em 0 0;
 }
 @media (min-width: 700px) {
   .quality-hero {
-    padding: 12em 0 0;
+    height: 350px;
   }
 }
 @media (min-width: 850px) {
   .quality-hero {
     padding: 16em 0;
-    height: 650px;
   }
 }
 .quality-hero .quality-hero__content {
@@ -2214,14 +2231,20 @@ html.magnifying > body {
   color: #fff;
   text-align: center;
   padding: 1em .5em;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 @media (min-width: 700px) {
   .home-description {
     padding: 2em 10%;
+    font-size: 1.25em;
   }
 }
 @media (min-width: 850px) {
+  .home-description {
+    padding: 2em 10%;
+  }
+}
+@media (min-width: 1100px) {
   .home-description {
     padding: 3em 20%;
   }
@@ -2624,44 +2647,84 @@ html.magnifying > body {
   width: 100%;
 }
 
-.about-description {
-  background: #efede4;
-  padding: 2em 10%;
-}
-.about-description .about-description__image {
-  padding: 0 2em;
-}
-.about-description .about-description__content {
-  padding: 0 2em;
-}
-
 .about-vision {
   background: #efede4;
-  padding: 4em 20%;
+  padding: 2em .5em 0;
   text-align: center;
+}
+@media (min-width: 700px) {
+  .about-vision {
+    padding: 2em 2.5% 0;
+  }
+}
+@media (min-width: 850px) {
+  .about-vision {
+    padding: 4em 10%;
+  }
+}
+@media (min-width: 1100px) {
+  .about-vision {
+    padding: 4em 15% 4em 10%;
+  }
 }
 .about-vision .about-vision__item-content {
   display: inline-block;
   vertical-align: middle;
-  position: relative;
+  margin-bottom: 1em;
+}
+@media (min-width: 850px) {
+  .about-vision .about-vision__item-content {
+    margin-bottom: 2em;
+  }
 }
 .about-vision .about-vision__item-title {
+  position: relative;
   color: #459790;
   font-size: 2.5em;
+  text-align: left;
   text-transform: uppercase;
-  margin: 0 0 2em 0;
+  margin: 0;
 }
-.about-vision .about-vision__item-description {
-  font-size: .95em;
+@media (min-width: 700px) {
+  .about-vision .about-vision__item-title {
+    padding-top: 20px;
+  }
 }
-.about-vision .about-vision__item-description::before {
+@media (min-width: 850px) {
+  .about-vision .about-vision__item-title {
+    margin: 0 0 2em 0;
+    padding-top: 20px;
+  }
+}
+.about-vision .about-vision__item-title::before {
   content: "";
   position: absolute;
-  top: 25%;
-  left: calc(50% - 5em);
-  width: 10em;
+  top: 0;
+  left: 0;
+  width: 80%;
   height: 4px;
   background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+.about-vision .about-vision__item-description {
+  position: relative;
+  font-size: .95em;
+  text-align: left;
+}
+@media (min-width: 850px) {
+  .about-vision .about-vision__item-description {
+    padding-top: 30px;
+  }
+}
+@media (min-width: 850px) {
+  .about-vision .about-vision__item-description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: url(img/bg-line-dot-separator.png) x-repeat;
+  }
 }
 
 .about-question {
@@ -2671,10 +2734,103 @@ html.magnifying > body {
 
 .about-questions {
   background: #efede4;
-  padding: 5em 10%;
+  padding: 1em .5em;
+}
+@media (min-width: 700px) {
+  .about-questions {
+    padding: 2em 2.5%;
+  }
+}
+@media (min-width: 850px) {
+  .about-questions {
+    padding: 3em 5%;
+  }
+}
+@media (min-width: 1100px) {
+  .about-questions {
+    padding: 5em 10%;
+  }
 }
 .about-questions .about-thequestion__wrapper {
   margin-bottom: 1em;
+}
+.about-questions .about-thequestion__wrapper:first-of-type .about-thequestion__item {
+  padding-top: 1em;
+}
+@media (min-width: 850px) {
+  .about-questions .about-thequestion__wrapper:first-of-type .about-thequestion__item {
+    padding-top: 3em;
+  }
+}
+.about-questions .about-thequestion__wrapper:first-of-type .about-thequestion__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+.about-questions .about-thequestion__wrapper:first-of-type .about-thequestion__answer {
+  padding-top: 1em;
+}
+@media (min-width: 850px) {
+  .about-questions .about-thequestion__wrapper:first-of-type .about-thequestion__answer {
+    padding-top: 3em;
+  }
+  .about-questions .about-thequestion__wrapper:first-of-type .about-thequestion__answer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: url(img/bg-line-dot-separator.png) x-repeat;
+  }
+}
+@media (min-width: 700px) {
+  .about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__item {
+    padding-bottom: 3em;
+  }
+}
+@media (min-width: 850px) {
+  .about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__item {
+    padding-bottom: 4.6em;
+  }
+  .about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__item::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 85%;
+    height: 4px;
+    background: url(img/bg-line-dot-separator.png) x-repeat;
+  }
+}
+@media (min-width: 1100px) {
+  .about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__item {
+    padding-bottom: 3em;
+  }
+}
+.about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__answer {
+  padding-bottom: 1em;
+}
+@media (min-width: 850px) {
+  .about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__answer {
+    padding-bottom: 3em;
+  }
+}
+.about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__answer::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: url(img/bg-line-dot-separator.png) x-repeat;
+}
+.about-questions .about-thequestion__wrapper:last-of-type .about-thequestion__answer p {
+  margin: 0;
 }
 .about-questions .about-thequestion__item {
   position: relative;
@@ -2684,7 +2840,7 @@ html.magnifying > body {
   border: 3px solid #459790;
   border-radius: 20px;
   display: inline-block;
-  margin: 0 2em;
+  margin: 0 2em 0 0;
   text-align: center;
   width: 33px;
   height: 33px;
@@ -2692,41 +2848,71 @@ html.magnifying > body {
 .about-questions .about-thequestion__item .about-thequestion__number--div {
   font-size: 1em;
 }
+@media (min-width: 700px) {
+  .about-questions .about-thequestion__item .about-thequestion__number--div {
+    width: auto;
+  }
+}
+@media (min-width: 850px) {
+  .about-questions .about-thequestion__item .about-thequestion__number--div {
+    width: 70%;
+  }
+}
 .about-questions .about-thequestion__answer {
-  padding: 0 4em 0 2em;
   position: relative;
 }
-.about-questions .title_dotted::before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: 2em;
-  width: 80%;
-  height: 4px;
-  background: url(img/bg-line-dot-separator.png) x-repeat;
-}
-.about-questions .title_dotted-bas::after {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 2em;
-  width: 80%;
-  height: 4px;
-  background: url(img/bg-line-dot-separator.png) x-repeat;
+@media (min-width: 1100px) {
+  .about-questions .about-thequestion__answer {
+    padding: 0 4em 0 0;
+  }
 }
 
 .about-contact {
   background-color: #fff;
-  padding: 4em 10%;
+  padding: 1em .5em;
+}
+@media (min-width: 700px) {
+  .about-contact {
+    padding: 1em 2.5%;
+  }
+}
+@media (min-width: 850px) {
+  .about-contact {
+    padding: 3em 5% 2em;
+  }
+}
+@media (min-width: 1100px) {
+  .about-contact {
+    padding: 4em 10% 3em;
+  }
 }
 .about-contact .about-contact__item-content {
-  padding: 0 5em 0 2em;
   position: relative;
 }
+@media (min-width: 700px) {
+  .about-contact .about-contact__item-content {
+    padding: 0;
+  }
+}
+@media (min-width: 850px) {
+  .about-contact .about-contact__item-content {
+    padding: 0 5em 0 2em;
+  }
+}
 .about-contact .about-contact__item-content .about-contact__text {
-  padding-top: 3em;
+  padding-top: 1em;
   position: relative;
   font-size: 1em;
+}
+@media (min-width: 700px) {
+  .about-contact .about-contact__item-content .about-contact__text {
+    padding-top: 1em;
+  }
+}
+@media (min-width: 850px) {
+  .about-contact .about-contact__item-content .about-contact__text {
+    padding-top: 3.5em;
+  }
 }
 .about-contact .about-contact__item-content .title_dotted::before {
   content: '';
@@ -2749,7 +2935,22 @@ html.magnifying > body {
   font-weight: normal;
 }
 .about-contact .title_dotted-bas {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
+}
+@media (min-width: 700px) {
+  .about-contact .title_dotted-bas {
+    padding-bottom: 1em;
+  }
+}
+@media (min-width: 850px) {
+  .about-contact .title_dotted-bas {
+    padding-bottom: 2.2em;
+  }
+}
+@media (min-width: 1100px) {
+  .about-contact .title_dotted-bas {
+    padding-bottom: 3.5em;
+  }
 }
 .about-contact .title_dotted-bas::after {
   content: '';
@@ -2761,7 +2962,17 @@ html.magnifying > body {
   background: url(img/bg-line-dot-separator.png) x-repeat;
 }
 .about-contact .about-contact__form {
-  padding: 0 4em 0 2em;
+  padding: 2em 0 0;
+}
+@media (min-width: 700px) {
+  .about-contact .about-contact__form {
+    padding: 2em 2.5%;
+  }
+}
+@media (min-width: 850px) {
+  .about-contact .about-contact__form {
+    padding: 0 4em 0 2em;
+  }
 }
 .about-contact .about-contact__form input[type="text"], .about-contact .about-contact__form input[type="email"], .about-contact .about-contact__form textarea, .about-contact .about-contact__form input[type="submit"] {
   background-color: #fff;

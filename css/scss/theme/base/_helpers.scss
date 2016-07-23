@@ -10,10 +10,13 @@
 	.section-banner__title {
 		color:#fff;
 		font-family: 'nexa_rust_script_l0regular';
-		font-size: 3em;
+		font-size: 2em;
 		margin: 0;
-		// top: 25%;
+		text-align: center;
 		@extend %center;
+		@include mq(tablet) { font-size: 3em;}
+		@include mq(lap) { }
+		@include mq(desk) { }   
 	}
 }
 
