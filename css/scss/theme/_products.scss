@@ -15,11 +15,23 @@
 
 // Section product-description
 .product-description {
-	padding: 2em 10% 4em;
+	padding: 2em .5em;
+	@include mq(tablet) { padding: 2em 2.5% 2em;}
+	@include mq(lap) { padding: 2em 5% 2em; }
+	@include mq(desk) { padding: 2em 10% 2em; }
+
 
 	.product-description__image {
 		padding: 0;
 		@extend %col-2-5;
+
+		img {
+			margin: 0 auto;
+			width: 50%;
+			@include mq(tablet) { }
+			@include mq(lap) { width: auto; }
+			@include mq(desk) { }
+		}
 	}
 
 	.product-description__title {
@@ -30,8 +42,10 @@
 	}
 
 	.product-description__content {
-		padding: 0 1em 0 3em;
 		@extend %col-3-5;
+		@include mq(tablet) { }
+		@include mq(lap) { padding: 0 1em 0 3em; }
+		@include mq(desk) { }
 	}
 
 	.product-description__description {
@@ -42,29 +56,48 @@
 
 // Section product-ingredients
 .product-ingredients {
-	background: url('img/bg-product-ingredients.png') no-repeat bottom left #efede4;
-	padding: 4em 10% 4em 30%;
+	background: #efede4;
+	padding: 2em .5em 1em;
+	@include mq(tablet) { padding: 2em 2.5%; }
+	@include mq(lap) { 
+		padding: 3em 5% 16em;
+		background: url('img/bg-product-ingredients.png') no-repeat bottom left #efede4;
+	}
+	@include mq(desk) {padding: 4em 10% 4em 30%;  }
 
 	img {
 		display: inline-block;
 		// width:15%; it seems that magnify has to take it
 		vertical-align: top;
-		margin-bottom: 1.5em;
+		// margin-bottom: 1.5em;
+		margin: 0 auto 1.5em;
+		width: 50%;
+
+		@include mq(tablet) { }
+		@include mq(lap) { width:auto;   }
+		@include mq(desk) { }
 	}
 
 	.product-ingredients__item-content {
 		display: inline-block;
 		vertical-align: middle;
-		width:65%;
-		margin-left: 20%;
+		width: 100%;
 		margin-bottom: 1em;
 		position:relative;
+		@include mq(tablet) { }
+		@include mq(lap) { 
+			width:65%; 
+			margin-left: 20%;
 
-		&::before {
-			// content:"\2022   \2022    \2022    \2022    \2022   \2022    \2022    \2022    \2022    \2022";
-			// font-size: 1.5em;
-			content:"";
-			@include dot-line(8em, 20%, -30%);
+			&::before {
+				content:"";
+				@include dot-line(8em, 10%, -28%);
+			}
+		}
+		@include mq(desk) {
+			&::before {
+				top: 10%;
+			}
 		}
 
 	}
@@ -84,11 +117,18 @@
 
 // Section product-nutrition
 .product-nutrition {
-	padding: 4em 10%;
+	padding: 1em .5em;
+	@include mq(tablet) { padding: 2em 2.5% 2em;}
+	@include mq(lap) { padding: 2em 5% 4em; }
+	@include mq(desk) { padding: 2em 10% 4em; }	
 
 	.product-nutrition__image {
 		padding: 0 3em;
+		margin-top: 1em;
 		@extend %col-2-5;
+		@include mq(tablet) { }
+		@include mq(lap) { margin-top: 0; }
+		@include mq(desk) {  }	
 
 		img {
 			margin: 0 auto;
@@ -96,23 +136,46 @@
 	}
 
 	.product-nutrition__content {
-		margin-top: 2em;
-		padding: 0 2em;
+		margin-top: 1em;
 		@extend %col-3-5;
+		@include mq(tablet) { }
+		@include mq(lap) { padding: 0 2em;}
+		@include mq(desk) { }	
 
 		p {
 			font-size: .9em;
 		}
 	}
+
+	.product-nutrition__disclaimer-image {
+		display: inline-block;
+		vertical-align: top;
+		// width: 20%;
+	}
+
+	.product-nutrition__disclaimer-content {
+		display: inline-block;
+		vertical-align: top;
+		width: 80%;
+		padding-left: .5em;
+	}
 }
 
 // Section product-kitchen
 .product-kitchen {
-	padding: 2em 10%;
+	padding: 1em .5em 0;
+	@include mq(tablet) { padding: 2em 2.5% 2em;}
+	@include mq(lap) { padding: 2em 5% 4em; }
+	@include mq(desk) { padding: 2em 10% 4em; }	
+
 
 	.product-kitchen__recipes {
-		padding: 0 2em;
-		@extend %col-1-3;
+		display: inline-block;
+		vertical-align: top;
+		width:100%;
+		@include mq(tablet) { }
+		@include mq(lap) { width: percentage(1/3);  }
+		@include mq(desk) { padding: 0 2em; }
 	}
 
 	.product-kitchen__title {
@@ -120,6 +183,11 @@
 		position:relative;
 		font-size: 2.4em;
 		text-transform: uppercase;
+		margin: 0;
+		line-height: 1.2em;
+		@include mq(tablet) { margin: 1em 0; line-height: 1.6em;}
+		@include mq(lap) { }
+		@include mq(desk) { }
 	}
 
 	.title_dotted {
@@ -130,30 +198,57 @@
 	}
 
 	.product-kitchen__content {
-		padding: 0 2em;
-		@extend %col-2-3;
+		display: inline-block;
+		vertical-align: top;
+		width:100%;
+		@include mq(tablet) { margin: 0; padding: 0 2em;}
+		@include mq(lap) { width: percentage(2/3);  }
+		@include mq(desk) { }
 
-		img {
+		.product-kitchen__content-wrapper {
+			margin-top: 1em;
+			@include mq(tablet) { margin: 0; }
+			@include mq(lap) { }
+			@include mq(desk) { }
+		}
+
+		.product-kitchen__content-image {
 			@extend %col-1-3;
+
+			img {
+				margin: 0 auto;
+			}
 		}
 
 		.product-kitchen__description {
-			padding: 0 1em;
-			margin-bottom: 1.5em;
 			@extend %col-2-3;	
+			@include mq(tablet) { margin-bottom: 1.5em; padding: 0 1em;}
+			@include mq(lap) { }
+			@include mq(desk) { }
 		}
 	}
 
 	.product-kitchen__disclaimer {
-		width: 60%;
 		margin: 1.5em 0 0;
-		font-size: .75em;
-		text-transform: uppercase;
+		@include mq(tablet) { width: 60%; }
+		@include mq(lap) { }
+		@include mq(desk) { }
+	}
+
+	.product-kitchen__recipes-wrapper {
+		margin-top: 1em;
+		@include mq(tablet) { margin-top: 0;}
 	}
 
 	.product-kitchen__recipes-item {
 		position:relative;
 		margin-bottom: 2em;
+		@include mq(mobile) { 
+			@include simple-grid( 2 , 5% );
+		}
+		@include mq(tablet) {  }
+		@include mq(lap) { width: 100%; }
+		@include mq(desk) { }
 
 		&:hover {
 			cursor:pointer;
@@ -183,6 +278,8 @@
 			color:#fff;
 			text-align: center;
 			@extend %center;
+			@include mq(lap) { width: 80%; margin: 0 auto;}
+			@include mq(desk) { width: auto; }
 		}
 
 		img {

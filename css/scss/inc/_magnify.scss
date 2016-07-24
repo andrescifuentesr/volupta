@@ -4,7 +4,10 @@ html.magnifying > body {
 .magnify {
 	position: relative;
 	display: inline-block;
-	width:15%;
+	width:100%;
+	@include mq(tablet) {  }
+	@include mq(lap) { width:15%;}
+	@include mq(desk) {  }
 	 
 }
 .magnify .magnify-lens {

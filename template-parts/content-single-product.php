@@ -75,7 +75,7 @@
 		$ingredient_image = types_render_field( "ingredient-image", array( ) );
 	?>
 
-	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner-ingredients.jpg');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
+	<section class="section-banner" style="background-image:url('<?php echo types_render_field( "section-ingredients-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_ingredients_product_title ); ?></h3>
 	</section><!-- .product-ingredients -->
 
@@ -126,8 +126,12 @@
 		$section_nutrition_product_content = types_render_field( "section-nutrition-product-content", array( ) );
 		//call of custom field section-nutrition-product-image
 		$section_nutrition_product_image = types_render_field( "section-nutrition-product-image", array( ) );
+		//call of custom field section-nutrition-image-disclaimer
+		$section_nutrition_image_disclaimer = types_render_field( "section-nutrition-image-disclaimer", array( ) );
+		//call of custom field section-nutrition-content-image
+		$section_nutrition_content_disclaimer = types_render_field( "section-nutrition-content-disclaimer", array( ) );
 	?>
-	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner-nutrition.jpg');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
+	<section class="section-banner" style="background-image:url('<?php echo types_render_field( "section-nutriton-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 			<?php if( !empty( $section_nutrition_product_title ) ) { ?>
 				<h3 class="section-banner__title"><?php echo esc_html( $section_nutrition_product_title ); ?></h3>
 			<?php } ?>
@@ -137,6 +141,12 @@
 	<section class="product-nutrition">
 		<div class="product-nutrition__content">
 			<?php echo $section_nutrition_product_content; ?>
+			
+			<div class="product-nutrition__disclaimer disclaimer">
+				<div class="product-nutrition__disclaimer-image"><?php echo $section_nutrition_image_disclaimer ?></div><!--
+				
+			--><div class="product-nutrition__disclaimer-content"><?php echo $section_nutrition_content_disclaimer ?></div>
+			</div>
 		</div><!--
 
 	--><div class="product-nutrition__image">
@@ -158,46 +168,40 @@
 	 <?php
 		//call of custom field section-kitchen-product-title
 		$section_kitchen_product_title = types_render_field( "section-kitchen-product-title", array( ) );
-		//call of custom field section-kitchen-product-content
-		$section_kitchen_product_content = types_render_field( "section-kitchen-product-content", array( ) );
+		//call of custom field section_kitchen_instructions_content
+		$section_kitchen_instructions_content = types_render_field( "section-kitchen-instructions-content", array( ) );
 		//call of custom field section-kitchen-product-image
 		$section_kitchen_product_image = types_render_field( "section-kitchen-product-image", array( "alt" => "Kitchen instructions", "title" => "" ) );
+		//call of custom field section-kitchen-disclaimer
+		$section_kitchen_disclaimer = types_render_field( "section-kitchen-disclaimer", array( ) );
 	?>
-	<section class="section-banner" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-product-banner-kitchen.jpg');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
+	<section class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
 	</section><!-- .product-kitchen -->
 
 	<section class="product-kitchen">
 		<div class="product-kitchen__content">
 			
-			<h3 class="product-kitchen__title title_dotted">Organic quinoa & ancient grains</h3>
-			<div>
-				<?php echo $section_kitchen_product_image; //call of custom field contact-image ?><!--
+			<h3 class="product-kitchen__title title_dotted">
+				<?php the_title(); ?>
+			</h3>
+			
+			<div class="product-kitchen__content-wrapper">
+				<div class="product-kitchen__content-image">
+					<?php echo $section_kitchen_product_image; //call of custom field contact-image ?>
+				</div><!--
 			
 			--><div class="product-kitchen__description">
-					<?php //echo $section_kitchen_product_content; ?>
-					<p>
-						Place 1 cup of grains and 2 cups of water or broth in a saucepan and bring to boil. (for fluffier/looser texture, use less liquid)
-					</p>
-
-					<br><br><br>
-
-					<p>Reduce heat to low and cover.</p>
-
-					<br><br><br>
-
-					<p>Cook for 15-20 minutes and remove from heat. (frequent stirring is recommended)</p>
-
-					<br><br><br>
-
-					<p>Fluff with a fork and serve. </p>
+					<?php echo $section_kitchen_instructions_content; ?>
 				</div>
 
 				<div class="line-separator"></div>
 
 			</div>
 
-			<p class="product-kitchen__disclaimer">STORAGE INFORMATION: TO PRESERVE FRESHNESS AND QUALITY,  THIS PRODUCT SHOULD BE STORED IN A COOL, DRY PLACE AWAY FROM SUNLIGHT PRIOR TO COOKING.</p>
+			<div class="product-kitchen__disclaimer disclaimer">
+				<?php echo $section_kitchen_disclaimer; ?>
+			</div>
 		</div><!--
 
 	--><div class="product-kitchen__recipes">
@@ -205,7 +209,6 @@
 			<h3 class="product-kitchen__title title_dotted"><?php _e( 'Featured recipes', 'volupta') ?></h3>
 
 			<div class="product-kitchen__recipes-wrapper">
-
 				<?php
 					$args = array(
 						'post_type' 		=> 'recipe', 	//Costum type Recipe			
@@ -216,19 +219,17 @@
 
 					$QueryRecipes = new WP_Query($args);
 				?>
-				<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?>
-
-					<div class="product-kitchen__recipes-item">
+				<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?><!--
+				--><div class="product-kitchen__recipes-item">
 						<a href="<?php the_permalink(); ?>">
-							<img class="product-kitchen__recipes-image" src="<?php bloginfo('template_directory'); ?>/img/produc-recipe-item.png" alt="">
+							<div class="product-kitchen__recipes-image">
+								<?php echo types_render_field( "recipes-feature-image", array() ); ?>
+							</div>
 							<?php the_title( '<span>', '</span>' ); ?>
 						</a>
-					</div>
-
-				<?php endwhile; // End of the loop. ?>
-
+					</div><!--
+			--><?php endwhile; // End of the loop. ?>
 			</div><!-- .product-kitchen__recipes-wrapper -->
-
 		</div>
 	</section><!-- .product-kitchen -->	
 
