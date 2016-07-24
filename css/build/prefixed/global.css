@@ -1129,6 +1129,12 @@ p {
   margin: 0 10%;
   width: 80%;
 }
+@media (min-width: 440px) {
+  .flexslider .slides img {
+    width: 60%;
+    margin: 0 20%;
+  }
+}
 @media (min-width: 700px) {
   .flexslider .slides img {
     width: 70%;
@@ -1209,7 +1215,7 @@ html[xmlns] .flexslider .slides {
   background: url("img/slider-arrow.svg") repeat;
   transition: all 0.3s ease-in-out;
 }
-@media (min-width: 700px) {
+@media (min-width: 440px) {
   .flex-direction-nav a {
     top: 30%;
   }
@@ -1421,6 +1427,33 @@ html.magnifying > body {
   text-transform: none;
 }
 
+.fixedsticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+
+/* When position: sticky is supported but native behavior is ignored */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+  position: static;
+}
+
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+  position: fixed;
+}
+
+.fixedsticky-dummy {
+  display: none;
+}
+
+.fixedsticky-on + .fixedsticky-dummy {
+  display: block;
+}
+
 .site {
   width: 100%;
   position: relative;
@@ -1531,7 +1564,7 @@ html.magnifying > body {
 .site-header {
   position: fixed;
   left: 50%;
-  z-index: 999;
+  z-index: 99999;
   -ms-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
   height: 147px;
@@ -2310,8 +2343,9 @@ html.magnifying > body {
 }
 
 .home-products {
-  background: url("img/bg-home-product.png") no-repeat bottom right #e5e3d4;
-  padding: 1em .5em 5em;
+  background: #e5e3d4;
+  padding: 1em .5em 2em;
+  overflow: hidden;
 }
 @media (min-width: 700px) {
   .home-products {
@@ -2321,22 +2355,69 @@ html.magnifying > body {
 @media (min-width: 850px) {
   .home-products {
     padding: 3em 10% 3em;
+    background: url("img/bg-home-product.png") no-repeat bottom right #e5e3d4;
   }
 }
 .home-products .home-products__image {
   position: relative;
-  height: 600px;
-  padding: 2em;
+  height: 430px;
+  margin-top: 2em;
+}
+@media (min-width: 440px) {
+  .home-products .home-products__image {
+    margin-top: 3em;
+  }
+}
+@media (min-width: 700px) {
+  .home-products .home-products__image {
+    margin-top: 5em;
+  }
+}
+@media (min-width: 850px) {
+  .home-products .home-products__image {
+    margin-top: 5em;
+  }
+}
+@media (min-width: 1100px) {
+  .home-products .home-products__image {
+    padding: 2em;
+    height: 600px;
+    margin-top: 0;
+  }
 }
 .home-products .home-products__image-seed {
   position: absolute;
-  top: 50%;
-  -ms-transform: translate(35px, -50%);
-      transform: translate(35px, -50%);
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  width: 80%;
+}
+@media (min-width: 440px) {
+  .home-products .home-products__image-seed {
+    width: 50%;
+  }
+}
+@media (min-width: 850px) {
+  .home-products .home-products__image-seed {
+    width: auto;
+  }
 }
 .home-products .home-products__image-pouch {
   position: absolute;
   top: 50%;
+  left: 50%;
+  width: 80%;
+}
+@media (min-width: 440px) {
+  .home-products .home-products__image-pouch {
+    width: 50%;
+  }
+}
+@media (min-width: 850px) {
+  .home-products .home-products__image-pouch {
+    width: auto;
+  }
 }
 .home-products .home-products__content {
   text-align: center;
@@ -2345,6 +2426,7 @@ html.magnifying > body {
   .home-products .home-products__content {
     text-align: left;
     padding-bottom: 3em;
+    margin-top: 1em;
   }
 }
 @media (min-width: 1100px) {
@@ -2355,8 +2437,10 @@ html.magnifying > body {
 .home-products .home-products__title {
   color: #459790;
   font-size: 2em;
+  line-height: 1.2em;
   text-transform: uppercase;
   margin-bottom: 0;
+  margin-top: .5em;
   text-align: center;
 }
 @media (min-width: 700px) {
@@ -2585,6 +2669,38 @@ html.magnifying > body {
   color: #459790;
   font-size: 2.25em;
   margin-bottom: .5em;
+}
+
+.fixedsticky {
+  top: 74px;
+}
+
+.product-menu {
+  background: #459790;
+  padding: 1em 25%;
+  width: 100%;
+  z-index: 9999;
+}
+.product-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.product-menu li {
+  color: #fff;
+  border-right: 1px solid #fff;
+  padding: 0 2em;
+  display: inline-block;
+  width: 25%;
+}
+.product-menu li:last-of-type {
+  border-right: none;
+}
+.product-menu a {
+  color: #fff;
+}
+.product-menu a:hover {
+  color: #dfdcc9;
 }
 
 .product-description {

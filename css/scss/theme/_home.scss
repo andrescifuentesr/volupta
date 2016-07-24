@@ -16,36 +16,52 @@
 
 // Section home-products
 .home-products {
-	background: url('img/bg-home-product.png') no-repeat bottom right $tertiary;
-	padding: 1em .5em 5em;
+	background: $tertiary;
+	padding: 1em .5em 2em;
+	overflow: hidden;
 	@include mq(tablet) { padding: 2em 10%; }
-	@include mq(lap) { padding: 3em 10% 3em; }
+	@include mq(lap) { padding: 3em 10% 3em; background: url('img/bg-home-product.png') no-repeat bottom right $tertiary;  }
 	@include mq(desk) { }   
 
 	.home-products__image {
 		position:relative;
-		height: 600px;
-		// a modifier
-		padding: 2em;
-		// a modifier
+		height: 430px;
+		margin-top: 2em;
 		@extend %col-2-5;
+		@include mq(mobile) { margin-top: 3em; }
+		@include mq(tablet) { margin-top: 5em; }
+		@include mq(lap) {      margin-top: 5em; }
+		@include mq(desk) { padding: 2em; height: 600px; margin-top: 0;}
 	}
 
 	.home-products__image-seed {
 		position: absolute;
-		top: 50%;
-		transform: translate(35px, -50%);
+		top: 40%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		@include mq(mobile) { width: 50%; }
+		@include mq(tablet) { }
+		@include mq(lap) { width: auto; }
+		@include mq(desk) {  }
+		
 	}
 
 	.home-products__image-pouch {
 		position:absolute;
 		top: 50%;
+		left:50%;
+		width: 80%;
+		@include mq(mobile) { width: 50%; }
+		@include mq(tablet) { }
+		@include mq(lap) { width: auto;  }
+		@include mq(desk) { }
 	}
 
 	.home-products__content {
 		text-align: center;
 		@extend %col-3-5;
-		@include mq(tablet) { text-align: left; padding-bottom: 3em;}
+		@include mq(tablet) { text-align: left; padding-bottom: 3em; margin-top: 1em;}
 		@include mq(lap) { }
 		@include mq(desk) { padding: 0 10em 0 4em; }
 	}
@@ -53,8 +69,10 @@
 	.home-products__title {
 		color: $primary;
 		font-size: 2em;
+		line-height: 1.2em; 
 		text-transform: uppercase;
 		margin-bottom: 0;
+		margin-top: .5em;
 		text-align: center;
 		@include mq(tablet) { font-size: 3em; line-height: 1.2em; text-align: left; margin: 0; }
 		@include mq(lap) { margin: 1em 0 0.25em;}

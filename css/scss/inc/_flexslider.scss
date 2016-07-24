@@ -44,6 +44,7 @@
   display: block;
   margin:0 10%;
   width:80%;
+  @include mq(mobile) { width:60%; margin:0 20%;  }
   @include mq(tablet) { width:70%; margin:0 15%;  }
   @include mq(lap) { width:40%; margin:0 30%; }
   @include mq(desk) { }
@@ -103,7 +104,8 @@ html[xmlns] .flexslider .slides {
   text-indent: -9999px;
   background: url('img/slider-arrow.svg') repeat;
   transition: all 0.3s ease-in-out;
-  @include mq(tablet) { top: 30%;  }
+  @include mq(mobile) { top: 30%;  }
+  @include mq(tablet) {  }
   @include mq(lap) {  }
   @include mq(desk) { }  
 }

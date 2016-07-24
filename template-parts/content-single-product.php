@@ -36,6 +36,24 @@
 		</div>
 	</section><!-- .product-hero -->
 
+	<section class="product-menu fixedsticky clearfix" id="js-sticky-menu">
+		<ul>
+			<li>
+				<a href="#js-product-description">Description</a>
+			</li><!--
+		--><li>
+				<a href="#js-product-ingredients">Ingredients</a>
+			</li><!--
+		--><li>
+				<a href="#js-product-nutrition">Nutrition</a>
+			</li><!--
+		--><li>
+				<a href="#js-product-kitchen">Kitchen</a>
+			</li>
+		</ul>
+		
+	</section>
+
 	<?php 
 	/*
 	/////////////////
@@ -43,7 +61,7 @@
 	///////////////// 
 	*/
 	 ?>
-	<section class="product-description">
+	<section id="js-product-description" class="product-description">
 		<div class="product-description__image">
 			<?php the_post_thumbnail( 'full' ); ?>
 		</div><!--
@@ -76,7 +94,7 @@
 		$ingredient_image = types_render_field( "ingredient-image", array( ) );
 	?>
 
-	<section class="section-banner" style="background-image:url('<?php echo types_render_field( "section-ingredients-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
+	<section id="js-product-ingredients" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-ingredients-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_ingredients_product_title ); ?></h3>
 	</section><!-- .product-ingredients -->
 
@@ -132,7 +150,7 @@
 		//call of custom field section-nutrition-content-image
 		$section_nutrition_content_disclaimer = types_render_field( "section-nutrition-content-disclaimer", array( ) );
 	?>
-	<section class="section-banner" style="background-image:url('<?php echo types_render_field( "section-nutriton-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
+	<section id="js-product-nutrition" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-nutriton-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 			<?php if( !empty( $section_nutrition_product_title ) ) { ?>
 				<h3 class="section-banner__title"><?php echo esc_html( $section_nutrition_product_title ); ?></h3>
 			<?php } ?>
@@ -176,7 +194,7 @@
 		//call of custom field section-kitchen-disclaimer
 		$section_kitchen_disclaimer = types_render_field( "section-kitchen-disclaimer", array( ) );
 	?>
-	<section class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
+	<section id="js-product-kitchen" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -50px;" data-1000-top="background-position: 0px 0px;">
 		<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
 	</section><!-- .product-kitchen -->
 

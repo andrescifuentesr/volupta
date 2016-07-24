@@ -32,7 +32,7 @@
 	<div class="home-products__image">
 		<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
 			<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="">
-			<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="" data-450-top="transform: translate(0, -50%);" data-900-top="transform: translate(0, 100%);">
+			<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="" data-600-top="transform: translate(-50%, -50%);" data-1000-top="transform: translate(-50%, 100%);">
 		</a>
 	</div><!--
 	
