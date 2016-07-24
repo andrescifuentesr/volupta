@@ -18,7 +18,8 @@
 	///////////////// 
 	*/
 	 ?>
-	<section class="section-hero product-hero">
+
+	<section class="section-hero product-hero" style="background-image:url('<?php echo types_render_field( "section-hero-background-image", array( "alt" => "", "url" => "true" ) ); ?>');">
 		<div class="section-hero__content product-hero__content">
 			<?php
 				//call of custom field section-product-title-hero

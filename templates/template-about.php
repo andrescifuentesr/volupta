@@ -10,7 +10,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<section class="section-hero about-hero">
+				<section class="section-hero about-hero" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
 					<div class="section-hero__content">
 						<?php the_content(); ?>
 					</div>
