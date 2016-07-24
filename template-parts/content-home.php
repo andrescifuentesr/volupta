@@ -9,31 +9,40 @@
 
 ?>
 
-<section class="section-hero home-hero">
+<section class="section-hero home-hero" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
 	<div class="section-hero__content">
-		<h2 class="section-hero__title">lorem ipsum dolor</h2>
-		<p class="section-hero__sub-title">sit amet conasectetur adipiscing elit</p>
+		<?php the_content(); ?>
 	</div>
 </section><!-- .home-hero -->
 
+
+<?php 
+	//call of custom home-section-introduction-content
+	$home_section_introduction_content = types_render_field( "home-section-introduction-content", array( ) );
+	//call of custom section-home-product-title
+	$section_home_product_title = types_render_field( "section-home-product-title", array( ) );
+	//call of custom section-home-product-content
+	$section_home_product_content = types_render_field( "section-home-product-content", array( ) );
+?>
 <section class="home-description">
-	<p class="">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit mauris a efficitur consequat. Sed ex nibh, ultricies in nisl eget, commodo tempor lorem. Mauris enim mi, ornare non euismod vitae, pretium eget lorem. 
-	</p>
+	<div><?php echo $home_section_introduction_content; ?></div>
 </section><!-- .home-description -->
 
 <section class="home-products">
 	<div class="home-products__image">
 		<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-			<img src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="">
+			<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="">
+			<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="" data-450-top="transform: translate(0, -50%);" data-900-top="transform: translate(0, 100%);">
 		</a>
 	</div><!--
 	
 --><div class="home-products__content">
-		<h3 class="home-products__title">lorem ipsum sit</h3>
-		<p class="home-products__description">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit mauris a efficitur consequat. Sed ex nibh, ultricies in nisl eget, commodo tempor lorem. Mauris enim mi, ornare non euismod vitae, pretium eget lorem. 
-		</p>
+		<h3 class="home-products__title">
+			<?php echo $section_home_product_title; ?>
+		</h3>
+		<div class="home-products__description">
+			<?php echo $section_home_product_content; ?>
+		</div>
 		<a class="home-products__button" href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
 			<?php _e('View products', 'volupta') ?>
 		</a>

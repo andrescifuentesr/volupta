@@ -3,15 +3,15 @@
 	height: 350px;
 	color:#fff;
 	text-align: center;
-	padding: 10em 0 0;
+	padding: 12em 0 0;
 
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	@include mq(tablet) { padding: 17em 0 0; height: 400px; }
-	@include mq(lap) { padding: 20em 0 0; height: 500px; }
-	@include mq(desk) { height: 650px; }	
+	@include mq(tablet) {  height: 400px; }
+	@include mq(lap) { padding: 14em 0 0; height: 500px; }
+	@include mq(desk) { padding: 18em 0 0; height: 650px; }	
 
 	.section-hero__content {
 		width:100%;
@@ -39,8 +39,8 @@
 
 // Section home page Hero
 .home-hero { 
-	background: url('img/home-hero.jpg') no-repeat center center;
-	background-size: cover;
+	// background: url('img/home-hero.jpg') no-repeat center center;
+	// background-size: cover;
 }
 
 // Section product-hero
@@ -79,16 +79,16 @@
 
 // Section About-hero
 .about-hero {
-	padding: 12em 0 0;
-	@include mq(tablet) { }
+
+	@include mq(tablet) { padding: 12em 0 0; }
 	@include mq(lap) { padding: 17em 0; }
 	@include mq(desk) { padding: 20em 0; }		
 }
 
 // Section Quality-hero
 .quality-hero {
-	padding: 12em 0 0;
-	@include mq(tablet) { }
+	
+	@include mq(tablet) { padding: 12em 0 0; }
 	@include mq(lap) { padding: 17em 0; }
 	@include mq(desk) {padding: 20em 0; }		
 

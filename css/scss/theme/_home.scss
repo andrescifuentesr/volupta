@@ -11,7 +11,7 @@
 	font-size: 1em;
 	@include mq(tablet) { padding: 2em 10%; font-size: 1.25em; }
 	@include mq(lap) { padding: 2em 10%; }
-	@include mq(desk) { padding: 3em 20%;  }
+	@include mq(desk) { padding: 3em 28%;  }
 }
 
 // Section home-products
@@ -19,14 +19,27 @@
 	background: url('img/bg-home-product.png') no-repeat bottom right $tertiary;
 	padding: 1em .5em 5em;
 	@include mq(tablet) { padding: 2em 10%; }
-	@include mq(lap) { padding: 3em 10%; }
+	@include mq(lap) { padding: 3em 10% 3em; }
 	@include mq(desk) { }   
 
 	.home-products__image {
+		position:relative;
+		height: 600px;
 		// a modifier
 		padding: 2em;
 		// a modifier
 		@extend %col-2-5;
+	}
+
+	.home-products__image-seed {
+		position: absolute;
+		top: 50%;
+		transform: translate(35px, -50%);
+	}
+
+	.home-products__image-pouch {
+		position:absolute;
+		top: 50%;
 	}
 
 	.home-products__content {
@@ -34,7 +47,7 @@
 		@extend %col-3-5;
 		@include mq(tablet) { text-align: left; padding-bottom: 3em;}
 		@include mq(lap) { }
-		@include mq(desk) { padding-right: 4em; }
+		@include mq(desk) { padding: 0 10em 0 4em; }
 	}
 
 	.home-products__title {
@@ -43,9 +56,9 @@
 		text-transform: uppercase;
 		margin-bottom: 0;
 		text-align: center;
-		@include mq(tablet) { font-size: 3em; text-align: left; margin: 0; }
-		@include mq(lap) { margin: 1em 0 0;}
-		@include mq(desk) { }		
+		@include mq(tablet) { font-size: 3em; line-height: 1.2em; text-align: left; margin: 0; }
+		@include mq(lap) { margin: 1em 0 0.25em;}
+		@include mq(desk) { margin-bottom: .25em; }		
 	}
 
 	.home-products__description {
