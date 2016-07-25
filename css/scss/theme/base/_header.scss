@@ -3,12 +3,22 @@
 	left: 50%;
 	z-index: 99999;
 	transform: translate(-50%, 0);
-	height: 147px;
+	height: 75px;
 	width: 100%;
 	background: url('img/bg-nav-bar.png') no-repeat left bottom;
 	@include mq(tablet) { }
 	@include mq(lap) { }	
 	@include mq(desk) { max-width: $max-width; margin: 0 auto; padding-bottom: 3em; }
+
+	&::after {
+		content:'';
+		position:absolute;
+		z-index: -1;
+		top: 75px;
+		height:72px;
+		width: 234px;
+		background: url('img/bg-nav-bar--bottom.png') no-repeat;
+	}
 
 	.site-title {
 		text-indent: -9999px;

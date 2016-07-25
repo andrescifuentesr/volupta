@@ -1758,21 +1758,28 @@ jQuery(window).load(function(){
 	//https://github.com/filamentgroup/fixed-sticky
 	jQuery( '#js-sticky-menu' ).fixedsticky();
 
+	//adding an active clasee to the sticky menu
+	jQuery('#js-sticky-menu a').on('click', function() {
+		jQuery( "#js-sticky-menu a" ).removeClass('sticky-menu--active');
+		jQuery( this ).toggleClass('sticky-menu--active');
+	});
+	
+
 });
 
 //JS for a smooth anchor scroll
 //https://css-tricks.com/snippets/jquery/smooth-scrolling/
 jQuery(function() {
-  jQuery('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = jQuery(this.hash);
-      target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        jQuery('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+	jQuery('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = jQuery(this.hash);
+			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				jQuery('html, body').animate({
+					scrollTop: target.offset().top - 132
+				}, 1000);
+				return false;
+			}
+		}
+	});
 });

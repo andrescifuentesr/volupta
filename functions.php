@@ -46,7 +46,8 @@ function volupta_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'volupta' ),
 		'footer' => esc_html__( 'Footer', 'volupta' ),
-		'social' => esc_html__( 'Social', 'volupta' )
+		'social' => esc_html__( 'Social', 'volupta' ),
+		'sticky' => esc_html__( 'Sticky', 'volupta' )
 	) );
 
 	/*

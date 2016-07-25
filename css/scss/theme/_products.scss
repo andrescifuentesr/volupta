@@ -21,36 +21,48 @@
 // Section product-description
 .product-menu {
 	background:$primary;
-	padding: 1em 25%;
+	padding: 0;
 	width:100%;
 	z-index: 9999;
+	text-align: center;
+	@include mq(tablet) { }
+	@include mq(lap) { padding: .5em 5%; }
+	@include mq(desk) { padding: 1em 25%;  }
 
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		// display:flex;
-		// justify-content: space-between;
 	}
 
 	li {
-		color: #fff;
-		border-right: 1px solid #fff;
-		padding: 0 2em;
-		display: inline-block;
-		width: 25%;
 
 		&:last-of-type {
-			border-right: none;			
-		}
+
+			a {
+				border-bottom: none;
+				@include mq(tablet) { border-right: none;}
+			}
+		}		
+
 	}
 
 	a {
 		color: #fff;
+		display: block;
+		padding:.5em 0;
+		border-bottom: 1px solid #fff;
+		@include mq(tablet) { width: 25%; float: left;  border-bottom: none; border-right: 1px solid #fff;}
+		@include mq(lap) { padding: 0; }
 
-		&:hover {
+		&:hover,
+		{
 			color: #dfdcc9;
 		}
+	}
+
+	.sticky-menu--active {
+		color: #dfdcc9;
 	}
 
 }

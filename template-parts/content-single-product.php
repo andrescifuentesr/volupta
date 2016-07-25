@@ -37,21 +37,7 @@
 	</section><!-- .product-hero -->
 
 	<section class="product-menu fixedsticky clearfix" id="js-sticky-menu">
-		<ul>
-			<li>
-				<a href="#js-product-description">Description</a>
-			</li><!--
-		--><li>
-				<a href="#js-product-ingredients">Ingredients</a>
-			</li><!--
-		--><li>
-				<a href="#js-product-nutrition">Nutrition</a>
-			</li><!--
-		--><li>
-				<a href="#js-product-kitchen">Kitchen</a>
-			</li>
-		</ul>
-		
+		<?php wp_nav_menu( array( 'theme_location' => 'sticky', 'menu_id' => 'sticky-menu', 'menu_class' => 'menu-items--sticky' ) ); ?>		
 	</section>
 
 	<?php 
