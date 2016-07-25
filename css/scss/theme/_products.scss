@@ -25,8 +25,8 @@
 	width:100%;
 	z-index: 9999;
 	text-align: center;
-	@include mq(tablet) { }
-	@include mq(lap) { padding: .5em 5%; }
+	@include mq(tablet) { padding: 1em 0; }
+	@include mq(lap) { padding: 1em 5%; }
 	@include mq(desk) { padding: 1em 25%;  }
 
 	ul {
@@ -50,10 +50,9 @@
 	a {
 		color: #fff;
 		display: block;
-		padding:.5em 0;
 		border-bottom: 1px solid #fff;
 		@include mq(tablet) { width: 25%; float: left;  border-bottom: none; border-right: 1px solid #fff;}
-		@include mq(lap) { padding: 0; }
+		@include mq(lap) { }
 
 		&:hover,
 		{

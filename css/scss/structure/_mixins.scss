@@ -2,27 +2,40 @@
  // Font Face
  //==========================================
 
- @font-face {
-    font-family: 'nexa_rust_script_l0regular';
-    src: url('css/fonts/nexarustscriptl-0-webfont.eot');
-    src: url('css/fonts/nexarustscriptl-0-webfont.eot?#iefix') format('embedded-opentype'),
-         url('css/fonts/nexarustscriptl-0-webfont.woff2') format('woff2'),
-         url('css/fonts/nexarustscriptl-0-webfont.woff') format('woff'),
-         url('css/fonts/nexarustscriptl-0-webfont.ttf') format('truetype'),
-         url('css/fonts/nexarustscriptl-0-webfont.svg#nexa_rust_script_l0regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+//  @font-face {
+//     font-family: 'Nexa Rust Script L W00_00';
+//     src: url('css/fonts/nexarustscriptl-0-webfont.eot');
+//     src: url('css/fonts/nexarustscriptl-0-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('css/fonts/nexarustscriptl-0-webfont.woff2') format('woff2'),
+//          url('css/fonts/nexarustscriptl-0-webfont.woff') format('woff'),
+//          url('css/fonts/nexarustscriptl-0-webfont.ttf') format('truetype'),
+//          url('css/fonts/nexarustscriptl-0-webfont.svg#Nexa Rust Script L W00_00') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
 
+// }
+
+// @font-face {
+//     font-family: 'veneerregular';
+//     src: url('css/fonts/veneer-webfont.woff2') format('woff2'),
+//          url('css/fonts/veneer-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+
+@font-face{
+	font-family:"Veneer W03 Regular";
+	src:url("Fonts/1291430/3d17aa6c-64cc-43c8-a04d-b8d68d6c39c0.eot?#iefix");
+	src:url("css/fonts/1291430/3d17aa6c-64cc-43c8-a04d-b8d68d6c39c0.eot?#iefix") format("eot"),url("css/fonts/1291430/c946f057-dba2-44be-85a1-5df0942b74d5.woff2") format("woff2"),url("css/fonts/1291430/f7e83b11-53c3-46f5-aed5-649716547493.woff") format("woff"),url("css/fonts/1291430/7548fe08-d21f-4366-90da-0ffa3bc69e8b.ttf") format("truetype");
+}
+@font-face{
+	font-family:"Nexa Rust Script L W00_00";
+	src:url("css/fonts/1425187/c3b8a7f4-85c1-42ff-bf50-1f6c4086ecc0.eot?#iefix");
+	src:url("css/fonts/1425187/c3b8a7f4-85c1-42ff-bf50-1f6c4086ecc0.eot?#iefix") format("eot"),url("css/fonts/1425187/8b5fe2c9-b5f1-4047-a276-ab66d4b2a659.woff2") format("woff2"),url("css/fonts/1425187/4556bc2b-c205-44d7-843d-9238cb7e5e61.woff") format("woff"),url("css/fonts/1425187/58471124-a4b0-4287-98ae-24b4ef05e819.ttf") format("truetype");
 }
 
-@font-face {
-    font-family: 'veneerregular';
-    src: url('css/fonts/veneer-webfont.woff2') format('woff2'),
-         url('css/fonts/veneer-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
 //==========================================
