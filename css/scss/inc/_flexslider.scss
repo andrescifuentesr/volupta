@@ -47,7 +47,7 @@
   @include mq(mobile) { width:60%; margin:0 20%;  }
   @include mq(tablet) { width:70%; margin:0 15%;  }
   @include mq(lap) { width:40%; margin:0 30%; }
-  @include mq(desk) { }
+  @include mq(desk) { width: auto; max-width: $max-width; margin: 0 auto; }
 }
 .flexslider .slides:after {
   display: block;
@@ -227,7 +227,7 @@ html[xmlns] .flexslider .slides {
   width: 100%;
   height: auto;
   display: block;
-  opacity: .7;
+  opacity: .4;
   cursor: pointer;
   -moz-user-select: none;
   -webkit-transition: all 1s ease;

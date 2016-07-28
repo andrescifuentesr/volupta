@@ -13,6 +13,7 @@
 	margin: 0;
 	padding-left: 0;
 	@include mq(tablet) { display:flex; justify-content: space-between; }
+	@include mq(desk) { display: inline-block; }
 }
 
 .main-navigation li {

@@ -11,7 +11,14 @@
 
 	@include mq(tablet) {  height: 400px; }
 	@include mq(lap) { padding: 14em 0 0; height: 500px; }
-	@include mq(desk) { padding: 18em 0 0; height: 650px; }	
+	@include mq(desk) { padding: 18em 0 0; height: 650px; }
+
+	.product-hero--wrapper {
+		padding: 0;
+		@include mq(tablet) { }
+		@include mq(lap) { }
+		@include mq(desk) { max-width: $max-width; margin: 0 auto;  }		
+	}
 
 	.section-hero__content {
 		width:100%;

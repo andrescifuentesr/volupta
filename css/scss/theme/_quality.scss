@@ -2,10 +2,13 @@
 
 .quality {
 	background: #efede4;
-	padding: 1em .5em;
-	@include mq(tablet) { padding: 2em 2.5%; }
-	@include mq(lap) { padding: 3em 5%; }
-	@include mq(desk) { padding: 5em 10%; }
+
+	.quality--wrapper {
+		padding: 1em .5em;
+		@include mq(tablet) { padding: 2em 2.5%; }
+		@include mq(lap) { padding: 3em 5%; }
+		@include mq(desk) { padding: 5em 0; max-width: $max-width; margin: 0 auto;  }		
+	}	
 
 
 	.quality-description__wrapper {
@@ -65,10 +68,13 @@
 
 .quality-certifications {
 	background: #efede4;
-	padding: 1em .5em;
-	@include mq(tablet) { padding: 2em 2.5% 1em; }
-	@include mq(lap) { padding: 5em 5%; }
-	@include mq(desk) { padding: 5em 10%; }
+
+	.quality-certifications--wrapper {
+		padding: 1em .5em;
+		@include mq(tablet) { padding: 2em 2.5% 1em; }
+		@include mq(lap) { padding: 5em 5%; }
+		@include mq(desk) { padding: 5em 0; max-width: $max-width; margin: 0 auto;  }		
+	}	
 
 	.quality-certifications__introduction {
 		color: $primary;
@@ -93,16 +99,16 @@
 		// padding-bottom: .5em;
 		position: relative;
 		text-align: center;
-		@include mq(tablet) { text-align: left;}
+		@include mq(tablet) { }
 		@include mq(lap) { }
-		@include mq(desk) { }
+		@include mq(desk) { text-align: left;}
 
 		.quality-certifications__pictitle--img {
 			margin-bottom: 1em;
 			@extend %col-1-4;
 			@include mq(tablet) { }
-			@include mq(lap) { padding-right: 1em; margin-bottom: 0; }
-			@include mq(desk) { }
+			@include mq(lap) { width:100%;  }
+			@include mq(desk) { width: percentage(1/4); margin-bottom: 0; padding-right: 1em; }
 
 			img {
 				margin: 0 auto;
@@ -117,6 +123,21 @@
 			margin-bottom: 0.25em;
 		}
 	}
+	
+	//modification seulement pour GMO
+	.quality-certifications__pictitle---gmo {
+
+		.quality-certifications__pictitle--img {
+			@include mq(lap) { width:100%; }
+			@include mq(desk) { width:40%; }
+		}
+
+		h3 {
+			@include mq(lap) { width:100%; }
+			@include mq(desk) { width:60%; }
+		}
+
+	}
 
 	.quality__title {
 		color:$primary;
@@ -128,8 +149,8 @@
 		text-align: center;
 		@extend %col-3-4;
 		@include mq(tablet) { }
-		@include mq(lap) { text-align: left;  }
-		@include mq(desk) { }
+		@include mq(lap) {  }
+		@include mq(desk) { text-align: left; }
 	}
 
 	.title_dotted {

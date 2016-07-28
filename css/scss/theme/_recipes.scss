@@ -8,6 +8,10 @@
 	@include mq(desk) { }
 
 
+	.site-recipes--wrapper {
+		@include mq(desk) { max-width: $max-width; margin: 0 auto;  }
+	}
+
 	.flexslider .slides .slides-img {
 		display: inline-block;
 		vertical-align: top;
@@ -54,6 +58,7 @@
 
 	.recipes__content {
 		color: #4a2904;
+		font-size: 1.2em;
 
 		p {
 			margin: 0;
@@ -62,17 +67,27 @@
 
 	//modifications CSS flexslider
 	.flex-direction-nav {
-		display: none;
-		@include mq(tablet) { }
-		@include mq(lap) { display:block; }
+		padding: 1em 1em 0;
+		@include mq(tablet) { padding: 0; }
+		@include mq(lap) { }
 		@include mq(desk) { }	
 	}
 
-	.flex-direction-nav a {
-		top: 48%;
+	.flex-direction-nav li {
+		display: inline-block;
+		width: 50%;
+		text-align: center;
 		@include mq(tablet) { }
 		@include mq(lap) {  }
-		@include mq(desk) {top: 35%; }	
+		@include mq(desk) { }	
+	}
+
+
+	.flex-direction-nav a {
+		position: static;
+		@include mq(tablet) { }
+		@include mq(lap) { position: absolute; top: 48%; }
+		@include mq(desk) {top: 23%; }	
 	}
 
 	.flex-direction-nav .flex-prev {
@@ -91,9 +106,9 @@
 	}
 
 	.flex-control-thumbs {
-		width: 100%;
+		display: none;
 		@include mq(tablet) { }
-		@include mq(lap) { margin-top: 2em; width: 80%;}
+		@include mq(lap) { display: block; margin-top: 2em; width: 80%;}
 		@include mq(desk) { width: 50%; margin-top: .5em;}	
 
 		li {

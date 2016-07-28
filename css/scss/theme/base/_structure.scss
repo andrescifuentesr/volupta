@@ -1,10 +1,9 @@
 .site {
 	width: 100%;
-	// padding-bottom: .5em;
 	position: relative;
-	@include mq(tablet) { width: 100%; }
-	@include mq(lap) { }
-	@include mq(desk) { max-width: $max-width; margin: 0 auto; position: relative;}
+	// @include mq(tablet) { width: 100%; }
+	// @include mq(lap) { }
+	// @include mq(desk) { max-width: $max-width; margin: 0 auto; position: relative;}
 }
 
 .site-main {

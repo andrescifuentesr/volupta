@@ -8,12 +8,12 @@
 	background: url('img/bg-nav-bar.png') no-repeat left bottom;
 	@include mq(tablet) { }
 	@include mq(lap) { }	
-	@include mq(desk) { max-width: $max-width; margin: 0 auto; padding-bottom: 3em; }
+	@include mq(desk) { /* max-width: $max-width; margin: 0 auto; */ padding-bottom: 3em; }
 
 	&::after {
 		content:'';
 		position:absolute;
-		z-index: -1;
+		z-index: -2;
 		top: 75px;
 		height:72px;
 		width: 234px;
@@ -47,15 +47,23 @@
 		@include mq(desk) { }	
 	}
 
-	.main-navigation {
-		width:50%;
+	.navigation-wrapper {
+		width: 50%;
 		display: inline-block;
 		vertical-align: top;
-		margin-top: 0em;
+		text-align: right;
+		padding-right: 1em;
+		@include mq(tablet) { width:75%; padding-right: .5em;}	
+		@include mq(desk) { padding-right: 2em; }	
+	}
+
+	.main-navigation {
+		display: inline-block;
+		vertical-align: top;
     	text-align: right;
-		@include mq(tablet) { margin-top: 1em; padding-left: 1em; width:55%; padding-right: 0; }
-		@include mq(lap) { padding-left: 2em; padding-right: 4em;}
-		@include mq(desk) { margin-top: 1.5em; padding-left: 0; width:50%; padding-right: 1em;  }	
+		@include mq(tablet) { margin-top: 1em; width:75%; padding-right: 0; }
+		@include mq(lap) { /*padding-left: 2em; padding-right: 4em;*/}
+		@include mq(desk) { margin-top: 1.5em; padding-left: 0; padding-right: 1em;  }	
 	}
 	
 	.site-search {
@@ -63,8 +71,8 @@
 		display: none;
 		vertical-align: top;
 		margin-top: 1em;
-		@include mq(tablet) { display: inline-block; width:20%; padding: 0 .5em;}
+		@include mq(tablet) { display: inline-block; width:25%; padding: 0 0 0 .5em;}
 		@include mq(lap) {  }	
-		@include mq(desk) { width:25%; padding: 0;}
+		@include mq(desk) { width:auto; padding: 0;}
 	}
 }

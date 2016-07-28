@@ -2,7 +2,8 @@
 //initialise skrollr
 skrollr.init({
 	// smoothScrolling: false,
-	mobileDeceleration: 0.004
+	mobileDeceleration: 0.004,
+	
 });
 
 //========================
