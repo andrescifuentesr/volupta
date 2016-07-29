@@ -4,7 +4,7 @@
 	background: #efede4;
 
 	.quality--wrapper {
-		padding: 1em .5em;
+		padding: 1em 1em;
 		@include mq(tablet) { padding: 2em 2.5%; }
 		@include mq(lap) { padding: 3em 5%; }
 		@include mq(desk) { padding: 5em 0; max-width: $max-width; margin: 0 auto;  }		
@@ -70,7 +70,7 @@
 	background: #efede4;
 
 	.quality-certifications--wrapper {
-		padding: 1em .5em;
+		padding: 1em 1em;
 		@include mq(tablet) { padding: 2em 2.5% 1em; }
 		@include mq(lap) { padding: 5em 5%; }
 		@include mq(desk) { padding: 5em 0; max-width: $max-width; margin: 0 auto;  }		

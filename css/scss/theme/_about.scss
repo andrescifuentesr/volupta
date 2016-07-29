@@ -4,7 +4,7 @@
 	text-align: center;
 
 	.about-vision--wrapper {
-		padding: 2em .5em 0;
+		padding: 2em 1em 0;
 		@include mq(tablet) { padding: 2em 2.5% 0; }
 		@include mq(lap) { padding: 4em 10%; }
 		@include mq(desk) { padding: 4em 5% 4em 0; max-width: $max-width; margin: 0 auto;  }
@@ -71,7 +71,7 @@
 	background: #efede4;
 
 	.about-questions--wrapper {
-		padding: 1em .5em;
+		padding: 1em 1em;
 		@include mq(tablet) { padding: 2em 2.5%; }
 		@include mq(lap) { padding: 3em 5%; }
 		@include mq(desk) { padding: 5em 0; max-width: $max-width; margin: 0 auto;  }		
@@ -186,34 +186,45 @@
 .about-contact {
 	background: url('img/bg-about-us--contact.png') no-repeat #fff;
 	background-size: cover;
+	border-top: 14px solid $primary;
 
 	.about-contact--wrapper {
-		padding: 1em .5em;
+		padding: 1em 1em;
 		@include mq(tablet) { padding: 1em 2.5%;}
 		@include mq(lap) { padding: 3em 5% 2em; }
-		@include mq(desk) { padding: 4em 0 3em; max-width: $max-width; margin: 0 auto;  }		
-	}	
+		@include mq(desk) { padding: 8em 0 6em; max-width: $max-width; margin: 0 auto;  }		
+	}
+
+	.about-contact-section__title {
+		font-size: 2.5em;
+		margin: 0 0 0.2em;
+		line-height: 1.2em;	
+	}
 	
 	.about-contact__item-content{
 		@extend %col-2-5;
 		position: relative;
 		@include mq(tablet) { padding: 0;}
-		@include mq(lap) { padding: 0 5em 0 2em;  }
-		@include mq(desk) { }
+		@include mq(lap) { padding: 0 4em 0 0;  }
+		@include mq(desk) { padding: 0 5em 0 2em;  }
 
 		.about-contact__text{
 			padding-top: 1em;
 			position: relative;
 			font-size: 1em;
 			@include mq(tablet) { padding-top: 1em;}
-			@include mq(lap) { padding-top: 3.5em; }
-			@include mq(desk) { }
+			@include mq(lap) { padding-top: 1.8em; }
+			@include mq(desk) { padding-top: 2em; }
 		}
 
 		.title_dotted {
 			&::before {
 				content:'';
-				@include dot-line(100%, 0px, 0px);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-bottom: 2px solid $secondary;
 			}
 		}
 
@@ -235,20 +246,24 @@
 		padding-bottom: 1em;
 		@include mq(tablet) {padding-bottom: 1em;}
 		@include mq(lap) { padding-bottom: 2.2em; }
-		@include mq(desk) { padding-bottom: 3.5em; }
+		@include mq(desk) { padding-bottom: 1.5em; }
 
 		&::after {
 			content:'';
-			@include dot-line(100%,100%, 0px);
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			border-bottom: 2px solid $secondary;
 		}
 	}	
 
 	.about-contact__form {
 		padding:  2em 0 0;
 		@extend %col-3-5;
-		@include mq(tablet) { padding:  2em 2.5%;}
-		@include mq(lap) { padding:  0 4em 0 2em; }
-		@include mq(desk) { }
+		@include mq(tablet) { }
+		@include mq(lap) { padding: 0; }
+		@include mq(desk) { padding:  0 4em 0 4em;  }
 
 		input[type="text"], input[type="email"], textarea, input[type="submit"] {
 		    background-color: #fff;

@@ -18,7 +18,7 @@
 		width:100%;
 		@include mq(tablet) { }
 		@include mq(lap) { width:50%; padding: 0 7.5%; }
-		@include mq(desk) { }
+		@include mq(desk) { width:55%; }
 
 		img {
 			width: auto;
@@ -40,11 +40,11 @@
 		width:100%;
 		@include mq(tablet) { }
 		@include mq(lap) { width:50%; margin-top: 0; padding: 0 2.5%;}
-		@include mq(desk) { padding: 0 7.5%; }
+		@include mq(desk) { width:45%; padding: 0 0 0 4%; }
 	}
 
 	.recipes__title {
-		color:$heading-color;
+		color:$primary;
 		font-size: 3em;
 		text-transform: uppercase;
 		text-align: center;
@@ -52,12 +52,13 @@
 	}
 
 	.recipes__overview {
-		color:$heading-color;
+		font-size: 1.15em;
+		color:$primary;
 		font-weight: 700;
 	}
 
 	.recipes__content {
-		color: #4a2904;
+		color: #5d5d5f;
 		font-size: 1.2em;
 
 		p {
@@ -87,7 +88,7 @@
 		position: static;
 		@include mq(tablet) { }
 		@include mq(lap) { position: absolute; top: 48%; }
-		@include mq(desk) {top: 23%; }	
+		@include mq(desk) {top: 28%; }	
 	}
 
 	.flex-direction-nav .flex-prev {
@@ -96,6 +97,7 @@
 
 	.flex-direction-nav .flex-next {
 		right: 52.5%;
+		@include mq(desk) {right: 47.5%;}	
 	}
 
 	.flexslider:hover .flex-direction-nav .flex-prev {
@@ -103,6 +105,7 @@
 	}
 	.flexslider:hover .flex-direction-nav .flex-next {
 		right: 52%;
+		@include mq(desk) {right: 47%;}	
 	}
 
 	.flex-control-thumbs {

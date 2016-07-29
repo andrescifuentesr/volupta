@@ -6,7 +6,7 @@
 	}
 
 	h2 {
-		color: $primary;
+		color: $heading-color;
 		font-size: 2.25em;
 		margin-bottom: .5em;
 	}
@@ -21,19 +21,18 @@
 // Section product-description
 .product-menu {
 	background:$primary;
-	padding-left: 180px;
-	
 	width:100%;
 	z-index: 9999;
-	text-align: center;
-	
+	text-align: right;
+	@include mq(tablet) { padding-left: 180px; text-align: center; padding-right: 0;}
+	@include mq(lap) { padding-left: 130px;}
 	@include mq(desk) {  }
 
 	.product-menu--wrapper {
 		padding: 0;
-		@include mq(tablet) { padding: 1em 0; }
-		@include mq(lap) { padding: 1em 5%; }
-		@include mq(desk) { padding: 1em 0;  max-width: $max-width; margin: 0 auto;  }		
+		@include mq(tablet) { padding: 1.5em 0; }
+		@include mq(lap) { padding: 1.5em 5%; }
+		@include mq(desk) { padding: 1.5em 0;  max-width: $max-width; margin: 0 auto;  }		
 	}
 
 	ul {
@@ -58,7 +57,8 @@
 		color: #fff;
 		display: block;
 		border-bottom: 1px solid #fff;
-		@include mq(tablet) { width: 25%; float: left;  border-bottom: none; border-right: 1px solid #fff;}
+		padding-right: 1em;
+		@include mq(tablet) { padding-right: 0; width: 25%; float: left;  border-bottom: none; border-right: 1px solid #fff;}
 		@include mq(lap) { }
 
 		&:hover,
@@ -77,7 +77,7 @@
 .product-description {
 
 	.product-description--wrapper {
-		padding: 2em .5em;
+		padding: 2em 1em;
 		@include mq(tablet) { padding: 2em 2.5% 2em;}
 		@include mq(lap) { padding: 2em 5% 2em; }
 		@include mq(desk) { padding: 2em 0 2em;  max-width: $max-width; margin: 0 auto;  }				
@@ -99,7 +99,7 @@
 
 	.product-description__title {
 		margin-top: 1em;
-		color: $primary;
+		color: $heading-color;
 		font-size: 2.25em;
 		margin-bottom: .5em;
 	}
@@ -119,11 +119,12 @@
 
 // Section product-ingredients
 .product-ingredients {
-	background: #efede4;	
+	background: #efede4;
+	background-size: cover;
 	@include mq(lap) { background: url('img/bg-product-ingredients.png') no-repeat bottom left #efede4; }
 
 	.product-ingredients--wrapper {
-		padding: 2em .5em 1em;
+		padding: 2em 1em 1em;
 		@include mq(tablet) { padding: 2em 2.5%; }
 		@include mq(lap) { padding: 3em 5% 16em; }
 		@include mq(desk) { padding: 4em 5% 4em 15%; max-width: $max-width; margin: 0 auto;  }		
@@ -167,7 +168,7 @@
 	}
 
 	.product-ingredients__item-title {
-		color: $primary;
+		color: $heading-color;
 		font-size: 2.25em;
 		text-transform: uppercase;
 		margin: 0;
@@ -183,7 +184,7 @@
 .product-nutrition {
 
 	.product-nutrition--wrapper {
-		padding: 1em .5em;
+		padding: 1em 1em;
 		@include mq(tablet) { padding: 2em 2.5% 2em;}
 		@include mq(lap) { padding: 2em 5% 4em; }
 		@include mq(desk) { padding: 2em 0 4em;  max-width: $max-width; margin: 0 auto;  }		
@@ -232,7 +233,7 @@
 .product-kitchen {
 
 	.product-kitchen--wrapper {
-		padding: 1em .5em 0;
+		padding: 1em 1em 0;
 		@include mq(tablet) { padding: 2em 2.5% 2em;}
 		@include mq(lap) { padding: 2em 5% 4em; }
 		@include mq(desk) { padding: 2em 0 4em;  max-width: $max-width; margin: 0 auto;  }		
@@ -249,7 +250,7 @@
 	}
 
 	.product-kitchen__title {
-		color:$primary;
+		color:$heading-color;
 		position:relative;
 		font-size: 2.4em;
 		text-transform: uppercase;

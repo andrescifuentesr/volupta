@@ -45,7 +45,7 @@ get_header(); ?>
 						--><div class="quality-description__content">
 								<h3 class="quality__title title_dotted"><?php echo types_render_field( "section-packing-title", array( ) ); ?></h3>
 								<p class="quality__description">
-								<?php echo types_render_field( "section-packing-content", array( "output" => "raw") ); ?>
+								<?php echo types_render_field( "section-packing-content", array( ) ); ?>
 								</p>
 							</div>
 						</div>

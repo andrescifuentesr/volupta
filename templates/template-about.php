@@ -82,14 +82,18 @@ get_header(); ?>
 
 				<?php wp_reset_postdata(); ?>
 
-				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-contact-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
+<!-- 				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-contact-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
 					<h3 class="section-banner__title
 					"><?php echo types_render_field( "section-contact-title", array( ) ); ?></h3>
-				</section><!-- .about-questions -->
+				</section> -->
+				<!-- .about-questions -->
 
 				<section class="about-contact">
 					<div class="about-contact--wrapper">
 						<div class="about-contact__item-content ">
+							
+							<h3 class="about-contact-section__title"><?php echo types_render_field( "section-contact-title", array( ) ); ?></h3>
+
 							<div class="about-contact__text title_dotted">
 								<?php echo types_render_field( "section-contact-content", array( ) ); ?>
 							</div>

@@ -27,7 +27,7 @@
 	@include mq(desk) { }
 
 	.home-products--wrapper {
-		padding: 1em .5em 2em;
+		padding: 1em 1em 2em;
 		@include mq(tablet) { padding: 2em 10%; }
 		@include mq(lap) { padding: 3em 10% 3em;  }
 		@include mq(desk) { padding: 3em 0 3em; max-width: $max-width; margin: 0 auto;  }		

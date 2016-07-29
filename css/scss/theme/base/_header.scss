@@ -3,7 +3,7 @@
 	left: 50%;
 	z-index: 99999;
 	transform: translate(-50%, 0);
-	height: 75px;
+	height: 76px;
 	width: 100%;
 	background: url('img/bg-nav-bar.png') no-repeat left bottom;
 	@include mq(tablet) { }
@@ -14,8 +14,8 @@
 		content:'';
 		position:absolute;
 		z-index: -2;
-		top: 75px;
-		height:72px;
+		top: 76px;
+		height:71px;
 		width: 234px;
 		background: url('img/bg-nav-bar--bottom.png') no-repeat;
 	}
