@@ -27,7 +27,7 @@ get_header(); ?>
 										'post_type' 		=> 'recipe', 	//Costum type Recipe			
 										'order'				=> 'ASC',		// List in ascending order
 										'orderby'      		=> 'id',		// List them in their menu order
-										'posts_per_page'	=>   -1, 		// Show the last one
+										'posts_per_page'	=>   3, 		// Show the last one
 									);
 
 									$QueryRecipes = new WP_Query($args);

@@ -52,6 +52,7 @@
 	*/
 	 ?>
 	<section id="js-product-description" class="product-description">
+
 		<div class="product-description--wrapper">
 			<div class="product-description__image">
 				<?php the_post_thumbnail( 'full' ); ?>
@@ -91,6 +92,8 @@
 	</section><!-- .product-ingredients -->
 
 	<section class="product-ingredients">
+
+		<img class="home-product__ingredients" src="<?php bloginfo('template_directory'); ?>/img/bg-product-ingredients.png">
 
 		<div class="product-ingredients--wrapper">
 
@@ -234,14 +237,14 @@
 							'post_type' 		=> 'recipe', 	//Costum type Recipe			
 							'order'				=> 'ASC',		// List in ascending order
 							'orderby'      		=> 'id',		// List them in their menu order
-							'posts_per_page'	=>   -1, 		// Show the last one
+							'posts_per_page'	=>   3, 		// Show the last one
 						);
 
 						$QueryRecipes = new WP_Query($args);
 					?>
 					<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?><!--
 					--><div class="product-kitchen__recipes-item">
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php echo esc_url( get_permalink(9) ); ?>">
 								<div class="product-kitchen__recipes-image">
 									<?php echo types_render_field( "recipes-feature-image", array() ); ?>
 								</div>

@@ -29,7 +29,7 @@
 	.home-products--wrapper {
 		padding: 1em 1em 2em;
 		@include mq(tablet) { padding: 2em 10%; }
-		@include mq(lap) { padding: 3em 10% 3em;  }
+		@include mq(lap) { padding: 3em 10% 4em;  }
 		@include mq(desk) { padding: 3em 0 3em; max-width: $max-width; margin: 0 auto;  }		
 	}
 
@@ -40,8 +40,8 @@
 		@extend %col-2-5;
 		@include mq(mobile) { margin-top: 3em; }
 		@include mq(tablet) { margin-top: 5em; }
-		@include mq(lap) {      margin-top: 5em; }
-		@include mq(desk) { padding: 2em; height: 600px; margin-top: 0;}
+		@include mq(lap) {      margin-top: 0; height: 600px; }
+		@include mq(desk) { padding: 2em; }
 	}
 
 	.home-products__image-seed {

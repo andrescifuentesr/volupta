@@ -73,7 +73,7 @@
 							'post_type' 		=> 'recipe', 	//Costum type Recipe			
 							'order'				=> 'ASC',		// List in ascending order
 							'orderby'      		=> 'id',		// List them in their menu order
-							'posts_per_page'	=>   -1, 		// Show the last one
+							'posts_per_page'	=>   3, 		// Show the last one
 						);
 
 						$QueryRecipes = new WP_Query($args);
@@ -86,7 +86,18 @@
 						    </a>
 							<div class="home-recipes__description">
 								<?php the_title( '<h2 class="home-recipes__title">', '</h2>' ); ?>
-								<p class="home-recipes__content">Made with our Organic Quinoa and Ancient Grains Blend</p>
+
+								<?php
+									//call of custom field recipes-overview
+									$page_home_page_description_recipe = types_render_field( "recipes-description-home-page", array( ) );
+								?>
+								<p class="home-recipes__content">
+									<?php 
+										if( !empty( $page_home_page_description_recipe ) ) {
+											echo $page_home_page_description_recipe;
+										}
+									?>
+								</p>
 							</div>				    	
 						</li>
 
