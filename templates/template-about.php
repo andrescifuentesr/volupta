@@ -44,10 +44,12 @@ get_header(); ?>
 					</div>
 				</section><!-- .about-ingredients -->
 
-				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-thefaq-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
-					<h3 class="section-banner__title">
-						<?php echo types_render_field( "section-thefaq-title", array( ) ); ?>
-					</h3>
+				<section id="js-parallax__trigger_1">
+						<div id="js-parallaxBackground_1" style="background-image:url('<?php echo types_render_field( "section-thefaq-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;" class="section-banner about-banner">
+							<h3 class="section-banner__title">
+								<?php echo types_render_field( "section-thefaq-title", array( ) ); ?>
+							</h3>
+						</div>
 				</section><!-- .about-nutrition -->
 
 				<section class="about-questions">

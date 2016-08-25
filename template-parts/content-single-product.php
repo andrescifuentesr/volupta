@@ -87,8 +87,10 @@
 		$ingredient_image = types_render_field( "ingredient-image", array( ) );
 	?>
 
-	<section id="js-product-ingredients" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-ingredients-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
-		<h3 class="section-banner__title"><?php echo esc_html( $section_ingredients_product_title ); ?></h3>
+	<section id="js-product-ingredients">
+			<div id="js-parallaxBackground_1" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-ingredients-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
+				<h3 class="section-banner__title"><?php echo esc_html( $section_ingredients_product_title ); ?></h3>
+			</div>
 	</section><!-- .product-ingredients -->
 
 	<section class="product-ingredients">
@@ -149,12 +151,13 @@
 		//call of custom field section-nutrition-content-image
 		$section_nutrition_content_disclaimer = types_render_field( "section-nutrition-content-disclaimer", array( ) );
 	?>
-	<section id="js-product-nutrition" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-nutriton-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
-			<?php if( !empty( $section_nutrition_product_title ) ) { ?>
+
+	<section id="js-product-nutrition">
+			<div id="js-parallaxBackground_2" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-nutriton-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
 				<h3 class="section-banner__title"><?php echo esc_html( $section_nutrition_product_title ); ?></h3>
-			<?php } ?>
-		</h3>
+			</div>
 	</section><!-- .product-nutrition -->
+
 
 	<section class="product-nutrition">
 
@@ -196,8 +199,11 @@
 		//call of custom field section-kitchen-disclaimer
 		$section_kitchen_disclaimer = types_render_field( "section-kitchen-disclaimer", array( ) );
 	?>
-	<section id="js-product-kitchen" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
-		<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
+
+	<section id="js-product-kitchen">
+			<div id="js-parallaxBackground_3" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
+				<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
+			</div>
 	</section><!-- .product-kitchen -->
 
 	<section class="product-kitchen">

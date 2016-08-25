@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main site-page" role="main">
 
-			<section class="section-hero home-hero">
+			<section class="section-hero section-default">
 			</section><!-- .home-hero -->
 
 			<div class="page-wrapper">

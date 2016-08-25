@@ -31,5 +31,8 @@
 
 <?php wp_footer(); ?>
 
+<?php //we call a separate template for the Parallax JavaScript ?>
+<?php get_template_part( 'template-parts/content-footer', get_post_format() ); ?>
+
 </body>
 </html>

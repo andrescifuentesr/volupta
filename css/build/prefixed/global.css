@@ -1846,6 +1846,7 @@ html.magnifying > body {
   color: #fff;
   font-family: 'Nexa Rust Script L W00_00';
   font-size: 2em;
+  line-height: 1.25em;
   margin: 0;
   text-align: center;
 }
@@ -2151,8 +2152,9 @@ html.magnifying > body {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-.home-hero {
+.section-default {
   background: url("img/home-hero.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .product-hero {
@@ -2444,9 +2446,10 @@ html.magnifying > body {
 }
 .home-products .home-products__image-seed {
   position: absolute;
-  top: 40%;
   left: 50%;
   width: 80%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 }
 @media (min-width: 440px) {
   .home-products .home-products__image-seed {
@@ -2460,9 +2463,10 @@ html.magnifying > body {
 }
 .home-products .home-products__image-pouch {
   position: absolute;
-  top: 50%;
   left: 50%;
   width: 80%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 }
 @media (min-width: 440px) {
   .home-products .home-products__image-pouch {
@@ -2538,6 +2542,10 @@ html.magnifying > body {
   .home-recipes {
     padding: 5em 0 2em;
   }
+}
+.home-recipes .js-recipe__item {
+  position: relative;
+  top: -50%;
 }
 .home-recipes .home-recipes__description {
   margin-top: 1.5em;
@@ -2819,7 +2827,7 @@ html.magnifying > body {
   color: #fff;
   display: block;
   border-bottom: 1px solid #fff;
-  padding-right: 1em;
+  padding: .3em 1em .3em 0;
 }
 @media (min-width: 700px) {
   .product-menu a {
@@ -3826,14 +3834,6 @@ input[type=submit].icon-search {
 *:after,
 *:before {
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-.skrollr-desktop body {
-  height: 100% !important;
 }
 
 html {

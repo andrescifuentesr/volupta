@@ -52,9 +52,11 @@ get_header(); ?>
 					</div>
 				</section><!-- .quality-description -->
 
-				<section class="section-banner quality-banner" style="background-image:url('<?php echo types_render_field( "section-certif-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
-					<h3 class="section-banner__title"><?php echo types_render_field( "section-certif-title", array( ) ); ?></h3>
-				</section><!-- .quality-questions -->
+				<section id="js-parallax__trigger_1">
+						<div id="js-parallaxBackground_1" style="background-image:url('<?php echo types_render_field( "section-certif-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;" class="section-banner quality-banner">
+							<h3 class="section-banner__title"><?php echo types_render_field( "section-certif-title", array( ) ); ?></h3>
+						</div>
+				</section><!-- .quality-questions -->			
 
 				<section class="quality-certifications">
 					<div class="quality-certifications--wrapper">

@@ -46,9 +46,10 @@
 
 	.home-products__image-seed {
 		position: absolute;
-		top: 40%;
+		// top: 40%;
 		left:50%;
 		width: 80%;
+		transform: translate(-50%, -50%);
 		@include mq(mobile) { width: 50%; }
 		@include mq(tablet) { }
 		@include mq(lap) { width: auto; }
@@ -58,9 +59,10 @@
 
 	.home-products__image-pouch {
 		position:absolute;
-		top: 50%;
+		// top: 50%;
 		left:50%;
 		width: 80%;
+		transform: translate(-50%, -50%);
 		@include mq(mobile) { width: 50%; }
 		@include mq(tablet) { }
 		@include mq(lap) { width: auto;  }
@@ -112,6 +114,11 @@
 	@include mq(tablet) { padding: 5em 0 2em;  }
 	@include mq(lap) { }
 	@include mq(desk) { }
+
+	.js-recipe__item {
+		position: relative;
+		top: -50%;
+	}
 
 	.home-recipes__description {
 		margin-top: 1.5em;

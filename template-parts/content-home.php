@@ -32,11 +32,11 @@
 </section><!-- .home-description -->
 
 <section class="home-products">
-	<div class="home-products--wrapper">
-		<div class="home-products__image">
+	<div id="js-parallaxHome_1" class="home-products--wrapper">
+		<div id="js-parallaxContainer_1" class="home-products__image">
 			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" data-600-top="transform: translate(-50%, -50%);" data-1400-top="transform: translate(-50%, -300%);">
-				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="" data-600-top="transform: translate(-50%, -50%);" data-1400-top="transform: translate(-50%, 100%);">
+				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
+				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="Pouch">
 			</a>
 		</div><!--
 		
@@ -54,9 +54,10 @@
 	</div>
 </section><!-- .home-products -->
 
-<section class="home-recipes" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-recipe-wood.jpg');" data-100-top="background-position:0px 0px;" data-1000-top="background-position: 0px -150px;">
+<section id="js-parallaxContainer_2" class="home-recipes" style="background-image:url('<?php bloginfo('template_directory'); ?>/img/bg-recipe-wood.jpg');">
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-500-top="transform:translate3d(0px, 0px, 0px)" data-1000-top="transform:translate3d(0px, 150px, 0px)">
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class('js-recipe__item'); ?> data-500-top="transform:translate3d(0px, 0px, 0px)" data-1000-top="transform:translate3d(0px, 150px, 0px)">
 
 		<div class="flexslider-wrapper loading">
 
