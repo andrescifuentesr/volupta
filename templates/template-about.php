@@ -84,35 +84,23 @@ get_header(); ?>
 
 				<?php wp_reset_postdata(); ?>
 
-<!-- 				<section class="section-banner about-banner" style="background-image:url('<?php echo types_render_field( "section-contact-image", array( "alt" => "", "url" => "true" ) ); ?>');" data-100-top="background-position:0px -150px;" data-1000-top="background-position: 0px 0px;">
-					<h3 class="section-banner__title
-					"><?php echo types_render_field( "section-contact-title", array( ) ); ?></h3>
-				</section> -->
-				<!-- .about-questions -->
 
-				<section class="about-contact">
-					<div class="about-contact--wrapper">
-						<div class="about-contact__item-content ">
-							
-							<h3 class="about-contact-section__title"><?php echo types_render_field( "section-contact-title", array( ) ); ?></h3>
+				<?php
+					$args = array(
+						'page_id'			=> 15 //id of page contact = 15
+					);
 
-							<div class="about-contact__text title_dotted">
-								<?php echo types_render_field( "section-contact-content", array( ) ); ?>
-							</div>
-							<div class="about-contact__adresses">
-								<span class="about-contact__title"><?php echo types_render_field( "section-contact-adress-title", array( ) ); ?></span><br/>
-								<?php echo types_render_field( "section-contact-adress-content", array( ) ); ?>
-							</div>
-							<div class="about-contact__adresses title_dotted-bas">
-								<span class="about-contact__title"><?php echo types_render_field( "section-email-title", array( ) ); ?></span><br/>
-								<a href="mailto:info@volupta.com"><?php echo types_render_field( "section-email-adress", array( ) ); ?></a>
-							</div>
-						</div><!--
-						--><div class="about-contact__form">
-							    <?php echo do_shortcode('[contact-form-7 id="41" title="Contact form 1"]'); ?>
-						</div>
-					</div>
-				</section>
+					$QueryContact = new WP_Query($args);
+				?>
+
+				<?php while ($QueryContact->have_posts()) : $QueryContact->the_post(); ?>				
+
+					<?php //we call a separate template for the Contact Page ?>
+					<?php get_template_part( 'templates/template-contact', get_post_format() ); ?>
+
+				<?php endwhile; // End of the loop. ?>
+
+				<?php wp_reset_postdata(); ?>
 
 			<?php endwhile; // End of the loop.?>
 
