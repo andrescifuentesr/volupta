@@ -24,7 +24,7 @@
 
 		// build scene
 		var scene = new ScrollMagic.Scene({
-							triggerElement: "#js-product-ingredients", duration: 800, offset: -300})
+							triggerElement: "#js-parallax__trigger_1", duration: 800, offset: -300})
 						.setTween("#js-parallaxBackground_1", 0.5, {backgroundPosition: "0px 0px"}) // trigger a TweenMax.to tween
 						.addTo(controller);
 	</script>

@@ -26,6 +26,7 @@
 		vertical-align: middle;
 		// float: left;
 		background: url('img/bg-line-dot-separator-white.png') no-repeat bottom center;
+		animation: intro 5s;
 
 		h2 {
 			color:#fff;
@@ -48,6 +49,7 @@
 .section-default { 
 	background: url('img/home-hero.jpg') no-repeat center center;
 	background-size: cover;
+	border-bottom: 14px solid $primary;
 }
 
 // Section product-hero

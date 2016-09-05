@@ -192,14 +192,10 @@
 	 <?php
 		//call of custom field section-kitchen-product-title
 		$section_kitchen_product_title = types_render_field( "section-kitchen-product-title", array( ) );
-
-
-		// //call of custom field section_kitchen_instructions_content
-		// $section_kitchen_instructions_content = types_render_field( "section-kitchen-instructions-content", array( ) );
-		// //call of custom field section-kitchen-product-image
-		// $section_kitchen_product_image = types_render_field( "section-kitchen-product-image", array( "alt" => "Kitchen instructions", "title" => "" ) );
-
-
+		//call of custom field section_kitchen_instructions_content
+		$section_kitchen_instructions_content = types_render_field( "section-kitchen-instructions-content", array( ) );
+		//call of custom field section-kitchen-product-image
+		$section_kitchen_product_image = types_render_field( "section-kitchen-product-image", array( "alt" => "Kitchen instructions", "title" => "" ) );
 		//call of custom field section-kitchen-disclaimer
 		$section_kitchen_disclaimer = types_render_field( "section-kitchen-disclaimer", array( ) );
 	?>
@@ -220,45 +216,12 @@
 				</h3>
 				
 				<div class="product-kitchen__content-wrapper">
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-1", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-1", array( ) ); ?>
-						</div>	
-					</div>
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-2", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-2", array( ) ); ?>
-						</div>	
-					</div>
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-3", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-3", array( ) ); ?>
-						</div>	
-					</div>
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-4", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-4", array( ) ); ?>
-						</div>	
+					<div class="product-kitchen__content-image">
+						<?php echo $section_kitchen_product_image; //call of custom field contact-image ?>
+					</div><!--
+				
+				--><div class="product-kitchen__description">
+						<?php echo $section_kitchen_instructions_content; ?>
 					</div>
 
 					<div class="line-separator"></div>

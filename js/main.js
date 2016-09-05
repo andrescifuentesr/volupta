@@ -7,6 +7,7 @@ jQuery(window).load(function(){
 		animation:"slide",
 		controlNav: false,
 		slideshow: false,
+		touch: false,
 		start:function(){
 			jQuery(".site-main").find(".flexslider-wrapper").removeClass("loading");
 			jQuery(".spinner").hide();
@@ -18,6 +19,7 @@ jQuery(window).load(function(){
 		animation:"slide",
 		controlNav: "thumbnails",
 		slideshow: false,
+		touch: false,
 		start:function(){
 			jQuery(".site-recipes").find(".flexslider-wrapper").removeClass("loading");
 			jQuery(".spinner").hide();

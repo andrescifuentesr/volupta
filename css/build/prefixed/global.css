@@ -1404,6 +1404,7 @@ html.magnifying > body {
 
 .magnify .magnify-lens {
   /* Create the magnifying lens */
+  /* solo para móviles*/
   position: absolute;
   width: 200px;
   height: 200px;
@@ -1415,6 +1416,11 @@ html.magnifying > body {
   display: none;
   /* Place the lens on top of other elements */
   z-index: 100;
+}
+@media (max-width: 699px) {
+  .magnify .magnify-lens {
+    display: none !important;
+  }
 }
 
 .magnify .magnify-lens.loading {
@@ -1846,7 +1852,7 @@ html.magnifying > body {
   color: #fff;
   font-family: 'Nexa Rust Script L W00_00';
   font-size: 2em;
-  line-height: 1.25em;
+  line-height: 1.1em;
   margin: 0;
   text-align: center;
 }
@@ -2135,6 +2141,7 @@ html.magnifying > body {
   display: inline-block;
   vertical-align: middle;
   background: url("img/bg-line-dot-separator-white.png") no-repeat bottom center;
+  animation: intro 5s;
 }
 .section-hero .section-hero__content h2 {
   color: #fff;
@@ -2155,6 +2162,7 @@ html.magnifying > body {
 .section-default {
   background: url("img/home-hero.jpg") no-repeat center center;
   background-size: cover;
+  border-bottom: 14px solid #459790;
 }
 
 .product-hero {
@@ -2388,6 +2396,33 @@ html.magnifying > body {
     position: relative;
   }
 }
+.home-description .home-description--wrapper p {
+  display: inline;
+}
+.home-description .typl8-pull-quote {
+  position: relative;
+  padding: 1em;
+}
+.home-description .typl8-pull-quote:before, .home-description .typl8-pull-quote:after {
+  height: 1em;
+  opacity: 1;
+  font-size: 1em;
+  color: #dc976e;
+  line-height: 1;
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: -4px;
+}
+.home-description .typl8-pull-quote:before {
+  content: '';
+  background: url("img/quotation-marks-left.png") no-repeat;
+}
+.home-description .typl8-pull-quote:after {
+  content: '';
+  background: url("img/quotation-marks-right.png") no-repeat;
+}
 
 .home-products {
   background: #e5e3d4;
@@ -2590,6 +2625,11 @@ html.magnifying > body {
 }
 @media (min-width: 850px) {
   .site-recipes {
+    padding: 8em 0 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .site-recipes {
     padding: 8em 0 4em;
   }
 }
@@ -2618,17 +2658,19 @@ html.magnifying > body {
 }
 .site-recipes .flexslider .slides .slides-img img {
   width: auto;
-  max-width: 80%;
+  max-width: 300px;
   margin: 0 auto;
 }
 @media (min-width: 440px) {
   .site-recipes .flexslider .slides .slides-img img {
-    max-width: 60%;
+    /* max-width: 60%; */
+    max-width: 350px;
   }
 }
 @media (min-width: 700px) {
   .site-recipes .flexslider .slides .slides-img img {
-    max-width: 40%;
+    /* max-width: 40%; */
+    max-width: 380px;
   }
 }
 @media (min-width: 850px) {
@@ -2647,7 +2689,7 @@ html.magnifying > body {
   vertical-align: top;
   display: inline-block;
   width: 95%;
-  margin: 1em 2.5% 0;
+  margin: 6em 2.5% 0;
   padding: 2em;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -2655,7 +2697,7 @@ html.magnifying > body {
   .site-recipes .recipes__description {
     /* width:45%; margin: 0 2.5%; padding: 2em; */
     width: 80%;
-    margin: 1em 10% 0;
+    margin: 6em 10% 0;
   }
 }
 @media (min-width: 1200px) {
@@ -2688,12 +2730,9 @@ html.magnifying > body {
 .site-recipes .recipes__content p {
   margin: 0;
 }
-.site-recipes .flex-direction-nav {
-  padding: 1em 1em 0;
-}
 @media (min-width: 1200px) {
   .site-recipes .flex-direction-nav {
-    padding: 0;
+    /* padding: 0; */
   }
 }
 .site-recipes .flex-direction-nav li {
@@ -2702,19 +2741,39 @@ html.magnifying > body {
   text-align: center;
 }
 .site-recipes .flex-direction-nav a {
-  position: static;
+  position: absolute;
+  top: 23%;
 }
-@media (min-width: 1200px) {
+@media (min-width: 440px) {
   .site-recipes .flex-direction-nav a {
-    position: absolute;
+    top: 30%;
+  }
+}
+@media (min-width: 700px) {
+  .site-recipes .flex-direction-nav a {
     top: 35%;
   }
 }
 .site-recipes .flex-direction-nav .flex-prev {
-  left: 2.5%;
+  left: 10%;
+}
+@media (min-width: 850px) {
+  .site-recipes .flex-direction-nav .flex-prev {
+    left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .site-recipes .flex-direction-nav .flex-prev {
+    left: 2.5%;
+  }
 }
 .site-recipes .flex-direction-nav .flex-next {
-  right: 52.5%;
+  right: 10%;
+}
+@media (min-width: 850px) {
+  .site-recipes .flex-direction-nav .flex-next {
+    right: 25%;
+  }
 }
 @media (min-width: 1200px) {
   .site-recipes .flex-direction-nav .flex-next {
@@ -2722,10 +2781,25 @@ html.magnifying > body {
   }
 }
 .site-recipes .flexslider:hover .flex-direction-nav .flex-prev {
-  left: 2%;
+  left: 12%;
+}
+@media (min-width: 850px) {
+  .site-recipes .flexslider:hover .flex-direction-nav .flex-prev {
+    left: 23%;
+  }
+}
+@media (min-width: 1200px) {
+  .site-recipes .flexslider:hover .flex-direction-nav .flex-prev {
+    left: 2%;
+  }
 }
 .site-recipes .flexslider:hover .flex-direction-nav .flex-next {
-  right: 52%;
+  right: 12%;
+}
+@media (min-width: 850px) {
+  .site-recipes .flexslider:hover .flex-direction-nav .flex-next {
+    right: 23%;
+  }
 }
 @media (min-width: 1200px) {
   .site-recipes .flexslider:hover .flex-direction-nav .flex-next {
@@ -2770,6 +2844,11 @@ html.magnifying > body {
 
 .fixedsticky {
   top: 74px;
+}
+@media (max-width: 699px) {
+  .fixedsticky {
+    display: none;
+  }
 }
 
 .product-menu {
@@ -3128,12 +3207,18 @@ html.magnifying > body {
     margin: 0;
   }
 }
+.product-kitchen .product-kitchen__content .product-kitchen__content-image {
+  vertical-align: middle;
+}
 .product-kitchen .product-kitchen__content .product-kitchen__content-image img {
   margin: 0 auto;
 }
+.product-kitchen .product-kitchen__content .product-kitchen__description {
+  vertical-align: middle;
+}
 @media (min-width: 700px) {
   .product-kitchen .product-kitchen__content .product-kitchen__description {
-    margin-bottom: 1.5em;
+    /*margin-bottom: 1.5em;*/
     padding: 0 1em;
   }
 }
@@ -3792,6 +3877,16 @@ html.magnifying > body {
   font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
 }
 
+.site-contact .about-contact {
+  border: none;
+  padding-top: 9em;
+}
+@media (min-width: 1200px) {
+  .site-contact .about-contact {
+    padding-top: 2em;
+  }
+}
+
 .search-input {
   border: 1px solid #818285;
 }
@@ -3829,7 +3924,14 @@ input[type=submit].icon-search {
     float: none;
   }
 }
-
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *:after,
 *:before {

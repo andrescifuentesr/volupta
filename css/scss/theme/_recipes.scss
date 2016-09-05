@@ -4,8 +4,8 @@
 	padding: 9em 0 1em;
 	@include mq(mobile) { padding: 6em 0 1em; }
 	@include mq(tablet) {  }
-	@include mq(lap) { padding: 8em 0 4em; }
-	@include mq(desk) { }
+	@include mq(lap) { padding: 8em 0 2em; }
+	@include mq(desk) { padding: 8em 0 4em; }
 
 
 	.site-recipes--wrapper {
@@ -22,10 +22,11 @@
 
 		img {
 			width: auto;
-			max-width: 80%;
+			// max-width: 80%;
+			max-width: 300px;
 			margin: 0 auto;
-			@include mq(mobile) { max-width: 60%; }
-			@include mq(tablet) { max-width: 40%; }
+			@include mq(mobile) { /* max-width: 60%; */ max-width: 350px;}
+			@include mq(tablet) { /* max-width: 40%; */ max-width: 380px;}
 			@include mq(lap) { width: auto; }
 			@include mq(desk) { width: auto; max-width: 100%; }
 		}
@@ -36,11 +37,11 @@
 		vertical-align: top;
 		display: inline-block;
 		width:95%;
-		margin: 1em 2.5% 0;
+		margin: 6em 2.5% 0;
 		padding: 2em;
 		background: rgba(255,255,255,0.5);
 		@include mq(tablet) { }
-		@include mq(lap) { /* width:45%; margin: 0 2.5%; padding: 2em; */ width: 80%; margin: 1em 10% 0; }
+		@include mq(lap) { /* width:45%; margin: 0 2.5%; padding: 2em; */ width: 80%; margin: 6em 10% 0; }
 		@include mq(desk) { width:45%; margin: 0; padding: 3em; }
 	}
 
@@ -69,10 +70,10 @@
 
 	//modifications CSS flexslider
 	.flex-direction-nav {
-		padding: 1em 1em 0;
+		// padding: 1em 1em 0;
 		@include mq(tablet) {  }
 		@include mq(lap) { }
-		@include mq(desk) { padding: 0; }	
+		@include mq(desk) { /* padding: 0; */ }	
 	}
 
 	.flex-direction-nav li {
@@ -86,27 +87,35 @@
 
 
 	.flex-direction-nav a {
-		position: static;
-		@include mq(tablet) { }
+		position: absolute;
+		top: 23%;
+		@include mq(mobile) { top: 30%; }
+		@include mq(tablet) { top: 35%; }
 		@include mq(lap) { }
-		@include mq(desk) { position: absolute; top: 35%; }	
+		@include mq(desk) { }	
 	}
 
 	.flex-direction-nav .flex-prev {
-		left: 2.5%;
+		left:10%;
+		@include mq(lap) { left: 25%; }
+		@include mq(desk) { left: 2.5%; }
 	}
 
 	.flex-direction-nav .flex-next {
-		right: 52.5%;
-		@include mq(desk) {right: 47.5%;}	
+		right: 10%;
+		@include mq(lap) { right: 25%; }		
+		@include mq(desk) { right: 47.5%; }
 	}
 
 	.flexslider:hover .flex-direction-nav .flex-prev {
-		left: 2%;
+		left: 12%;
+		@include mq(lap) { left: 23%; }
+		@include mq(desk) { left: 2%; }		
 	}
 	.flexslider:hover .flex-direction-nav .flex-next {
-		right: 52%;
-		@include mq(desk) {right: 47%;}	
+		right: 12%;
+		@include mq(lap) { right: 23%; }
+		@include mq(desk) { right: 47%; }
 	}
 
 	.flex-control-thumbs {

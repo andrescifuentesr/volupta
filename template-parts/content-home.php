@@ -27,7 +27,7 @@
 
 <section class="home-description">
 	<div class="home-description--wrapper">
-		<div><?php echo $home_section_introduction_content; ?></div>
+		<div class="typl8-pull-quote"><?php echo $home_section_introduction_content; ?></div>
 	</div>
 </section><!-- .home-description -->
 

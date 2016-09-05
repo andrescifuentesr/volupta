@@ -1,0 +1,5 @@
+.site-contact .about-contact {
+	border: none;
+    padding-top: 9em;
+    @include mq(desk) { padding-top: 2em; }
+}

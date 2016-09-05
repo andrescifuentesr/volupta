@@ -17,9 +17,9 @@ get_header(); ?>
 				</section><!-- .about-hero -->
 				<section class="home-description">
 					<div class="home-description--wrapper">
-						<p class="">
+						<div class="typl8-pull-quote">
 							<?php echo types_render_field( "section-about-us-introduction", array( ) ); ?>
-						</p>
+						</div>
 					</div>
 				</section><!-- .home-description -->
 				<section class="about-vision">
@@ -82,23 +82,10 @@ get_header(); ?>
 					</div>
 				</section><!-- .about-questions -->	
 
-				<?php wp_reset_postdata(); ?>
+				<?php wp_reset_postdata(); ?>		
 
-
-				<?php
-					$args = array(
-						'page_id'			=> 15 //id of page contact = 15
-					);
-
-					$QueryContact = new WP_Query($args);
-				?>
-
-				<?php while ($QueryContact->have_posts()) : $QueryContact->the_post(); ?>				
-
-					<?php //we call a separate template for the Contact Page ?>
-					<?php get_template_part( 'templates/template-contact', get_post_format() ); ?>
-
-				<?php endwhile; // End of the loop. ?>
+				<?php //we call a separate template for the Contact Page ?>
+				<?php get_template_part( 'template-parts/content-contact', get_post_format() ); ?>
 
 				<?php wp_reset_postdata(); ?>
 

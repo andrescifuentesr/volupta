@@ -12,6 +12,10 @@ html.magnifying > body {
 }
 .magnify .magnify-lens {
 	/* Create the magnifying lens */
+
+	/* solo para móviles*/
+	@include mq(max-tablet) { display:none !important;}
+
 	position: absolute;
 	width: 200px;
 	height: 200px;

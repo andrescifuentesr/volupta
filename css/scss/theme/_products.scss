@@ -14,8 +14,8 @@
 }
 
 .fixedsticky { 
+	@include mq(max-tablet) { display:none; }
 	top: 74px;
-
 }
 
 // Section product-description
@@ -297,6 +297,7 @@
 		}
 
 		.product-kitchen__content-image {
+			vertical-align: middle;
 			@extend %col-1-3;
 
 			img {
@@ -305,8 +306,9 @@
 		}
 
 		.product-kitchen__description {
-			@extend %col-2-3;	
-			@include mq(tablet) { margin-bottom: 1.5em; padding: 0 1em;}
+			vertical-align: middle;
+			@extend %col-2-3;
+			@include mq(tablet) { /*margin-bottom: 1.5em;*/ padding: 0 1em;}
 			@include mq(lap) { }
 			@include mq(desk) { }
 		}
