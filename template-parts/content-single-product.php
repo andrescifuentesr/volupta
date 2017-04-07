@@ -204,100 +204,135 @@
 		$section_kitchen_disclaimer = types_render_field( "section-kitchen-disclaimer", array( ) );
 	?>
 
-	<section id="js-product-kitchen">
-			<div id="js-parallaxBackground_3" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
-				<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
-			</div>
-	</section><!-- .product-kitchen -->
+	<?php 
+		//Kitchen section conditional
+		if ( !empty( $section_kitchen_product_title ) ) { 
+	?>
 
-	<section class="product-kitchen">
-
-		<div class="product-kitchen--wrapper">
-			<div class="product-kitchen__content">
-				
-				<h3 class="product-kitchen__title title_dotted">
-					<?php the_title(); ?>
-				</h3>
-				
-				<div class="product-kitchen__content-wrapper">
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-1", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-1", array( ) ); ?>
-						</div>	
-					</div>
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-2", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-2", array( ) ); ?>
-						</div>	
-					</div>
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-3", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-3", array( ) ); ?>
-						</div>	
-					</div>
-
-					<div class="product-kitchen__content-item">
-						<div class="product-kitchen__content-image">
-							<?php echo types_render_field( "section-kitchen-product-image-4", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-						</div><!--
-					
-					--><div class="product-kitchen__description">
-							<?php echo types_render_field( "section-kitchen-instructions-content-4", array( ) ); ?>
-						</div>	
-					</div>
-
-					<div class="line-separator"></div>
-
+		<section id="js-product-kitchen">
+				<div id="js-parallaxBackground_3" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
+					<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
 				</div>
+		</section><!-- .product-kitchen -->
 
-				<div class="product-kitchen__disclaimer disclaimer">
-					<?php echo $section_kitchen_disclaimer; ?>
+		<section class="product-kitchen">
+
+			<div class="product-kitchen--wrapper">
+				<div class="product-kitchen__content">
+					
+					<h3 class="product-kitchen__title title_dotted">
+						<?php the_title(); ?>
+					</h3>
+					
+					<div class="product-kitchen__content-wrapper">
+
+						<div class="product-kitchen__content-item">
+							<div class="product-kitchen__content-image">
+								<?php echo types_render_field( "section-kitchen-product-image-1", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+							</div><!--
+						
+						--><div class="product-kitchen__description">
+								<?php echo types_render_field( "section-kitchen-instructions-content-1", array( ) ); ?>
+							</div>	
+						</div>
+
+						<div class="product-kitchen__content-item">
+							<div class="product-kitchen__content-image">
+								<?php echo types_render_field( "section-kitchen-product-image-2", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+							</div><!--
+						
+						--><div class="product-kitchen__description">
+								<?php echo types_render_field( "section-kitchen-instructions-content-2", array( ) ); ?>
+							</div>	
+						</div>
+
+						<div class="product-kitchen__content-item">
+							<div class="product-kitchen__content-image">
+								<?php echo types_render_field( "section-kitchen-product-image-3", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+							</div><!--
+						
+						--><div class="product-kitchen__description">
+								<?php echo types_render_field( "section-kitchen-instructions-content-3", array( ) ); ?>
+							</div>	
+						</div>
+
+						<div class="product-kitchen__content-item">
+							<div class="product-kitchen__content-image">
+								<?php echo types_render_field( "section-kitchen-product-image-4", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+							</div><!--
+						
+						--><div class="product-kitchen__description">
+								<?php echo types_render_field( "section-kitchen-instructions-content-4", array( ) ); ?>
+							</div>	
+						</div>
+
+						<div class="line-separator"></div>
+
+					</div>
+
+					<div class="product-kitchen__disclaimer disclaimer">
+						<?php echo $section_kitchen_disclaimer; ?>
+					</div>
+				</div><!--
+
+			--><div class="product-kitchen__recipes">
+
+					<h3 class="product-kitchen__title title_dotted"><?php _e( 'Featured recipes', 'volupta') ?></h3>
+
+					<div class="product-kitchen__recipes-wrapper">
+						<?php
+							$args = array(
+								'post_type' 		=> 'recipe', 	//Costum type Recipe			
+								'order'				=> 'ASC',		// List in ascending order
+								'orderby'      		=> 'id',		// List them in their menu order
+								'posts_per_page'	=>   3, 		// Show the last one
+							);
+
+							$QueryRecipes = new WP_Query($args);
+						?>
+						<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?><!--
+						--><div class="product-kitchen__recipes-item">
+								<a href="<?php echo esc_url( get_permalink(9) ); ?>">
+									<div class="product-kitchen__recipes-image">
+										<?php echo types_render_field( "recipes-feature-image", array() ); ?>
+									</div>
+									<?php the_title( '<span>', '</span>' ); ?>
+								</a>
+							</div><!--
+					--><?php endwhile; // End of the loop. ?>
+					</div><!-- .product-kitchen__recipes-wrapper -->
 				</div>
-			</div><!--
-
-		--><div class="product-kitchen__recipes">
-
-				<h3 class="product-kitchen__title title_dotted"><?php _e( 'Featured recipes', 'volupta') ?></h3>
-
-				<div class="product-kitchen__recipes-wrapper">
-					<?php
-						$args = array(
-							'post_type' 		=> 'recipe', 	//Costum type Recipe			
-							'order'				=> 'ASC',		// List in ascending order
-							'orderby'      		=> 'id',		// List them in their menu order
-							'posts_per_page'	=>   3, 		// Show the last one
-						);
-
-						$QueryRecipes = new WP_Query($args);
-					?>
-					<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?><!--
-					--><div class="product-kitchen__recipes-item">
-							<a href="<?php echo esc_url( get_permalink(9) ); ?>">
-								<div class="product-kitchen__recipes-image">
-									<?php echo types_render_field( "recipes-feature-image", array() ); ?>
-								</div>
-								<?php the_title( '<span>', '</span>' ); ?>
-							</a>
-						</div><!--
-				--><?php endwhile; // End of the loop. ?>
-				</div><!-- .product-kitchen__recipes-wrapper -->
 			</div>
-		</div>
-	</section><!-- .product-kitchen -->	
+		</section><!-- .product-kitchen -->	
+
+	<?php } //end of Kitchen section conditional ?>
 
 </article>
+
+<?php wp_reset_postdata(); ?>
+
+<?php the_post_navigation(); ?>
+
+
+<!-- 
+<?php
+
+	$exclude_ids = get_the_ID();
+
+		$args = array(
+			'post_type' 		=> 'product',
+			'post__not_in'		=> array( $exclude_ids ),
+			'orderby' 			=> 'title',
+			'order' 			=> 'ASC',
+		);
+
+		$QueryMenu = new WP_Query($args);
+	?>
+
+	<?php while ($QueryMenu->have_posts()) : $QueryMenu->the_post(); ?>
+		
+		<div>
+			<?php the_title(); ?>
+		</div>
+
+	<?php endwhile; // End of the loop. ?> -->
