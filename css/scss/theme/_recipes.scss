@@ -88,9 +88,9 @@
 
 	.flex-direction-nav a {
 		position: absolute;
-		top: 23%;
-		@include mq(mobile) { top: 30%; }
-		@include mq(tablet) { top: 35%; }
+		top: 22%;
+		@include mq(mobile) { top: 29%; }
+		@include mq(tablet) { top: 32%; }
 		@include mq(lap) { }
 		@include mq(desk) { }	
 	}
