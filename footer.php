@@ -13,7 +13,17 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<?php
+		/*
+		/////////////////
+		Color definition
+		///////////////// 
+		*/
+		//call of custom section-ingredients-product-title
+		$main_color = types_render_field( "product-main-color", array( ) );
+	?>	
+
+	<footer id="colophon" class="site-footer" role="contentinfo" style="border-color:<?php echo esc_html( $main_color ); ?>;">
 		<div class="site-footer__social">
 			<?php get_template_part( 'menu', 'social' ); ?>
 		</div><!-- .nav-social -->

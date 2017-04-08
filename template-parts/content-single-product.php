@@ -11,6 +11,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+
+	<?php
+		/*
+		/////////////////
+		Color definition
+		///////////////// 
+		*/
+		//call of custom section-ingredients-product-title
+		$main_color = types_render_field( "product-main-color", array( ) );
+		//call of custom field ingredient_image-nutrition-product-image
+		$title_color = types_render_field( "product-title-color", array( ) );
+	?>
+
 	<?php 
 	/*
 	/////////////////
@@ -38,7 +51,7 @@
 		</div>
 	</section><!-- .product-hero -->
 
-	<section class="product-menu fixedsticky " id="js-sticky-menu">
+	<section class="product-menu fixedsticky " id="js-sticky-menu" style="color:<?php echo esc_html( $main_color ); ?>">
 		<div class="product-menu--wrapper clearfix">	
 			<?php wp_nav_menu( array( 'theme_location' => 'sticky', 'menu_id' => 'sticky-menu', 'menu_class' => 'menu-items--sticky' ) ); ?>
 		</div>
@@ -59,7 +72,7 @@
 			</div><!--
 			
 		--><div class="product-description__content">
-				<?php the_title( '<h1 class="product-description__title">', '</h1>' ); ?>
+				<?php the_title( '<h1 class="product-description__title" style="color: '. esc_html( $title_color ) .' ">', '</h1>' ); ?>
 				<div class="product-description__description">
 			 		<?php
 						the_content( sprintf(
@@ -88,7 +101,7 @@
 	?>
 
 	<section id="js-parallax__trigger_1">
-			<div id="js-parallaxBackground_1" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-ingredients-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
+			<div id="js-parallaxBackground_1" class="section-banner" style="border-color:<?php echo esc_html( $main_color ); ?>; background-image:url('<?php echo types_render_field( "section-ingredients-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
 				<h3 class="section-banner__title"><?php echo esc_html( $section_ingredients_product_title ); ?></h3>
 			</div>
 	</section><!-- .product-ingredients -->
@@ -117,7 +130,7 @@
 				--><div class="product-ingredients__item-content">
 						<div class="point-separator"></div>
 						
-						<h2 class="product-ingredients__item-title"><?php echo $child_post->post_title; ?></h2>
+						<h2 class="product-ingredients__item-title" style="color:<?php echo esc_html( $title_color ); ?>;"><?php echo $child_post->post_title; ?></h2>
 						<div class="product-ingredients__item-description">
 							<?php echo apply_filters( 'the_content', $child_post->post_content ); ?>
 						</div>
@@ -153,7 +166,7 @@
 	?>
 
 	<section id="js-product-nutrition">
-			<div id="js-parallaxBackground_2" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-nutriton-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
+			<div id="js-parallaxBackground_2" class="section-banner" style="border-color: <?php echo esc_html( $main_color ); ?>; background-image:url('<?php echo types_render_field( "section-nutriton-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
 				<h3 class="section-banner__title"><?php echo esc_html( $section_nutrition_product_title ); ?></h3>
 			</div>
 	</section><!-- .product-nutrition -->
@@ -210,7 +223,7 @@
 	?>
 
 		<section id="js-product-kitchen">
-				<div id="js-parallaxBackground_3" class="section-banner" style="background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
+				<div id="js-parallaxBackground_3" class="section-banner" style="border-color:<?php echo esc_html( $main_color ); ?>; background-image:url('<?php echo types_render_field( "section-kitchen-banner-image", array( "alt" => "", "url" => "true" ) ); ?>'); background-position: 0px -150px;">
 					<h3 class="section-banner__title"><?php echo esc_html( $section_kitchen_product_title) ; ?></h3>
 				</div>
 		</section><!-- .product-kitchen -->
@@ -311,46 +324,28 @@
 
 <?php wp_reset_postdata(); ?>
 
-<?php 
-/**
- *  Infinite next and previous post looping in WordPress
- */
-if( get_adjacent_post(false, '', true) ) { 
-	previous_post_link('%link');
-} else { 
-    $first = new WP_Query('post_type=product&posts_per_page=1&order=DESC'); $first->the_post();
-    	the_title( '<a href="' . esc_url( get_permalink() ) . '">', '</a>' );
-  	wp_reset_query();
-}; 
-    
-if( get_adjacent_post(false, '', false) ) { 
-	next_post_link('%link');
-} else { 
-	$last = new WP_Query('post_type=product&posts_per_page=1&order=ASC'); $last->the_post();
-    	the_title( '<a href="' . esc_url( get_permalink() ) . '">', '</a>' );
-    wp_reset_query();
-}; 
-?>
-
-<!-- 
-<?php
-
-	$exclude_ids = get_the_ID();
-
-		$args = array(
-			'post_type' 		=> 'product',
-			'post__not_in'		=> array( $exclude_ids ),
-			'orderby' 			=> 'title',
-			'order' 			=> 'ASC',
-		);
-
-		$QueryMenu = new WP_Query($args);
-	?>
-
-	<?php while ($QueryMenu->have_posts()) : $QueryMenu->the_post(); ?>
-		
-		<div>
-			<?php the_title(); ?>
-		</div>
-
-	<?php endwhile; // End of the loop. ?> -->
+<nav class="nav-infinite">
+	<ul>
+		<?php 
+		/**
+		 *  Infinite next and previous post looping in WordPress
+		 http://wplancer.com/infinite-next-and-previous-post-looping-in-wordpress/
+		 */
+		if( get_adjacent_post(false, '', true) ) { 
+			previous_post_link('<li clas="nav-item">%link</li>');
+		} else { 
+		    $first = new WP_Query('post_type=product&posts_per_page=1&order=DESC'); $first->the_post();
+		    	the_title( '<li clas="nav-item"><a href="' . esc_url( get_permalink() ) . '">', '</a></li>' );
+		  	wp_reset_query();
+		}; 
+		    
+		if( get_adjacent_post(false, '', false) ) { 
+			next_post_link('<li clas="nav-item">%link</li>');
+		} else { 
+			$last = new WP_Query('post_type=product&posts_per_page=1&order=ASC'); $last->the_post();
+		    	the_title( '<li clas="nav-item"><a href="' . esc_url( get_permalink() ) . '">', '</a></li>' );
+		    wp_reset_query();
+		}; 
+		?>
+	</ul>
+</nav>

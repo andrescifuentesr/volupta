@@ -20,7 +20,7 @@
 
 // Section product-description
 .product-menu {
-	background:$primary;
+	background: currentColor;
 	width:100%;
 	z-index: 9999;
 	text-align: right;
@@ -99,7 +99,7 @@
 
 	.product-description__title {
 		margin-top: 1em;
-		color: $heading-color;
+		color: currentColor;
 		font-size: 2.3em;
 		margin-bottom: .5em;
 	}
@@ -119,7 +119,6 @@
 
 // Section product-ingredients
 .product-ingredients {
-	background: #efede4;
 	position:relative;
 	// background-size: cover;
 	@include mq(lap) { /* background: url('img/bg-product-ingredients.png') no-repeat bottom left #efede4; */}

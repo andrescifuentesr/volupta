@@ -2276,6 +2276,30 @@ html.magnifying > body {
   font-size: 1.25em;
 }
 
+.nav-infinite {
+  background: #fff;
+}
+.nav-infinite ul {
+  list-style: none;
+}
+.nav-infinite li {
+  display: inline-block;
+  width: 50%;
+  padding: 2.5em 1em;
+  font-family: 'Veneer W03 Regular';
+  font-weight: normal;
+  color: #287568;
+  text-transform: uppercase;
+  font-size: 2.4em;
+}
+.nav-infinite li:first-child {
+  text-align: right;
+  border-right: 1px solid #f2f2f2;
+}
+.nav-infinite li:last-child {
+  text-align: left;
+}
+
 .spinner {
   position: absolute;
   top: 50%;
@@ -2865,7 +2889,7 @@ html.magnifying > body {
 }
 
 .product-menu {
-  background: #459790;
+  background: currentColor;
   width: 100%;
   z-index: 9999;
   text-align: right;
@@ -2971,7 +2995,7 @@ html.magnifying > body {
 }
 .product-description .product-description__title {
   margin-top: 1em;
-  color: #287568;
+  color: currentColor;
   font-size: 2.3em;
   margin-bottom: .5em;
 }
@@ -2985,7 +3009,6 @@ html.magnifying > body {
 }
 
 .product-ingredients {
-  background: #efede4;
   position: relative;
 }
 @media (min-width: 850px) {
