@@ -311,8 +311,26 @@
 
 <?php wp_reset_postdata(); ?>
 
-<?php the_post_navigation(); ?>
-
+<?php 
+/**
+ *  Infinite next and previous post looping in WordPress
+ */
+if( get_adjacent_post(false, '', true) ) { 
+	previous_post_link('%link');
+} else { 
+    $first = new WP_Query('post_type=product&posts_per_page=1&order=DESC'); $first->the_post();
+    	the_title( '<a href="' . esc_url( get_permalink() ) . '">', '</a>' );
+  	wp_reset_query();
+}; 
+    
+if( get_adjacent_post(false, '', false) ) { 
+	next_post_link('%link');
+} else { 
+	$last = new WP_Query('post_type=product&posts_per_page=1&order=ASC'); $last->the_post();
+    	the_title( '<a href="' . esc_url( get_permalink() ) . '">', '</a>' );
+    wp_reset_query();
+}; 
+?>
 
 <!-- 
 <?php
