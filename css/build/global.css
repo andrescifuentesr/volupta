@@ -2276,16 +2276,13 @@ html.magnifying > body {
   font-size: 1.25em;
 }
 
-.nav-infinite {
-  background: #fff;
-}
 .nav-infinite ul {
   list-style: none;
+  padding: 0;
 }
 .nav-infinite li {
   display: inline-block;
   width: 50%;
-  padding: 2.5em 1em;
   font-family: 'Veneer W03 Regular';
   font-weight: normal;
   color: #287568;
@@ -2298,6 +2295,22 @@ html.magnifying > body {
 }
 .nav-infinite li:last-child {
   text-align: left;
+}
+.nav-infinite span {
+  transition: .6s all;
+}
+.nav-infinite a {
+  display: block;
+  color: currentColor;
+  padding: 2.5em 1em;
+  background: #fff;
+  transition: .3s all;
+}
+.nav-infinite a:hover {
+  background: currentColor;
+}
+.nav-infinite a:hover span {
+  color: #fff;
 }
 
 .spinner {

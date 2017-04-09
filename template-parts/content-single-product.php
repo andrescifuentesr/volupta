@@ -324,28 +324,5 @@
 
 <?php wp_reset_postdata(); ?>
 
-<nav class="nav-infinite">
-	<ul>
-		<?php 
-		/**
-		 *  Infinite next and previous post looping in WordPress
-		 http://wplancer.com/infinite-next-and-previous-post-looping-in-wordpress/
-		 */
-		if( get_adjacent_post(false, '', true) ) { 
-			previous_post_link('<li clas="nav-item">%link</li>');
-		} else { 
-		    $first = new WP_Query('post_type=product&posts_per_page=1&order=DESC'); $first->the_post();
-		    	the_title( '<li clas="nav-item"><a href="' . esc_url( get_permalink() ) . '">', '</a></li>' );
-		  	wp_reset_query();
-		}; 
-		    
-		if( get_adjacent_post(false, '', false) ) { 
-			next_post_link('<li clas="nav-item">%link</li>');
-		} else { 
-			$last = new WP_Query('post_type=product&posts_per_page=1&order=ASC'); $last->the_post();
-		    	the_title( '<li clas="nav-item"><a href="' . esc_url( get_permalink() ) . '">', '</a></li>' );
-		    wp_reset_query();
-		}; 
-		?>
-	</ul>
-</nav>
+<?php //we call the circular navigation template ?>
+<?php get_template_part( 'template-parts/content-circular-nav', get_post_format() ); ?>
