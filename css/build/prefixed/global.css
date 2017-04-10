@@ -1988,7 +1988,7 @@ html.magnifying > body {
 }
 @media (min-width: 1200px) {
   .main-navigation li {
-    padding: 0 2em;
+    padding: 0 2em 1.5em;
     float: left;
     width: auto;
   }
@@ -2008,12 +2008,21 @@ html.magnifying > body {
 }
 
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
-  top: 1.5em;
+  top: 2.5em;
   left: -999em;
   z-index: 99999;
+  padding: 1em 0;
+}
+.main-navigation ul ul .menu-item-216 a {
+  color: #ec9b16;
+}
+.main-navigation ul ul .menu-item-217 a {
+  color: #bd3156;
+}
+.main-navigation ul ul .menu-item-218 a {
+  color: #459790;
 }
 
 .main-navigation ul ul ul {
@@ -2022,17 +2031,24 @@ html.magnifying > body {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  width: 250px;
+  display: block;
+}
+
+.main-navigation ul ul li {
+  padding: .25em 1em .25em 2em;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
-  color: #459790;
+  color: currentColor;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  left: 0;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -2044,7 +2060,7 @@ html.magnifying > body {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-  color: #459790;
+  color: currentColor;
 }
 
 /* Small menu. */

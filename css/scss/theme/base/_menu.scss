@@ -24,7 +24,8 @@
 	font-size: 1.5em;
 	@include mq(tablet) { float: left; width:auto; font-size: 1em; padding: .5em 0.5em;}
 	@include mq(lap) {  }
-	@include mq(desk) { padding: 0 2em; float: left; width:auto;  }	
+	@include mq(desk) { padding: 0 2em 1.5em;//this will break things, it was added for the new ul
+		float: left; width:auto;  }	
 }
 
 .main-navigation a {
@@ -39,12 +40,26 @@
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
+	// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	// float: left;
+	background: rgba(255, 255, 255, 0.8);
 	position: absolute;
-	top: 1.5em;
+	top: 2.5em;
 	left: -999em;
 	z-index: 99999;
+	padding: 1em 0;
+
+	.menu-item-216 a {
+		color:$mango;
+	}
+
+	.menu-item-217 a {
+		color:$beet;
+	}
+
+	.menu-item-218 a {
+		color:$primary;
+	}
 }
 
 .main-navigation ul ul ul {
@@ -53,16 +68,19 @@
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 250px;
+	display:block;
 }
 
 .main-navigation ul ul li {
-
+	padding: .25em 1em .25em 2em;
+	text-align: left;
+	text-transform:uppercase;
 }
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
-	color:$primary;
+	color:currentColor;
 }
 
 .main-navigation ul ul :hover > a,
@@ -75,7 +93,7 @@
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+	left: 0;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -87,7 +105,7 @@
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-	color:$primary;
+	color:currentColor;
 }
 
 /* Small menu. */

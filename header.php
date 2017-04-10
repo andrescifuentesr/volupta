@@ -20,6 +20,18 @@
 <?php wp_head(); ?>
 </head>
 
+<?php 
+
+//we detect if we are in a product to assign the current color
+//otherwise we assign the default color.
+if ( is_singular( 'product' ) ) {
+    $main_color = types_render_field( "product-main-color", array( ) );
+} else {
+	$main_color = 'rgb(69,151,144)';
+}
+
+?>
+
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'volupta' ); ?></a>
@@ -29,7 +41,7 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding --><!--
 	
-	--><div class="navigation-wrapper">
+	--><div class="navigation-wrapper" style="color: <?php echo esc_html( $main_color ); ?> ">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '&#9776;', 'volupta' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
