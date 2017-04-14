@@ -4,30 +4,44 @@
 
 // Section home-description
 .home-description {
-	background: $primary;
-	color: #fff;
+	background: #fff;
+	color: grey;
 	text-align: center;
 	font-size: 1em;
-	@include mq(tablet) {font-size: 1.25em; }
+	// @include mq(tablet) {font-size: 1.25em; }
 
 	.home-description--wrapper {
 		padding: 1em .5em;
 		@include mq(tablet) { padding: 2em 10%; }
 		@include mq(lap) { padding: 2em 10%; }
-		@include mq(desk) { padding: 3em 12em; max-width: $max-width; margin: 0 auto; position: relative;}
+		@include mq(desk) { padding: 3em 10em 3.7em; max-width: $max-width; margin: 0 auto; position: relative;}
 
 		p {
 			display: inline;
 		}
 	}
 
-	.typl8-pull-quote {
-		@include typl8-pull-quotes(
-  			$typl8-pull-quote-fontsize,
-  			$typl8-pull-quote-opacity,
-  			$typl8-pull-quote-color
-  		);
- 	}
+	.home-description__title {
+		font-size: 3.75em;
+		line-height: 1em;
+		margin: 0.6em 0 0.5em;
+	}
+
+	.home-description__description {
+		position:relative;
+		
+		&::after {
+			content:"";
+			position: relative;
+			width: 30%;
+		    margin: 0 auto;
+    		display: block;
+			height: 4px;
+			margin-top: 2.75em;
+			background: url(img/bg-line-dot-separator.png) x-repeat;
+		}
+
+	}
 
 }
 
@@ -41,6 +55,7 @@
 
 	.home-products--wrapper {
 		padding: 1em 1em 2em;
+		color:#fff;
 		@include mq(tablet) { padding: 2em 10%; }
 		@include mq(lap) { padding: 3em 10% 4em;  }
 		@include mq(desk) { padding: 3em 0 3em; max-width: $max-width; margin: 0 auto;  }		
@@ -91,7 +106,7 @@
 	}
 
 	.home-products__title {
-		color: $primary;
+		color: #fff;
 		font-size: 2em;
 		line-height: 1.2em; 
 		text-transform: uppercase;
@@ -106,17 +121,55 @@
 	.home-products__description {
 		margin-bottom: 2em;
 	}
+}
+
+.home-products__button {
+	display: inline-block;
+	background: #fff;
+	text-transform: uppercase;
+	color:#fff;
+	padding: 1em 3em;
+	border-radius: 20px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.product-item_1 {
+	background: $mango;
 
 	.home-products__button {
-		display: inline-block;
-		background: $primary;
-		text-transform: uppercase;
-		color:#fff;
-		padding: 1em 3em;
-		border-radius: 20px;
-		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+		color: $mango;
+	}	
+}
+
+.product-item_2 {
+	background: $beet;
+
+	.home-products__button {
+		color: $beet;
+	}	
+}
+
+.product-item_3 {
+
+	.home-products__title {
+		color: $primary;
 	}
 
+	.home-products__description {
+		color: $secondary;
+	}
+
+	.home-products__button {
+		background: $primary;
+	}	
+}
+
+.section-home__footer {
+
+	.home-products__button {
+		color: #707070;
+		margin-top: 1.8em;
+	}
 }
 
 // Section home-recipes

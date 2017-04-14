@@ -18,9 +18,9 @@
 		Color definition
 		///////////////// 
 		*/
-		//call of custom section-ingredients-product-title
+		//call of custom product-main-color
 		$main_color = types_render_field( "product-main-color", array( ) );
-		//call of custom field ingredient_image-nutrition-product-image
+		//call of custom field product-title-color
 		$title_color = types_render_field( "product-title-color", array( ) );
 	?>
 

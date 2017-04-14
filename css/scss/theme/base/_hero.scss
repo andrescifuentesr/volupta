@@ -45,11 +45,32 @@
 	}
 }
 
-// Section home page default
+// Section Page default
 .section-default { 
 	background: url('img/home-hero.jpg') no-repeat center center;
 	background-size: cover;
 	border-bottom: 14px solid $primary;
+}
+
+// Section Home page footer
+.section-home__footer { 
+	// height: 350px;
+	// @include mq(tablet) { padding: 10em 0 0; height: 400px; }
+	// @include mq(lap) { padding: 14em 0 0;  height: 600px; }
+	@include mq(desk) {  padding: 8.5em 0 0; height: 520px; }
+
+	.section-hero__content {
+		width:100%;
+		display: inline-block;
+		vertical-align: middle;
+		// float: left;
+		background: url('img/bg-line-dot-separator-white.png') no-repeat bottom center;
+		animation: none;
+	}
+
+	.section-home__footer__description {
+		font-size: 1.5em;
+	}
 }
 
 // Section product-hero
