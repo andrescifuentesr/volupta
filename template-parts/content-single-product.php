@@ -205,14 +205,6 @@
 	 <?php
 		//call of custom field section-kitchen-product-title
 		$section_kitchen_product_title = types_render_field( "section-kitchen-product-title", array( ) );
-
-
-		// //call of custom field section_kitchen_instructions_content
-		// $section_kitchen_instructions_content = types_render_field( "section-kitchen-instructions-content", array( ) );
-		// //call of custom field section-kitchen-product-image
-		// $section_kitchen_product_image = types_render_field( "section-kitchen-product-image", array( "alt" => "Kitchen instructions", "title" => "" ) );
-
-
 		//call of custom field section-kitchen-disclaimer
 		$section_kitchen_disclaimer = types_render_field( "section-kitchen-disclaimer", array( ) );
 	?>
@@ -231,66 +223,89 @@
 		<section class="product-kitchen">
 
 			<div class="product-kitchen--wrapper">
-				<div class="product-kitchen__content">
-					
-					<h3 class="product-kitchen__title title_dotted">
-						<?php the_title(); ?>
-					</h3>
-					
-					<div class="product-kitchen__content-wrapper">
 
-						<div class="product-kitchen__content-item">
-							<div class="product-kitchen__content-image">
-								<?php echo types_render_field( "section-kitchen-product-image-1", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-							</div><!--
+				<?php 
+					//Kitchen section conditional
+					if ( !empty( $section_kitchen_disclaimer ) ) { 
+				?>
+
+					<div class="product-kitchen__content">
 						
-						--><div class="product-kitchen__description">
-								<?php echo types_render_field( "section-kitchen-instructions-content-1", array( ) ); ?>
-							</div>	
+						<h3 class="product-kitchen__title title_dotted">
+							<?php the_title(); ?>
+						</h3>
+						
+						<div class="product-kitchen__content-wrapper">
+
+							<div class="product-kitchen__content-item">
+								<div class="product-kitchen__content-image">
+									<?php echo types_render_field( "section-kitchen-product-image-1", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+								</div><!--
+							
+							--><div class="product-kitchen__description">
+									<?php echo types_render_field( "section-kitchen-instructions-content-1", array( ) ); ?>
+								</div>	
+							</div>
+
+							<div class="product-kitchen__content-item">
+								<div class="product-kitchen__content-image">
+									<?php echo types_render_field( "section-kitchen-product-image-2", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+								</div><!--
+							
+							--><div class="product-kitchen__description">
+									<?php echo types_render_field( "section-kitchen-instructions-content-2", array( ) ); ?>
+								</div>	
+							</div>
+
+							<div class="product-kitchen__content-item">
+								<div class="product-kitchen__content-image">
+									<?php echo types_render_field( "section-kitchen-product-image-3", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+								</div><!--
+							
+							--><div class="product-kitchen__description">
+									<?php echo types_render_field( "section-kitchen-instructions-content-3", array( ) ); ?>
+								</div>	
+							</div>
+
+							<div class="product-kitchen__content-item">
+								<div class="product-kitchen__content-image">
+									<?php echo types_render_field( "section-kitchen-product-image-4", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
+								</div><!--
+							
+							--><div class="product-kitchen__description">
+									<?php echo types_render_field( "section-kitchen-instructions-content-4", array( ) ); ?>
+								</div>	
+							</div>
+
+							<div class="line-separator"></div>
+
 						</div>
 
-						<div class="product-kitchen__content-item">
-							<div class="product-kitchen__content-image">
-								<?php echo types_render_field( "section-kitchen-product-image-2", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-							</div><!--
-						
-						--><div class="product-kitchen__description">
-								<?php echo types_render_field( "section-kitchen-instructions-content-2", array( ) ); ?>
-							</div>	
+						<div class="product-kitchen__disclaimer disclaimer">
+							<?php echo $section_kitchen_disclaimer; ?>
 						</div>
+					</div><!--
 
-						<div class="product-kitchen__content-item">
-							<div class="product-kitchen__content-image">
-								<?php echo types_render_field( "section-kitchen-product-image-3", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-							</div><!--
-						
-						--><div class="product-kitchen__description">
-								<?php echo types_render_field( "section-kitchen-instructions-content-3", array( ) ); ?>
-							</div>	
-						</div>
+			--><?php } //end of Kitchen section conditional 
 
-						<div class="product-kitchen__content-item">
-							<div class="product-kitchen__content-image">
-								<?php echo types_render_field( "section-kitchen-product-image-4", array( "alt" => "Kitchen instructions", "title" => "" ) ); ?>
-							</div><!--
-						
-						--><div class="product-kitchen__description">
-								<?php echo types_render_field( "section-kitchen-instructions-content-4", array( ) ); ?>
-							</div>	
-						</div>
+					//we will applied a different class if we don't have the recipes section
+					$recipes_layout = '';
+					if ( empty( $section_kitchen_disclaimer ) ) {
+						$recipes_layout = 'product-kitchen__recipes_100';
+					}
 
-						<div class="line-separator"></div>
+			?><!--
 
-					</div>
+			--><div class="product-kitchen__recipes <?php echo $recipes_layout; ?>">
 
-					<div class="product-kitchen__disclaimer disclaimer">
-						<?php echo $section_kitchen_disclaimer; ?>
-					</div>
-				</div><!--
-
-			--><div class="product-kitchen__recipes">
-
-					<h3 class="product-kitchen__title title_dotted"><?php _e( 'Featured recipes', 'volupta') ?></h3>
+					<?php 
+						//Kitchen section conditional
+						if ( !empty( $section_kitchen_disclaimer ) ) { 
+					?>
+						<h3 class="product-kitchen__title title_dotted">
+							<?php _e( 'Featured recipes', 'volupta') ?>
+						</h3>
+					<?php } //end of Kitchen section conditional ?>
 
 					<div class="product-kitchen__recipes-wrapper">
 						<?php

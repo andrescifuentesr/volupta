@@ -248,7 +248,7 @@
 		padding: 1em 1em 0;
 		@include mq(tablet) { padding: 2em 2.5% 2em;}
 		@include mq(lap) { padding: 2em 5% 4em; }
-		@include mq(desk) { padding: 2em 0 4em;  max-width: $max-width; margin: 0 auto;  }		
+		@include mq(desk) { padding: 6em 0 5em;  max-width: $max-width; margin: 0 auto;  }		
 	}	
 
 
@@ -261,6 +261,27 @@
 		@include mq(desk) { padding: 0 0 0 2em; }
 	}
 
+	.product-kitchen__recipes_100 {
+		display: inline-block;
+		vertical-align: top;
+		width:100%;
+		@include mq(tablet) { }
+		@include mq(lap) {  }
+		@include mq(desk) { padding: 0 4em 0; }
+
+		.product-kitchen__recipes-item {
+			position:relative;
+			margin-bottom: 2em;
+			@include mq(mobile) { }
+			@include mq(tablet) {  }
+			@include mq(lap) { 
+				@include simple-grid( 3 , 5% );
+			}
+			@include mq(desk) { }
+		}
+
+	}
+
 	.product-kitchen__title {
 		color:$heading-color;
 		position:relative;
@@ -268,7 +289,7 @@
 		text-transform: uppercase;
 		margin: 0;
 		line-height: 1.2em;
-		@include mq(tablet) { margin: 1em 0; line-height: 1.6em;}
+		@include mq(tablet) { margin: 0 0 1em; line-height: 1.6em;}
 		@include mq(lap) { }
 		@include mq(desk) { }
 	}
@@ -339,7 +360,8 @@
 			cursor:pointer;
 
 			&::before {
-				background: rgba(57, 110, 75, 0);	
+				// background: rgba(57, 110, 75, 0); //old green backgroun
+				background: rgba(0, 0, 0, 0);
 			}
 
 			span {
@@ -351,7 +373,8 @@
 		&::before {
 			content:'';
 			position: absolute;
-			background: rgba(57, 110, 75, .6);
+			// background: rgba(57, 110, 75, .6);
+			background: rgba(0, 0, 0, .4);
 			top: 0;
 			left:0;
 			bottom:0;

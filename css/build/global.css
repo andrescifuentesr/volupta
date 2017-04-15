@@ -2329,10 +2329,15 @@ html.magnifying > body {
 .nav-infinite li:last-child {
   text-align: left;
 }
+.nav-infinite li:last-child a::before {
+  transform: rotate(180deg);
+  left: 80%;
+}
 .nav-infinite span {
   transition: .6s all;
 }
 .nav-infinite a {
+  position: relative;
   display: block;
   color: currentColor;
   padding: 2.5em 1em;
@@ -2344,6 +2349,17 @@ html.magnifying > body {
 }
 .nav-infinite a:hover span {
   color: #fff;
+}
+.nav-infinite a::before {
+  content: '';
+  width: 59px;
+  height: 59px;
+  position: absolute;
+  right: 80%;
+  z-index: 10;
+  cursor: pointer;
+  background: url("img/slider-arrow.svg") repeat;
+  transition: all 0.3s ease-in-out;
 }
 
 .spinner {
@@ -3242,7 +3258,7 @@ html.magnifying > body {
 }
 @media (min-width: 1200px) {
   .product-kitchen .product-kitchen--wrapper {
-    padding: 2em 0 4em;
+    padding: 6em 0 5em;
     max-width: 1150px;
     margin: 0 auto;
   }
@@ -3262,6 +3278,33 @@ html.magnifying > body {
     padding: 0 0 0 2em;
   }
 }
+.product-kitchen .product-kitchen__recipes_100 {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .product-kitchen .product-kitchen__recipes_100 {
+    padding: 0 4em 0;
+  }
+}
+.product-kitchen .product-kitchen__recipes_100 .product-kitchen__recipes-item {
+  position: relative;
+  margin-bottom: 2em;
+}
+@media (min-width: 850px) {
+  .product-kitchen .product-kitchen__recipes_100 .product-kitchen__recipes-item {
+    width: 30%;
+    margin-right: 5%;
+    display: inline-block;
+  }
+  .product-kitchen .product-kitchen__recipes_100 .product-kitchen__recipes-item:nth-child(n) {
+    margin-right: 5%;
+  }
+  .product-kitchen .product-kitchen__recipes_100 .product-kitchen__recipes-item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
 .product-kitchen .product-kitchen__title {
   color: #287568;
   position: relative;
@@ -3272,7 +3315,7 @@ html.magnifying > body {
 }
 @media (min-width: 700px) {
   .product-kitchen .product-kitchen__title {
-    margin: 1em 0;
+    margin: 0 0 1em;
     line-height: 1.6em;
   }
 }
@@ -3366,7 +3409,7 @@ html.magnifying > body {
   cursor: pointer;
 }
 .product-kitchen .product-kitchen__recipes-item:hover::before {
-  background: rgba(57, 110, 75, 0);
+  background: transparent;
 }
 .product-kitchen .product-kitchen__recipes-item:hover span {
   opacity: 0;
@@ -3374,7 +3417,7 @@ html.magnifying > body {
 .product-kitchen .product-kitchen__recipes-item::before {
   content: '';
   position: absolute;
-  background: rgba(57, 110, 75, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
   bottom: 0;
