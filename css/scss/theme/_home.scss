@@ -22,9 +22,12 @@
 	}
 
 	.home-description__title {
-		font-size: 3.75em;
-		line-height: 1em;
+		font-size: 2em;
+		line-height: 1.2em; 
 		margin: 0.6em 0 0.5em;
+		@include mq(tablet) { font-size: 3em; line-height: 1em;  }
+		@include mq(lap) { }
+		@include mq(desk) { font-size: 3.75em; }
 	}
 
 	.home-description__description {
@@ -113,7 +116,7 @@
 		margin-bottom: 0;
 		margin-top: .5em;
 		text-align: center;
-		@include mq(tablet) { font-size: 3em; line-height: 1.2em; text-align: left; margin: 0; }
+		@include mq(tablet) { font-size: 3em; text-align: left; margin: 0; }
 		@include mq(lap) { margin: 1em 0 0.25em;}
 		@include mq(desk) { margin-bottom: .25em; }		
 	}
@@ -172,45 +175,25 @@
 	}
 }
 
-// Section home-recipes
-.home-recipes {
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding: 1em 0 .5em;
-	@include mq(tablet) { padding: 5em 0 2em;  }
-	@include mq(lap) { }
-	@include mq(desk) { }
+// Section Home page footer
+.section-home__footer { 
+	height: 350px;
+	padding: 4em 0.5em 0;
+	@include mq(tablet) { padding: 6em 0 0; height: 400px; }
+	@include mq(lap) { padding: 8.5em 0 0; height: 520px; }
+	@include mq(desk) {   }
 
-	.js-recipe__item {
-		position: relative;
-		top: -50%;
+	.section-hero__content {
+		width:100%;
+		display: inline-block;
+		vertical-align: middle;
+		background: url('img/bg-line-dot-separator-white.png') no-repeat bottom center;
+		animation: none;
 	}
 
-	.home-recipes__description {
-		margin-top: 1.5em;
-		color:#fff;
-		text-align: center;
-		background: transparentize($primary, .2);
-		padding: 1em 0;
-		@include mq(tablet) { padding: 1.5em 0;  }
-		@include mq(lap) { }
-		@include mq(desk) { }
+	.section-home__footer__description {
+		font-size: 1.2em;
+		line-height: 1em;
+		@include mq(desk) { font-size: 1.5em; }		
 	}
-
-	.home-recipes__title {
-		text-transform: uppercase;
-		font-size: 1.5em;
-		color:#fff;
-		@include mq(tablet) { font-size: 2.5em;  }
-		@include mq(lap) { }
-		@include mq(desk) { }
-	}
-
-	.home-recipes__content {
-		padding:0 1em;
-		@include mq(tablet) { padding:0 25%; }
-		@include mq(lap) { }
-		@include mq(desk) { }
-	}
-
 }

@@ -1729,7 +1729,24 @@ html.magnifying > body {
   height: 450px;
 }
 .site-page .page-wrapper {
-  padding: 4em 4em 2em;
+  padding: 2em 1em 0;
+}
+@media (min-width: 700px) {
+  .site-page .page-wrapper {
+    padding: 2em 2.5% 0;
+  }
+}
+@media (min-width: 850px) {
+  .site-page .page-wrapper {
+    padding: 4em 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .site-page .page-wrapper {
+    padding: 4em 5% 4em 0;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
 }
 .site-page .page-header {
   margin-bottom: 2em;
@@ -2020,10 +2037,11 @@ html.magnifying > body {
   display: none;
   list-style: none;
   margin: 0;
-  padding-left: 0;
+  padding: 0 .25em;
 }
 @media (min-width: 700px) {
   .main-navigation ul {
+    padding: 0;
     display: flex;
     justify-content: space-between;
   }
@@ -2039,44 +2057,59 @@ html.magnifying > body {
   width: 100%;
   text-align: center;
   padding: 1em 0;
-  font-size: 1.5em;
 }
 @media (min-width: 700px) {
   .main-navigation li {
     float: left;
     width: auto;
-    font-size: 1em;
-    padding: .5em 0.5em;
+    padding: .5em 0.5em 2em;
+  }
+}
+@media (min-width: 850px) {
+  .main-navigation li {
+    padding: .5em 0.5em 2em;
   }
 }
 @media (min-width: 1200px) {
   .main-navigation li {
-    padding: 0 2em 1.5em;
     float: left;
     width: auto;
+    padding: 0 2em 1.5em;
   }
 }
 
 .main-navigation a {
   display: block;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 1.25em;
   color: #fff;
   transition: .2s all;
 }
 @media (min-width: 700px) {
   .main-navigation a {
     color: #818285;
+    font-size: 0.8em;
   }
 }
 
 .main-navigation ul ul {
-  background: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  top: 2.5em;
-  left: -999em;
-  z-index: 99999;
-  padding: 1em 0;
+  display: inline-block;
+}
+@media (min-width: 700px) {
+  .main-navigation ul ul {
+    display: inline-block;
+    top: 3em;
+    position: absolute;
+    left: -999em;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1em 0;
+  }
+}
+@media (min-width: 1200px) {
+  .main-navigation ul ul {
+    top: 2.5em;
+  }
 }
 .main-navigation ul ul .menu-item-216 a, .main-navigation ul ul .menu-item-245 a {
   color: #ec9b16;
@@ -2094,14 +2127,38 @@ html.magnifying > body {
 }
 
 .main-navigation ul ul a {
-  width: 250px;
   display: block;
+}
+@media (min-width: 700px) {
+  .main-navigation ul ul a {
+    width: 225px;
+  }
+}
+@media (min-width: 850px) {
+  .main-navigation ul ul a {
+    width: 250px;
+  }
 }
 
 .main-navigation ul ul li {
-  padding: .25em 1em .25em 2em;
-  text-align: left;
-  text-transform: uppercase;
+  text-align: center;
+  padding: .15em 0;
+}
+@media (min-width: 700px) {
+  .main-navigation ul ul li {
+    padding: .25em 1em .25em 1em;
+    text-align: left;
+  }
+}
+@media (min-width: 850px) {
+  .main-navigation ul ul li {
+    padding: .25em 1em .25em 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .main-navigation ul ul li {
+    padding: .25em 1em .25em 2em;
+  }
 }
 
 .main-navigation li:hover > a,
@@ -2111,7 +2168,19 @@ html.magnifying > body {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: 0;
+  left: -0.5em;
+}
+@media (min-width: 850px) {
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    left: -1em;
+  }
+}
+@media (min-width: 1200px) {
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    left: 0;
+  }
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -2241,23 +2310,6 @@ html.magnifying > body {
   background: url("img/home-hero.jpg") no-repeat center center;
   background-size: cover;
   border-bottom: 14px solid #459790;
-}
-
-@media (min-width: 1200px) {
-  .section-home__footer {
-    padding: 8.5em 0 0;
-    height: 520px;
-  }
-}
-.section-home__footer .section-hero__content {
-  width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  background: url("img/bg-line-dot-separator-white.png") no-repeat bottom center;
-  animation: none;
-}
-.section-home__footer .section-home__footer__description {
-  font-size: 1.5em;
 }
 
 .product-hero {
@@ -2439,7 +2491,12 @@ html.magnifying > body {
   font-weight: normal;
   color: #287568;
   text-transform: uppercase;
-  font-size: 2.5em;
+  font-size: 2em;
+}
+@media (min-width: 700px) {
+  .nav-infinite li {
+    font-size: 2.5em;
+  }
 }
 .nav-infinite li:first-child {
   text-align: right;
@@ -2451,14 +2508,16 @@ html.magnifying > body {
 .nav-infinite li:last-child a::before {
   transform: rotate(180deg);
   left: 80%;
+  top: 40%;
 }
 .nav-infinite span {
+  display: block;
+  line-height: 1em;
   transition: .6s all;
 }
 .nav-infinite .disclaimer-recipes {
   display: block;
   line-height: 1em;
-  margin-top: -0.4em;
   color: #959595;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .7em;
@@ -2468,9 +2527,14 @@ html.magnifying > body {
   position: relative;
   display: block;
   color: currentColor;
-  padding: 2.5em 1em;
+  padding: 1em .3em;
   background: #fff;
   transition: .3s all;
+}
+@media (min-width: 700px) {
+  .nav-infinite a {
+    padding: 2.5em 1em;
+  }
 }
 .nav-infinite a:hover {
   background: currentColor;
@@ -2488,8 +2552,12 @@ html.magnifying > body {
   right: 80%;
   z-index: 10;
   cursor: pointer;
-  background: url("img/slider-arrow.svg") repeat;
   transition: all 0.3s ease-in-out;
+}
+@media (min-width: 700px) {
+  .nav-infinite a::before {
+    background: url("img/slider-arrow.svg") repeat;
+  }
 }
 
 .spinner {
@@ -2626,9 +2694,20 @@ html.magnifying > body {
   display: inline;
 }
 .home-description .home-description__title {
-  font-size: 3.75em;
-  line-height: 1em;
+  font-size: 2em;
+  line-height: 1.2em;
   margin: 0.6em 0 0.5em;
+}
+@media (min-width: 700px) {
+  .home-description .home-description__title {
+    font-size: 3em;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1200px) {
+  .home-description .home-description__title {
+    font-size: 3.75em;
+  }
 }
 .home-description .home-description__description {
   position: relative;
@@ -2759,7 +2838,6 @@ html.magnifying > body {
 @media (min-width: 700px) {
   .home-products .home-products__title {
     font-size: 3em;
-    line-height: 1.2em;
     text-align: left;
     margin: 0;
   }
@@ -2817,48 +2895,36 @@ html.magnifying > body {
   margin-top: 1.8em;
 }
 
-.home-recipes {
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 1em 0 .5em;
+.section-home__footer {
+  height: 350px;
+  padding: 4em 0.5em 0;
 }
 @media (min-width: 700px) {
-  .home-recipes {
-    padding: 5em 0 2em;
+  .section-home__footer {
+    padding: 6em 0 0;
+    height: 400px;
   }
 }
-.home-recipes .js-recipe__item {
-  position: relative;
-  top: -50%;
-}
-.home-recipes .home-recipes__description {
-  margin-top: 1.5em;
-  color: #fff;
-  text-align: center;
-  background: rgba(69, 151, 144, 0.8);
-  padding: 1em 0;
-}
-@media (min-width: 700px) {
-  .home-recipes .home-recipes__description {
-    padding: 1.5em 0;
+@media (min-width: 850px) {
+  .section-home__footer {
+    padding: 8.5em 0 0;
+    height: 520px;
   }
 }
-.home-recipes .home-recipes__title {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  color: #fff;
+.section-home__footer .section-hero__content {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("img/bg-line-dot-separator-white.png") no-repeat bottom center;
+  animation: none;
 }
-@media (min-width: 700px) {
-  .home-recipes .home-recipes__title {
-    font-size: 2.5em;
-  }
+.section-home__footer .section-home__footer__description {
+  font-size: 1.2em;
+  line-height: 1em;
 }
-.home-recipes .home-recipes__content {
-  padding: 0 1em;
-}
-@media (min-width: 700px) {
-  .home-recipes .home-recipes__content {
-    padding: 0 25%;
+@media (min-width: 1200px) {
+  .section-home__footer .section-home__footer__description {
+    font-size: 1.5em;
   }
 }
 
@@ -2883,7 +2949,7 @@ html.magnifying > body {
   }
 }
 .site-recipes .site-recipes--wrapper {
-  padding-bottom: 4em;
+  padding-bottom: 1em;
 }
 @media (min-width: 850px) {
   .site-recipes .site-recipes--wrapper {
@@ -4172,7 +4238,24 @@ html.magnifying > body {
 }
 
 .site-locator .page-wrapper {
-  padding: 4em 4em 2em;
+  padding: 2em 1em 0;
+}
+@media (min-width: 700px) {
+  .site-locator .page-wrapper {
+    padding: 2em 2.5% 0;
+  }
+}
+@media (min-width: 850px) {
+  .site-locator .page-wrapper {
+    padding: 4em 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .site-locator .page-wrapper {
+    padding: 4em 0;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
 }
 .site-locator #wpsl-wrap {
   background: #fff;
@@ -4185,7 +4268,7 @@ html.magnifying > body {
   margin-bottom: 2em;
   padding: 1.5em 1em 1em;
 }
-.site-locator #wpsl-stores {
+.site-locator #wpsl-result-list {
   padding: 0 0 0 1em;
 }
 .site-locator .wpsl-directions {

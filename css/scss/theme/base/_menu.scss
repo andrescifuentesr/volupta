@@ -11,8 +11,8 @@
 	display: none;
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
-	@include mq(tablet) { display:flex; justify-content: space-between; }
+	padding: 0 .25em;
+	@include mq(tablet) {padding: 0; display:flex; justify-content: space-between; }
 	@include mq(desk) { display: inline-block; }
 }
 
@@ -21,33 +21,35 @@
 	width:100%;
 	text-align: center;
 	padding: 1em 0;
-	font-size: 1.5em;
-	@include mq(tablet) { float: left; width:auto; font-size: 1em; padding: .5em 0.5em;}
-	@include mq(lap) {  }
-	@include mq(desk) { padding: 0 2em 1.5em;//this will break things, it was added for the new ul
-		float: left; width:auto;  }	
+	@include mq(tablet) { float: left; width:auto; padding: .5em 0.5em 2em;}
+	@include mq(lap) { padding: .5em 0.5em 2em; }
+	@include mq(desk) { float: left; width:auto; padding: 0 2em 1.5em; }	
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	font-size: 0.8em;
+	font-size: 1.25em;
 	color:#fff;
 	transition:.2s all;
-	@include mq(tablet) { color:$base-color;}
+	@include mq(tablet) { color:$base-color; font-size: 0.8em;}
 	@include mq(lap) { }
-	@include mq(desk) { }		
+	@include mq(desk) { }
 }
 
 .main-navigation ul ul {
-	// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	// float: left;
-	background: rgba(255, 255, 255, 0.8);
-	position: absolute;
-	top: 2.5em;
-	left: -999em;
-	z-index: 99999;
-	padding: 1em 0;
+	display: inline-block;	
+	@include mq(tablet) { 
+		display: inline-block;
+		top: 3em;
+		position: absolute;
+		left: -999em;
+		z-index: 99999;
+		background: rgba(255, 255, 255, 0.8);
+		padding: 1em 0;
+	}
+	@include mq(lap) { }
+	@include mq(desk) { top: 2.5em; }
 
 	.menu-item-216 a, .menu-item-245 a {
 		color:$mango;
@@ -68,14 +70,20 @@
 }
 
 .main-navigation ul ul a {
-	width: 250px;
 	display:block;
+	@include mq(tablet) { width: 225px; }
+	@include mq(lap) { width: 250px; }
 }
 
 .main-navigation ul ul li {
-	padding: .25em 1em .25em 2em;
-	text-align: left;
-	text-transform:uppercase;
+	text-align: center;
+	padding: .15em 0;
+	@include mq(tablet) {
+		padding: .25em 1em .25em 1em;
+		text-align: left;
+	}
+	@include mq(lap) { padding: .25em 1em .25em 1.5em; }	
+	@include mq(desk) { padding: .25em 1em .25em 2em; }	
 }
 
 .main-navigation li:hover > a,
@@ -93,7 +101,9 @@
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: 0;
+	left: -0.5em;
+	@include mq(lap) { left: -1em; }
+	@include mq(desk) { left: 0; }
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -165,7 +175,4 @@
 	.menu-toggle {
 		display: none;
 	}
-	// .main-navigation ul {
-	// 	display: block;
-	// }
 }

@@ -13,7 +13,8 @@
 		font-weight: normal;
 		color:$heading-color;
 		text-transform: uppercase;
-		font-size: 2.5em;
+		font-size: 2em;
+		@include mq(tablet) { font-size: 2.5em; }
 
 		&:first-child {
 			text-align: right;
@@ -28,12 +29,15 @@
 				&::before {
 					transform: rotate(180deg);
 					left: 80%;
+					top: 40%;
 				}
 			}
 		}	
 	}
 
 	span {
+		display:block;
+		line-height: 1em;
 		transition: .6s all;
 	}
 
@@ -41,20 +45,22 @@
 	.disclaimer-recipes {
 		display:block;
 		line-height: 1em;
-		margin-top: -0.4em;
 		color: #959595;
 		font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 		font-size: .7em;
-		transition: .6s all;	
+		transition: .6s all;
+		@include mq(tablet) { }	
 	}
 
 	a {
 		position: relative;
 		display:block;
 		color: currentColor;
-		padding: 2.5em 1em;
+		padding: 1em .3em;
 		background: #fff;
 		transition: .3s all;
+		@include mq(tablet) { padding: 2.5em 1em; }
+
 
 		&:hover {
 			background:currentColor;
@@ -75,8 +81,8 @@
 			right: 80%;
 			z-index: 10;
 			cursor: pointer;
-			background: url('img/slider-arrow.svg') repeat;
 			transition: all 0.3s ease-in-out;
+			@include mq(tablet) { background: url('img/slider-arrow.svg') repeat; }			
 		}		
 	
 	}

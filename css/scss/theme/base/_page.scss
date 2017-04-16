@@ -6,7 +6,10 @@
 	}
 
 	.page-wrapper {
-		padding: 4em 4em 2em;
+		padding: 2em 1em 0;
+		@include mq(tablet) { padding: 2em 2.5% 0; }
+		@include mq(lap) { padding: 4em 10%; }
+		@include mq(desk) { padding: 4em 5% 4em 0; max-width: $max-width; margin: 0 auto;  }
 	}
 
 	.page-header {
