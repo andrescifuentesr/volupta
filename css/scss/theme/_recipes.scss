@@ -1,15 +1,17 @@
 .site-recipes {
 	background: url('img/bg-recipe-wood.jpg') repeat;
 	background-size: cover;
-	padding: 9em 0 1em;
-	@include mq(mobile) { padding: 6em 0 1em; }
+	padding: 9em 0 0;
+	@include mq(mobile) { padding: 6em 0 0; }
 	@include mq(tablet) {  }
-	@include mq(lap) { padding: 8em 0 2em; }
-	@include mq(desk) { padding: 8em 0 4em; }
+	@include mq(lap) { padding: 8em 0 0; }
+	@include mq(desk) { padding: 8em 0 0; }
 
 
 	.site-recipes--wrapper {
-		@include mq(desk) { max-width: $max-width; margin: 0 auto;  }
+		padding-bottom: 4em;
+		@include mq(lap) { padding-bottom: 2em; }
+		@include mq(desk) { max-width: $max-width; margin: 0 auto;  padding-bottom: 4em; }
 	}
 
 	.flexslider .slides .slides-img {
@@ -46,7 +48,7 @@
 	}
 
 	.recipes__title {
-		color:$primary;
+		color: currentColor;
 		font-size: 3em;
 		text-transform: uppercase;
 		text-align: center;
@@ -55,7 +57,7 @@
 
 	.recipes__overview {
 		font-size: 1.15em;
-		color:$primary;
+		color: currentColor;
 		font-weight: 700;
 	}
 
@@ -133,9 +135,5 @@
 			@include mq(desk) { }
 		}
 	}
-
-}
-
-.recipe__item {
 
 }

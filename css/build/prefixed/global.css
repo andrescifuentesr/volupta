@@ -2075,13 +2075,13 @@ html.magnifying > body {
   z-index: 99999;
   padding: 1em 0;
 }
-.main-navigation ul ul .menu-item-216 a {
+.main-navigation ul ul .menu-item-216 a, .main-navigation ul ul .menu-item-245 a {
   color: #ec9b16;
 }
-.main-navigation ul ul .menu-item-217 a {
+.main-navigation ul ul .menu-item-217 a, .main-navigation ul ul .menu-item-246 a {
   color: #bd3156;
 }
-.main-navigation ul ul .menu-item-218 a {
+.main-navigation ul ul .menu-item-218 a, .main-navigation ul ul .menu-item-247 a {
   color: #459790;
 }
 
@@ -2437,7 +2437,7 @@ html.magnifying > body {
   font-weight: normal;
   color: #287568;
   text-transform: uppercase;
-  font-size: 2.4em;
+  font-size: 2.5em;
 }
 .nav-infinite li:first-child {
   text-align: right;
@@ -2452,6 +2452,15 @@ html.magnifying > body {
   left: 80%;
 }
 .nav-infinite span {
+  transition: .6s all;
+}
+.nav-infinite .disclaimer-recipes {
+  display: block;
+  line-height: 1em;
+  margin-top: -0.4em;
+  color: #959595;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .7em;
   transition: .6s all;
 }
 .nav-infinite a {
@@ -2473,6 +2482,9 @@ html.magnifying > body {
   width: 59px;
   height: 59px;
   position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   right: 80%;
   z-index: 10;
   cursor: pointer;
@@ -2842,27 +2854,36 @@ html.magnifying > body {
 .site-recipes {
   background: url("img/bg-recipe-wood.jpg") repeat;
   background-size: cover;
-  padding: 9em 0 1em;
+  padding: 9em 0 0;
 }
 @media (min-width: 440px) {
   .site-recipes {
-    padding: 6em 0 1em;
+    padding: 6em 0 0;
   }
 }
 @media (min-width: 850px) {
   .site-recipes {
-    padding: 8em 0 2em;
+    padding: 8em 0 0;
   }
 }
 @media (min-width: 1200px) {
   .site-recipes {
-    padding: 8em 0 4em;
+    padding: 8em 0 0;
+  }
+}
+.site-recipes .site-recipes--wrapper {
+  padding-bottom: 4em;
+}
+@media (min-width: 850px) {
+  .site-recipes .site-recipes--wrapper {
+    padding-bottom: 2em;
   }
 }
 @media (min-width: 1200px) {
   .site-recipes .site-recipes--wrapper {
     max-width: 1150px;
     margin: 0 auto;
+    padding-bottom: 4em;
   }
 }
 .site-recipes .flexslider .slides .slides-img {
@@ -2934,7 +2955,7 @@ html.magnifying > body {
   }
 }
 .site-recipes .recipes__title {
-  color: #459790;
+  color: currentColor;
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
@@ -2946,7 +2967,7 @@ html.magnifying > body {
 }
 .site-recipes .recipes__overview {
   font-size: 1.15em;
-  color: #459790;
+  color: currentColor;
   font-weight: 700;
 }
 .site-recipes .recipes__content {

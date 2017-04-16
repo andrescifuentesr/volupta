@@ -309,25 +309,26 @@
 
 					<div class="product-kitchen__recipes-wrapper">
 						<?php
-							$args = array(
-								'post_type' 		=> 'recipe', 	//Costum type Recipe			
+							// we create a for loop for callin all dishes children products: Ingredients
+							$args_recipe = array(
 								'order'				=> 'ASC',		// List in ascending order
+								'posts_per_page'	=>   3, 		// Show all child-posts
 								'orderby'      		=> 'id',		// List them in their menu order
-								'posts_per_page'	=>   3, 		// Show the last one
 							);
 
-							$QueryRecipes = new WP_Query($args);
-						?>
-						<?php while ($QueryRecipes->have_posts()) : $QueryRecipes->the_post(); ?><!--
+							$child_posts_recipe = types_child_posts('recipe', $args_recipe);
+							foreach ($child_posts_recipe as $child_post) {
+						?><!--
 						--><div class="product-kitchen__recipes-item">
 								<a href="<?php echo esc_url( get_permalink(9) ); ?>">
 									<div class="product-kitchen__recipes-image">
-										<?php echo types_render_field( "recipes-feature-image", array() ); ?>
+										<img src="<?php echo $child_post->fields['recipes-feature-image']; ?>" alt="<?php echo $child_post->post_title; ?>">
 									</div>
-									<?php the_title( '<span>', '</span>' ); ?>
+									<span><?php echo $child_post->post_title; ?></span>
 								</a>
 							</div><!--
-					--><?php endwhile; // End of the loop. ?>
+					--><?php } // End of the loop. ?>
+						<?php wp_reset_postdata(); ?>
 					</div><!-- .product-kitchen__recipes-wrapper -->
 				</div>
 			</div>
