@@ -15,8 +15,8 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div>
 				</section><!-- .quality-hero -->
-				<section class="home-description">
-					<div class="home-description--wrapper">
+				<section class="block-description">
+					<div class="block-description--wrapper">
 						<div class="typl8-pull-quote">
 							<?php echo types_render_field( "section-quality-introduction", array( ) ); ?>
 						</div>

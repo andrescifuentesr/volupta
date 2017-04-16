@@ -1,0 +1,52 @@
+.site-locator {
+
+	.page-wrapper {
+		padding: 4em 4em 2em;
+	}
+
+	#wpsl-wrap {
+		background: #fff;
+		padding-bottom: 3em;
+	}
+
+	.wpsl-input label, #wpsl-radius label, #wpsl-category label {
+		width: auto;
+	}
+
+	.wpsl-search {
+		margin-bottom: 2em;
+		padding: 1.5em 1em 1em;
+	}
+
+	#wpsl-stores {
+		padding: 0 0 0 1em;
+	}
+
+	.wpsl-directions {
+		color: $primary;
+	}
+
+	#wpsl-search-btn {
+		border: none;
+		color:#fff;
+		text-transform: uppercase !important;
+		background: $primary;
+		padding: .5em 2em;
+		margin-left:1em;
+		border-radius: 10px;
+		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+	}
+
+	#wpsl-gmap {
+		margin-right: 2em;
+	}
+
+	p {
+		color: $primary;
+	}
+
+	span {
+		color: $base-color	
+	}
+}
+

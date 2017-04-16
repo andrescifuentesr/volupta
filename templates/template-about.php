@@ -15,13 +15,13 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div>
 				</section><!-- .about-hero -->
-				<section class="home-description">
-					<div class="home-description--wrapper">
+				<section class="block-description">
+					<div class="block-description--wrapper">
 						<div class="typl8-pull-quote">
 							<?php echo types_render_field( "section-about-us-introduction", array( ) ); ?>
 						</div>
 					</div>
-				</section><!-- .home-description -->
+				</section><!-- .about-description -->
 				<section class="about-vision">
 					<div class="about-vision--wrapper">
 						<div class="about-vision__item-content">

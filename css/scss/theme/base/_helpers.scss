@@ -22,6 +22,35 @@
 	}
 }
 
+// Section home-description
+.block-description {
+	background: $primary;
+	color: #fff;
+	text-align: center;
+	font-size: 1em;
+	@include mq(tablet) {font-size: 1.25em; }
+
+	.block-description--wrapper {
+		padding: 1em .5em;
+		@include mq(tablet) { padding: 2em 10%; }
+		@include mq(lap) { padding: 2em 10%; }
+		@include mq(desk) { padding: 3em 12em; max-width: $max-width; margin: 0 auto; position: relative;}
+
+		p {
+			display: inline;
+		}
+	}
+
+	.typl8-pull-quote {
+		@include typl8-pull-quotes(
+  			$typl8-pull-quote-fontsize,
+  			$typl8-pull-quote-opacity,
+  			$typl8-pull-quote-color
+  		);
+ 	}
+
+}
+
 .disclaimer {
 	font-size: .75em;
 	text-transform: uppercase;

@@ -75,17 +75,14 @@
 
 // Section product-hero
 .product-hero {
-
 	padding: 11em 0 0;
 	height: 500px;
-
 	@include mq(tablet) { padding: 10em 0 0; height: 400px; }
 	@include mq(lap) { padding: 14em 0 0;  height: 600px; }
 	@include mq(desk) {  padding: 16em 0 0; height: 650px; }		
 
 	.product-hero__content {
 		padding: 0 .5em; 
-		
 		@include mq(tablet) { padding: 0 1em; }
 		@include mq(lap) { width:55%; float: left;  }
 		@include mq(desk) { width:50%;   }	
@@ -93,8 +90,35 @@
 		.section-hero__title {
 			margin-bottom: .5em;
 			@include mq(tablet) { margin-bottom: 0; }
+		}	
+
+		p {
+			font-size: 1.2em;
+			line-height: 1.4em;
+			@include mq(tablet) { line-height: 1.6em; }
 			@include mq(lap) {  }
 			@include mq(desk) { }
+		}
+	}
+}
+
+// Section Locator
+.locator-hero {
+	padding: 11em 0 0;
+	height: 500px;
+	@include mq(tablet) { padding: 10em 0 0; height: 400px; }
+	@include mq(lap) { padding: 14em 0 0;  height: 600px; }
+	@include mq(desk) {  padding: 16em 0 0; height: 650px; }		
+
+	.locator-hero__content {
+		padding: 0 .5em; 
+		@include mq(tablet) { padding: 0 1em; }
+		@include mq(lap) { width:55%; float: right;  }
+		@include mq(desk) { width:50%;   }	
+
+		.locator-hero__title {
+			margin-bottom: .5em;
+			@include mq(tablet) { margin-bottom: 0; }
 		}	
 
 		p {

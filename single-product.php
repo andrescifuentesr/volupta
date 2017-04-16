@@ -20,7 +20,7 @@ get_header(); ?>
 	?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main site-product" role="main" style="background:<?php echo esc_html( $background_color ); ?>;>
+		<main id="main" class="site-main site-product" role="main" style="background:<?php echo esc_html( $background_color ); ?>" >
 
 		<?php
 		while ( have_posts() ) : the_post();
