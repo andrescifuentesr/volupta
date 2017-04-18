@@ -41,6 +41,25 @@
 								triggerElement: "#js-product-kitchen", duration: 800, offset: -300 })
 							.setTween("#js-parallaxBackground_3", 0.5, {backgroundPosition: "0px 0px"}) // trigger a TweenMax.to tween
 							.addTo(controller);
+
+
+			//=====================
+			// Product animation
+			//=====================
+			//animation 1
+			// build tween
+			var producto1 = new TimelineMax ()
+				.add([
+					TweenMax.fromTo("#js-parallaxProduct .product-description__image-seed", 1, {top: '-100%'}, {top: '30%', ease: Linear.easeNone}),
+					TweenMax.fromTo("#js-parallaxProduct .product-description__image-pouch", 1, {top: '150%'}, {top: '50%', ease: Linear.easeNone})
+
+				]);
+			// build scene
+			var sceneproducto1 = new ScrollMagic.Scene({triggerElement: "#js-parallaxDescription", duration: 400, offset: -400})
+							.setTween(producto1)
+							.addTo(controller);
+
+
 		</script>
 
 	<?php }  ?>

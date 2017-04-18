@@ -75,6 +75,7 @@
 
 // Section product-description
 .product-description {
+	overflow: hidden;
 
 	.product-description--wrapper {
 		padding: 2em 1em;
@@ -85,16 +86,36 @@
 
 
 	.product-description__image {
+		position:relative;
+		margin-top: 4em;
 		padding: 0;
+		height: 400px;
 		@extend %col-2-5;
 
-		img {
-			margin: 0 auto;
-			width: 50%;
+		.product-description__image-seed {
+			position: absolute;
+			// top: 30%;
+			left:50%;
+			width: 80%;
+			transform: translate(-50%, -50%);
+			@include mq(mobile) { width: 50%; }
 			@include mq(tablet) { }
-			@include mq(lap) { width: auto; }
+			@include mq(lap) { width: 60%; }
+			@include mq(desk) {  }
+		}
+
+		.product-description__image-pouch {
+			position:absolute;
+			// top: 50%;
+			left:50%;
+			width: 80%;
+			transform: translate(-50%, -50%);
+			@include mq(mobile) { width: 50%; }
+			@include mq(tablet) { }
+			@include mq(lap) { width: 60%;  }
 			@include mq(desk) { }
 		}
+
 	}
 
 	.product-description__title {

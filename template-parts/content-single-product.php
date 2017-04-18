@@ -68,7 +68,17 @@
 
 		<div class="product-description--wrapper">
 			<div class="product-description__image">
-				<?php the_post_thumbnail( 'full' ); ?>
+				
+
+				<div id="js-parallaxDescription" class="">
+					<div id="js-parallaxProduct" class="">
+						<img class="product-description__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
+						<img class="product-description__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" a
+						lt="Pouch">
+					</div>
+				</div>
+
+
 			</div><!--
 			
 		--><div class="product-description__content">
