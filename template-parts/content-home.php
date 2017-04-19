@@ -85,7 +85,7 @@
 </section><!-- .home-products mango -->
 
 <section class="home-products product-item_2">
-	<div id="js-parallaxHome_1" class="home-products--wrapper">
+	<div id="js-parallaxHome_2" class="home-products--wrapper">
 		<div class="home-products__content">
 			<h3 class="home-products__title">
 				<?php echo $home_second_product_title; ?>
@@ -98,7 +98,7 @@
 			</a>
 		</div><!--
 	
-	--><div id="js-parallaxContainer_1" class="home-products__image">
+	--><div id="js-parallaxContainer_2" class="home-products__image">
 			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
 				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
 				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="Pouch">
@@ -108,8 +108,8 @@
 </section><!-- .home-products beet -->
 
 <section class="home-products product-item_3">
-	<div id="js-parallaxHome_1" class="home-products--wrapper">
-		<div id="js-parallaxContainer_1" class="home-products__image">
+	<div id="js-parallaxHome_3" class="home-products--wrapper">
+		<div id="js-parallaxContainer_3" class="home-products__image">
 			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
 				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
 				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="Pouch">

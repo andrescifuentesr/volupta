@@ -2797,7 +2797,8 @@ html.magnifying > body {
 }
 .home-products .home-products__image-pouch {
   position: absolute;
-  left: 50%;
+  top: 50%;
+  left: -250%;
   width: 80%;
   transform: translate(-50%, -50%);
 }

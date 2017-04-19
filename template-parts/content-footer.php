@@ -73,30 +73,146 @@
 		//=====================
 		//animation 1
 		// build tween
-		var home1 = new TimelineMax ()
-			.add([
-				TweenMax.fromTo("#js-parallaxContainer_1 .home-products__image-seed", 1, {top: '-100%'}, {top: '40%', ease: Linear.easeNone}),
-				TweenMax.fromTo("#js-parallaxContainer_1 .home-products__image-pouch", 1, {top: '150%'}, {top: '50%', ease: Linear.easeNone})
+		var tweenPouch = TweenMax.fromTo("#js-parallaxContainer_1 .home-products__image-pouch", 1,
+										{left: '-250%'},
+										{left: '50%', ease: Linear.easeNone}
+									);
 
-			]);
-		// build scene
-		var sceneHome1 = new ScrollMagic.Scene({triggerElement: "#js-parallaxHome_1", duration: 400, offset: -200})
-						.setTween(home1)
-						.addTo(controller);
+		var pouch = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_1 .home-products__image-pouch", duration: 250, offset: -400 })
+							.setTween(tweenPouch ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSeed = TweenMax.fromTo("#js-parallaxContainer_1 .home-products__image-seed", 1,
+										{top: '-100%'},
+										{top: '40%', ease: Linear.easeNone}
+									);
+
+		var seed = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_1", duration: 300, offset: -150 })
+							.setTween(tweenSeed) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText = TweenMax.fromTo("#js-parallaxHome_1 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeNone}
+									);
+
+		var text = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_1 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+		//=====================
+		// Home animations
+		//=====================
+		//animation 2
+		// build tween
+
+		var tweenPouch2 = TweenMax.fromTo("#js-parallaxContainer_2 .home-products__image-pouch", 1,
+										{left: '250%'},
+										{left: '50%', ease: Linear.easeNone}
+									);
+
+		var pouch2 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_2 .home-products__image-pouch", duration: 250, offset: -400 })
+							.setTween(tweenPouch2 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSeed2 = TweenMax.fromTo("#js-parallaxContainer_2 .home-products__image-seed", 1,
+										{top: '-100%'},
+										{top: '40%', ease: Linear.easeNone}
+									);
+
+		var seed2 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_2", duration: 300, offset: -150 })
+							.setTween(tweenSeed2) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText2 = TweenMax.fromTo("#js-parallaxHome_2 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeNone}
+									);
+
+		var text2 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_2 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText2 ) // trigger a TweenMax.to tween
+							.addTo(controller);	
+
+
+		//=====================
+		// Home animations
+		//=====================
+		//animation 3
+		// build tween
+		var tweenPouch3 = TweenMax.fromTo("#js-parallaxContainer_3 .home-products__image-pouch", 1,
+										{left: '-250%'},
+										{left: '50%', ease: Linear.easeNone}
+									);
+
+		var pouch3 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_3 .home-products__image-pouch", duration: 250, offset: -400 })
+							.setTween(tweenPouch3 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSeed3 = TweenMax.fromTo("#js-parallaxContainer_3 .home-products__image-seed", 1,
+										{top: '-100%'},
+										{top: '40%', ease: Linear.easeNone}
+									);
+
+		var seed3 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_3", duration: 300, offset: -150 })
+							.setTween(tweenSeed3) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText3 = TweenMax.fromTo("#js-parallaxHome_3 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeNone}
+									);
+
+		var text3 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_3 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText3 ) // trigger a TweenMax.to tween
+							.addTo(controller);	
+
+
+
+		// var home1 = new TimelineMax ()
+		// 	.add([
+		// 		TweenMax.fromTo("#js-parallaxContainer_1 .home-products__image-seed", 1, {top: '-100%'}, {top: '40%', ease: Linear.easeNone}),
+		// 		TweenMax.fromTo("#js-parallaxContainer_1 .home-products__image-pouch", 1, {left: '-350%'}, {left: '50%', ease: Linear.easeNone}),
+		// 		TweenMax.fromTo("#js-parallaxHome_1 .home-products__content", 1, {opacity: '0'}, {opacity: '1', ease: Linear.easeNone})
+
+
+
+		// 	]);
+		// // build scene
+		// var sceneHome1 = new ScrollMagic.Scene({triggerElement: "#js-parallaxHome_1", duration: 400, offset: -200})
+		// 				.setTween(home1)
+		// 				.addTo(controller);
+
+
+
 
 		//animation 2
 		// build tween
-		var home2 = new TimelineMax ()
-			.add([
-				TweenMax.fromTo("#js-parallaxContainer_2", 1, {backgroundPosition: "0 -100px"}, {backgroundPosition: "0 0px", ease: Linear.easeNone}),
-				TweenMax.fromTo("#js-parallaxContainer_2 .js-recipe__item", 1, {top: "150px"}, {top: "0", ease: Linear.easeNone})
+		// var home2 = new TimelineMax ()
+		// 	.add([
+		// 		TweenMax.fromTo("#js-parallaxContainer_2", 1, {backgroundPosition: "0 -100px"}, {backgroundPosition: "0 0px", ease: Linear.easeNone}),
+		// 		TweenMax.fromTo("#js-parallaxContainer_2 .js-recipe__item", 1, {top: "150px"}, {top: "0", ease: Linear.easeNone})
 
-			]);
+		// 	]);
 
-		// build scene
-		var sceneHome2 = new ScrollMagic.Scene({triggerElement: "#js-parallaxContainer_2", duration: 400, offset: -250})
-						.setTween(home2)
-						.addTo(controller);
+		// // build scene
+		// var sceneHome2 = new ScrollMagic.Scene({triggerElement: "#js-parallaxContainer_2", duration: 400, offset: -250})
+		// 				.setTween(home2)
+		// 				.addTo(controller);
 	</script>
 
 <?php } ?>
