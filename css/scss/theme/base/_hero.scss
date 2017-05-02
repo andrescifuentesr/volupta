@@ -55,22 +55,22 @@
 
 // Section product-hero
 .product-hero {
-	padding: 11em 0 0;
+	padding: 13em 0 0;
 	height: 500px;
-	@include mq(tablet) { padding: 10em 0 0; height: 400px; }
-	@include mq(lap) { padding: 14em 0 0;  height: 600px; }
-	@include mq(desk) {  padding: 16em 0 0; height: 650px; }		
+	@include mq(tablet) { padding: 12em 0 0; height: 400px; }
+	@include mq(lap) { padding: 16em 0 0;  height: 600px; }
+	@include mq(desk) {  padding: 18em 0 0; height: 650px; }		
 
 	.product-hero__content {
-		padding: 0 .5em; 
-		@include mq(tablet) { padding: 0 1em; }
-		@include mq(lap) { width:55%; float: left;  }
-		@include mq(desk) { width:50%;   }	
+		padding: 0 0.5em 0.5em; 
+		@include mq(tablet) { padding: 0 0 1em; }
+		@include mq(lap) { width:55%; float: left; padding: 4em 0 1em; }
+		@include mq(desk) { width:50%; }	
 
 		.section-hero__title {
 			margin-bottom: .5em;
 			@include mq(tablet) { margin-bottom: 0; }
-		}	
+		}
 
 		p {
 			font-size: 1.2em;
@@ -79,6 +79,10 @@
 			@include mq(lap) {  }
 			@include mq(desk) { }
 		}
+
+		.disclaimer {
+    		font-size: 0.6em;
+    	}
 	}
 }
 

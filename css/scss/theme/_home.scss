@@ -14,7 +14,7 @@
 		padding: 1em .5em;
 		@include mq(tablet) { padding: 2em 10%; }
 		@include mq(lap) { padding: 2em 10%; }
-		@include mq(desk) { padding: 3em 10em 3.7em; max-width: $max-width; margin: 0 auto; position: relative;}
+		@include mq(desk) { padding: 3em 10em 5em; max-width: $max-width; margin: 0 auto; position: relative;}
 
 		p {
 			display: inline;
@@ -53,24 +53,24 @@
 	background: $tertiary;
 	overflow: hidden;
 	@include mq(tablet) { }
-	@include mq(lap) { background: url('img/bg-home-product.png') no-repeat bottom right $tertiary;  }
+	@include mq(lap) { background: /* url('img/bg-home-product.png') no-repeat bottom right*/ $tertiary;  }
 	@include mq(desk) { }
 
 	.home-products--wrapper {
 		padding: 1em 1em 2em;
 		color:#fff;
 		@include mq(tablet) { padding: 2em 10%; }
-		@include mq(lap) { padding: 3em 10% 4em;  }
-		@include mq(desk) { padding: 3em 0 3em; max-width: $max-width; margin: 0 auto;  }		
+		@include mq(lap) { padding: 3em 10% 1em;  }
+		@include mq(desk) { padding: 3em 0 1em; max-width: $max-width; margin: 0 auto;  }		
 	}
 
 	.home-products__image {
 		position:relative;
-		height: 430px;
+		height: 350px;
 		margin-top: 2em;
 		@extend %col-2-5;
 		@include mq(mobile) { margin-top: 3em; }
-		@include mq(tablet) { margin-top: 5em; }
+		@include mq(tablet) { margin-top: 5em; height: 430px; }
 		@include mq(lap) {      margin-top: 0; height: 600px; }
 		@include mq(desk) { padding: 2em; }
 	}
@@ -83,7 +83,7 @@
 		transform: translate(-50%, -50%);
 		@include mq(mobile) { width: 50%; }
 		@include mq(tablet) { }
-		@include mq(lap) { width: auto; }
+		@include mq(lap) { /* width: auto; */ width: 80%; }
 		@include mq(desk) {  }
 		
 	}
@@ -96,7 +96,7 @@
 		transform: translate(-50%, -50%);
 		@include mq(mobile) { width: 50%; }
 		@include mq(tablet) { }
-		@include mq(lap) { width: auto;  }
+		@include mq(lap) { /* width: auto; */ width: 80%; }
 		@include mq(desk) { }
 	}
 
@@ -116,14 +116,24 @@
 		margin-bottom: 0;
 		margin-top: .5em;
 		text-align: center;
-		@include mq(tablet) { font-size: 3em; text-align: left; margin: 0; }
+		@include mq(tablet) { font-size: 3.75em; text-align: left; margin: 0; line-height: 1; }
 		@include mq(lap) { margin: 1em 0 0.25em;}
-		@include mq(desk) { margin-bottom: .25em; }		
+		@include mq(desk) { margin-bottom: .25em; }
+
+		.disclaimer {
+			display: block;
+			line-height: 1;
+		}
 	}
 
 	.home-products__description {
 		margin-bottom: 2em;
+		font-size: 1.25em;
 	}
+}
+
+.product-item_3 .disclaimer {
+	color: #959595;
 }
 
 .home-products__button {
@@ -137,7 +147,7 @@
 }
 
 .product-item_1 {
-	background: $mango;
+	background: url('img/HomePage_MANGO_Corner-Image_40.png') no-repeat bottom right $mango;
 
 	.home-products__button {
 		color: $mango;
@@ -145,14 +155,31 @@
 }
 
 .product-item_2 {
-	background: $beet;
+	background: url('img/HomePage_BEET_Corner-Image_40.png') no-repeat bottom left $beet;
 
 	.home-products__button {
 		color: $beet;
-	}	
+	}
+
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+	.home-products--wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		@include mq(lap) { display: block; }
+	}
+
+	.home-products__content {
+		order: 2;
+	}
+
+	.home-products__image {
+		order: 1;
+	}
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
 }
 
 .product-item_3 {
+	background: url('img/HomePage_AGB_Corner-Image_40.png') no-repeat bottom right;
 
 	.home-products__title {
 		color: $primary;
@@ -179,8 +206,8 @@
 .section-home__footer { 
 	height: 350px;
 	padding: 4em 0.5em 0;
-	@include mq(tablet) { padding: 6em 0 0; height: 400px; }
-	@include mq(lap) { padding: 8.5em 0 0; height: 520px; }
+	@include mq(tablet) { padding: 5.5em 0 0; height: 400px; }
+	@include mq(lap) { padding: 7.5em 0 0; height: 520px; }
 	@include mq(desk) {   }
 
 	.section-hero__content {

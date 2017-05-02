@@ -42,7 +42,7 @@
 					$section_product_description_hero = types_render_field( "section-product-description-hero", array( ) );
 				?>
 
-				<h2 class="section-hero__title"><?php echo esc_html( $section_product_title_hero ); ?></h2>
+				<h2 class="section-hero__title"><?php echo $section_product_title_hero; ?></h2>
 				
 				<div class="section-hero__sub-title product-hero__sub-title">
 					<?php echo $section_product_description_hero; ?>
@@ -63,26 +63,35 @@
 	Description section
 	///////////////// 
 	*/
-	 ?>
+
+	//call of custom product-parallax-section-title
+	$product_parallax_section_title = types_render_field( "product-parallax-section-title", array( ) );
+	//call of custom product-parallax-pouch-image
+	$product_parallax_pouch_image = types_render_field( "product-parallax-pouch-image", array( "alt" => "", "url" => "true" ) );
+	//call of custom product-parallax-pouch-content
+	$product_parallax_pouch_content = types_render_field( "product-parallax-pouch-content", array( "alt" => "", "url" => "true" ) );
+	?>
+	
 	<section id="js-product-description" class="product-description">
 
 		<div class="product-description--wrapper">
 			<div class="product-description__image">
-				
 
 				<div id="js-parallaxDescription" class="">
 					<div id="js-parallaxProduct" class="">
-						<img class="product-description__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
-						<img class="product-description__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" a
-						lt="Pouch">
+						<img class="product-description__image-seed" src="<?php echo esc_html( $product_parallax_pouch_content ); ?>" alt="Seed">
+						<img class="product-description__image-pouch" src="<?php echo esc_html( $product_parallax_pouch_image ); ?>" alt="Pouch">
 					</div>
 				</div>
-
 
 			</div><!--
 			
 		--><div class="product-description__content">
-				<?php the_title( '<h1 class="product-description__title" style="color: '. esc_html( $title_color ) .' ">', '</h1>' ); ?>
+				
+				<h1 class="product-description__title" style="color:<?php echo esc_html( $title_color ); ?>" />	
+					<?php echo $product_parallax_section_title; ?>
+				</h1>
+
 				<div class="product-description__description">
 			 		<?php
 						the_content( sprintf(
@@ -106,8 +115,7 @@
 	 <?php
 		//call of custom section-ingredients-product-title
 		$section_ingredients_product_title = types_render_field( "section-ingredients-product-title", array( ) );
-		//call of custom field ingredient_image-nutrition-product-image
-		$ingredient_image = types_render_field( "ingredient-image", array( ) );
+
 	?>
 
 	<section id="js-parallax__trigger_1">
@@ -118,7 +126,7 @@
 
 	<section class="product-ingredients">
 
-		<img class="home-product__ingredients" src="<?php bloginfo('template_directory'); ?>/img/bg-product-ingredients.png">
+		<img class="home-product__ingredients" src="<?php echo types_render_field( "section-ingredients-background-left-image", array( "alt" => "", "url" => "true" ) ); ?>">
 
 		<div class="product-ingredients--wrapper">
 
@@ -185,7 +193,7 @@
 	<section class="product-nutrition">
 
 		<div class="product-nutrition--wrapper">
-			<div class="product-nutrition__content">
+			<div class="product-nutrition__content" style="color: <?php echo esc_html( $main_color ); ?>">
 				<?php echo $section_nutrition_product_content; ?>
 				
 				<div class="product-nutrition__disclaimer disclaimer">
@@ -217,6 +225,8 @@
 		$section_kitchen_product_title = types_render_field( "section-kitchen-product-title", array( ) );
 		//call of custom field section-kitchen-disclaimer
 		$section_kitchen_disclaimer = types_render_field( "section-kitchen-disclaimer", array( ) );
+		//call of custom field section-recipes-page-link
+		$section_recipes_page_link = types_render_field( "section-recipes-page-link", array( ) );
 	?>
 
 	<?php 
@@ -330,9 +340,9 @@
 							foreach ($child_posts_recipe as $child_post) {
 						?><!--
 						--><div class="product-kitchen__recipes-item">
-								<a href="<?php echo esc_url( get_permalink(9) ); ?>">
+								<a href="<?php echo esc_url( $section_recipes_page_link ); ?>">
 									<div class="product-kitchen__recipes-image">
-										<img src="<?php echo $child_post->fields['recipes-feature-image']; ?>" alt="<?php echo $child_post->post_title; ?>">
+										<?php echo get_the_post_thumbnail( $child_post->ID, 'full', $attr = '' ); ?>
 									</div>
 									<span><?php echo $child_post->post_title; ?></span>
 								</a>

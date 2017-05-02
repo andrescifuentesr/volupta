@@ -65,8 +65,8 @@
 	<div id="js-parallaxHome_1" class="home-products--wrapper">
 		<div id="js-parallaxContainer_1" class="home-products__image">
 			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
-				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="Pouch">
+				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/mango-parralax-mix.png" alt="Seed">
+				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--mango.png" alt="Pouch">
 			</a>
 		</div><!--
 		
@@ -77,8 +77,8 @@
 			<div class="home-products__description">
 				<?php echo $home_first_product_content; ?>
 			</div>
-			<a class="home-products__button" href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-				<?php _e('View products', 'volupta') ?>
+			<a class="home-products__button" href="<?php echo esc_url( get_permalink(211) ); ?>" rel="bookmark">
+				<?php _e('View product', 'volupta') ?>
 			</a>
 		</div>
 	</div>
@@ -93,15 +93,15 @@
 			<div class="home-products__description">
 				<?php echo $home_second_product_content; ?>
 			</div>
-			<a class="home-products__button" href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-				<?php _e('View products', 'volupta') ?>
+			<a class="home-products__button" href="<?php echo esc_url( get_permalink(208) ); ?>" rel="bookmark">
+				<?php _e('View product', 'volupta') ?>
 			</a>
 		</div><!--
 	
 	--><div id="js-parallaxContainer_2" class="home-products__image">
 			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
-				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="Pouch">
+				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/beet-parralax-mix.png" alt="Seed">
+				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--beet.png" alt="Pouch">
 			</a>
 		</div>
 	</div>
@@ -124,7 +124,7 @@
 				<?php echo $home_third_product_content; ?>
 			</div>
 			<a class="home-products__button" href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-				<?php _e('View products', 'volupta') ?>
+				<?php _e('View product', 'volupta') ?>
 			</a>
 		</div>
 	</div>

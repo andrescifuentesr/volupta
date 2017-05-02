@@ -3,11 +3,16 @@
 	.page-wrapper {
 		padding: 2em 1em 0;
 		@include mq(tablet) { padding: 2em 2.5% 0; }
-		@include mq(lap) { padding: 4em 10%; }
-		@include mq(desk) { padding: 4em 0; max-width: $max-width; margin: 0 auto;  }		
+		@include mq(lap) { padding: 2em 10%; }
+		@include mq(desk) { padding: 2em 0; max-width: $max-width; margin: 0 auto;  }		
+	}
+
+	h2 {
+		font-size: 2.5em;
 	}
 
 	#wpsl-wrap {
+		margin-top: 1em;
 		background: #fff;
 		padding-bottom: 3em;
 	}

@@ -41,9 +41,15 @@
 		width:95%;
 		margin: 6em 2.5% 0;
 		padding: 2em;
-		background: rgba(255,255,255,0.5);
+		background: rgba(255,255,255,0.8);
 		@include mq(tablet) { }
-		@include mq(lap) { /* width:45%; margin: 0 2.5%; padding: 2em; */ width: 80%; margin: 6em 10% 0; }
+		@include mq(lap) { /* width:45%; margin: 0 2.5%; padding: 2em; */ 
+			width: 80%;
+			margin: 6em 10% 0;
+			min-height:700px;
+			max-height:705px;
+			overflow-x: scroll;
+		}
 		@include mq(desk) { width:45%; margin: 0; padding: 3em; }
 	}
 
@@ -58,7 +64,7 @@
 	.recipes__overview {
 		font-size: 1.15em;
 		color: currentColor;
-		font-weight: 700;
+		// font-weight: 700;
 	}
 
 	.recipes__content {

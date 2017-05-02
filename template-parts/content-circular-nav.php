@@ -31,20 +31,35 @@
 
 			//recover color of next post
 			$main_color = types_render_field( "product-main-color", array( ) );
+			//recover title of next post
+			$product_parallax_section_title = types_render_field( "product-parallax-section-title", array( ) );
 
-			the_title( '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
-								<a href="' . esc_url( get_permalink() ) . '"><span>', '</span></a>
-							</li>' );
+			echo '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
+					<a href="' . esc_url( get_permalink() ) . '">
+						<span>
+							' . $product_parallax_section_title . '
+						</span>
+					</a>
+				</li>';
 				
 			wp_reset_query();
 			
 		//if there is not a next post, I look for the first one
 		} else {
 		    $first = new WP_Query('post_type=product&posts_per_page=1&order=DESC'); $first->the_post();
+				//recover color of next post
 				$main_color = types_render_field( "product-main-color", array( ) );
-				the_title( '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
-								<a href="' . esc_url( get_permalink() ) . '"><span>', '</span></a>
-							</li>' );
+				//recover title of next post
+				$product_parallax_section_title = types_render_field( "product-parallax-section-title", array( ) );
+				
+				echo '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
+						<a href="' . esc_url( get_permalink() ) . '">
+							<span>
+								' . $product_parallax_section_title . '
+							</span>
+						</a>
+					</li>';
+
 			wp_reset_query();
 		}; 
 
@@ -60,20 +75,35 @@
 
 			//recover color of prev post
 			$main_color = types_render_field( "product-main-color", array( ) );
+			//recover title of prev post
+			$product_parallax_section_title = types_render_field( "product-parallax-section-title", array( ) );
 
-			the_title( '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
-					<a href="' . esc_url( get_permalink() ) . '"><span>', '</span></a>
-				</li>' );
+			echo '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
+				<a href="' . esc_url( get_permalink() ) . '">
+					<span>
+						' . $product_parallax_section_title . '
+					</span>
+				</a>
+			</li>';
 
 			wp_reset_query();
 
 		//if there is not a prev post, I look for the last one
 		} else { 
 			$last = new WP_Query('post_type=product&posts_per_page=1&order=ASC'); $last->the_post();
+		    	//recover title of prev post
 		    	$main_color = types_render_field( "product-main-color", array( ) );
-				the_title( '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
-								<a href="' . esc_url( get_permalink() ) . '"><span>', '</span></a>
-							</li>' );
+				//recover title of prev post
+				$product_parallax_section_title = types_render_field( "product-parallax-section-title", array( ) );
+				
+				echo '<li clas="nav-item" style="color: ' . esc_html( $main_color ) . ' ">
+					<a href="' . esc_url( get_permalink() ) . '">
+						<span>
+							' . $product_parallax_section_title . '
+						</span>
+					</a>
+				</li>';
+
 		    wp_reset_query();
 		}; 
 

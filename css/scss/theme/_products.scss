@@ -6,11 +6,19 @@
 	}
 
 	h2 {
-		color: $heading-color;
+		color: currentColor;
 		font-size: 2.25em;
 		margin-bottom: .5em;
 	}
 
+	p {
+		color: $base-color;
+	}
+
+	.disclaimer {
+		display: block;
+		line-height: 1;
+	}
 }
 
 .fixedsticky { 
@@ -84,7 +92,6 @@
 		@include mq(desk) { padding: 2em 0 2em;  max-width: $max-width; margin: 0 auto;  }				
 	}
 
-
 	.product-description__image {
 		position:relative;
 		margin-top: 4em;
@@ -121,8 +128,17 @@
 	.product-description__title {
 		margin-top: 1em;
 		color: currentColor;
-		font-size: 2.3em;
+		font-size: 2.5em;
 		margin-bottom: .5em;
+
+	}
+
+
+	.disclaimer {
+		display: block;
+		line-height: 1;
+		color: #959595;
+		font-size: .7em;
 	}
 
 	.product-description__content {

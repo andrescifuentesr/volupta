@@ -37,8 +37,9 @@
 	@include mq(desk) { }
 }
 
+
 .main-navigation ul ul {
-	display: inline-block;	
+	display: none;
 	@include mq(tablet) { 
 		display: inline-block;
 		top: 3em;
@@ -101,6 +102,7 @@
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
+	display:block;
 	left: -0.5em;
 	@include mq(lap) { left: -1em; }
 	@include mq(desk) { left: 0; }
@@ -120,7 +122,7 @@
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation.toggled .menu-menu-principal-container > ul {
 	display: block;
 }
 

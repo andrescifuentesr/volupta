@@ -79,3 +79,27 @@
 		@include mq(desk) { width:auto; padding: 0;}
 	}
 }
+
+.postid-211 {
+
+	.site-header {
+
+		background: url('img/bg-nav-bar--mango.png') no-repeat left bottom;
+
+		&::after {
+			background: url('img/bg-nav-bar--bottom--mango.png') no-repeat;
+		}
+	}
+}
+
+.postid-208 {
+
+	.site-header {
+
+		background: url('img/bg-nav-bar--beet.png') no-repeat left bottom;
+
+		&::after {
+			background: url('img/bg-nav-bar--bottom--beet.png') no-repeat;
+		}
+	}
+}

@@ -7,13 +7,14 @@
 
 	li {
 		display: inline-block;
+		vertical-align: top;
 		width: 50%;
 		// font-properties
 		font-family: 'Veneer W03 Regular';
 		font-weight: normal;
 		color:$heading-color;
 		text-transform: uppercase;
-		font-size: 2em;
+		font-size: 1.5em;
 		@include mq(tablet) { font-size: 2.5em; }
 
 		&:first-child {
@@ -41,6 +42,13 @@
 		transition: .6s all;
 	}
 
+	.disclaimer {
+		display: block;
+		line-height: 1;
+		color: #959595;
+		font-size: .7em;
+	}
+
 	//span for recipes page
 	.disclaimer-recipes {
 		display:block;
@@ -57,13 +65,17 @@
 		display:block;
 		color: currentColor;
 		padding: 1em .3em;
-		background: #fff;
+		min-height: 112px;
+		background: url('img/bg-recipe-wood-transparent.png') repeat #fff;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		transition: .3s all;
-		@include mq(tablet) { padding: 2.5em 1em; }
+		@include mq(tablet) { padding: 2.5em 1em; min-height: 310px; }
 
 
 		&:hover {
-			background:currentColor;
+			background: currentColor;
 			
 			span {
 				color:#fff;
@@ -72,17 +84,19 @@
 		}
 
 		&::before {
-			content: '';
-			width: 59px;
-			height: 59px;
-			position: absolute;
-			top: 50%;
-		    transform: translateY(-50%);
-			right: 80%;
-			z-index: 10;
-			cursor: pointer;
-			transition: all 0.3s ease-in-out;
-			@include mq(tablet) { background: url('img/slider-arrow.svg') repeat; }			
+			@include mq(tablet) {
+				content: '';
+				width: 59px;
+				height: 59px;
+				position: absolute;
+				top: 50%;
+			    transform: translateY(-50%);
+				right: 80%;
+				z-index: 10;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+				background: url('img/slider-arrow.svg') repeat;
+			}
 		}		
 	
 	}
