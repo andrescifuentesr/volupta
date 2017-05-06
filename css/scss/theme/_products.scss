@@ -384,7 +384,6 @@
 	}
 
 	.product-kitchen__recipes-item {
-		position:relative;
 		margin-bottom: 2em;
 		@include mq(mobile) { 
 			@include simple-grid( 2 , 5% );
@@ -393,30 +392,36 @@
 		@include mq(lap) { width: 100%; }
 		@include mq(desk) { }
 
-		&:hover {
-			cursor:pointer;
+		a {
+			position:relative;
+			display: block;
+
+			&:hover {
+				cursor:pointer;
+
+				&::before {
+					// background: rgba(57, 110, 75, 0); //old green backgroun
+					background: rgba(0, 0, 0, 0);
+				}
+
+				span {
+					opacity: 0;
+				}
+
+			}
 
 			&::before {
-				// background: rgba(57, 110, 75, 0); //old green backgroun
-				background: rgba(0, 0, 0, 0);
+				content:'';
+				position: absolute;
+				// background: rgba(57, 110, 75, .6);
+				background: rgba(0, 0, 0, .4);
+				top: 0;
+				left:0;
+				bottom:0;
+				width:100%;
+				transition: .3s all;
 			}
 
-			span {
-				opacity: 0;
-			}
-
-		}
-
-		&::before {
-			content:'';
-			position: absolute;
-			// background: rgba(57, 110, 75, .6);
-			background: rgba(0, 0, 0, .4);
-			top: 0;
-			left:0;
-			bottom:0;
-			width:100%;
-			transition: .3s all;
 		}
 
 		span {

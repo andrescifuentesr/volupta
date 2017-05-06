@@ -3696,7 +3696,6 @@ html.magnifying > body {
   }
 }
 .product-kitchen .product-kitchen__recipes-item {
-  position: relative;
   margin-bottom: 2em;
 }
 @media (min-width: 440px) {
@@ -3717,16 +3716,20 @@ html.magnifying > body {
     width: 100%;
   }
 }
-.product-kitchen .product-kitchen__recipes-item:hover {
+.product-kitchen .product-kitchen__recipes-item a {
+  position: relative;
+  display: block;
+}
+.product-kitchen .product-kitchen__recipes-item a:hover {
   cursor: pointer;
 }
-.product-kitchen .product-kitchen__recipes-item:hover::before {
+.product-kitchen .product-kitchen__recipes-item a:hover::before {
   background: transparent;
 }
-.product-kitchen .product-kitchen__recipes-item:hover span {
+.product-kitchen .product-kitchen__recipes-item a:hover span {
   opacity: 0;
 }
-.product-kitchen .product-kitchen__recipes-item::before {
+.product-kitchen .product-kitchen__recipes-item a::before {
   content: '';
   position: absolute;
   background: rgba(0, 0, 0, 0.4);

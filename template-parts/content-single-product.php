@@ -337,17 +337,20 @@
 							);
 
 							$child_posts_recipe = types_child_posts('recipe', $args_recipe);
+							//we create a counter varible to move the slider
+							$count = '';
 							foreach ($child_posts_recipe as $child_post) {
+								$count = $count+1;
 						?><!--
-						--><div class="product-kitchen__recipes-item">
-								<a href="<?php echo esc_url( $section_recipes_page_link ); ?>">
-									<div class="product-kitchen__recipes-image">
-										<?php echo get_the_post_thumbnail( $child_post->ID, 'full', $attr = '' ); ?>
-									</div>
-									<span><?php echo $child_post->post_title; ?></span>
-								</a>
-							</div><!--
-					--><?php } // End of the loop. ?>
+							--><div class="product-kitchen__recipes-item">
+									<a href="<?php echo esc_url( $section_recipes_page_link ); ?>#<?php echo $count; ?>">
+										<div class="product-kitchen__recipes-image">
+											<?php echo get_the_post_thumbnail( $child_post->ID, 'full', $attr = '' ); ?>
+										</div>
+										<span><?php echo $child_post->post_title; ?></span>
+									</a>
+								</div><!--
+						--><?php } // End of the loop. ?>
 						<?php wp_reset_postdata(); ?>
 					</div><!-- .product-kitchen__recipes-wrapper -->
 				</div>

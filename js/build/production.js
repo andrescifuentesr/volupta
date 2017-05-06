@@ -4826,29 +4826,34 @@ this._target=t,this._tween=o,this._vars=e,_=e.autoRound,i=!1,s=e.suffixMap||a.su
 //  Flexslider
 //========================
 jQuery(window).load(function(){
-	//slider page home
-	jQuery("#flexslider-home").flexslider({
-		animation:"slide",
-		controlNav: false,
-		slideshow: false,
-		touch: false,
-		start:function(){
-			jQuery(".site-main").find(".flexslider-wrapper").removeClass("loading");
-			jQuery(".spinner").hide();
-		}
-	});
 
-	//slider page recipes
-	jQuery("#flexslider-recipes").flexslider({
-		animation:"slide",
-		controlNav: "thumbnails",
-		slideshow: false,
-		touch: false,
-		start:function(){
-			jQuery(".site-recipes").find(".flexslider-wrapper").removeClass("loading");
-			jQuery(".spinner").hide();
+		//http://stackoverflow.com/questions/11384472/hash-url-navigation-with-a-flexslider
+		//set some variables for calculating the hash
+		var index = 0, hash = window.location.hash;
+
+		//via malsup (Cycle plugin), calculates the hash value
+
+		if (hash) {
+			index = /\d+/.exec(hash)[0];
+			index = (parseInt(index) || 1) - 1;
 		}
-	});
+
+		//slider page recipes
+		jQuery("#flexslider-recipes").flexslider({
+			animation:"slide",
+			controlNav: "thumbnails",
+			slideshow: false,
+			touch: false,
+			startAt: index, //now foo.html#3 will load item 3
+			after:function(slider){
+				window.location.hash = slider.currentSlide+1;
+				//now when you navigate, your location updates in the URL
+			},
+			start:function(){
+				jQuery(".site-recipes").find(".flexslider-wrapper").removeClass("loading");
+				jQuery(".spinner").hide();
+			}
+		});
 
 	//https://github.com/thdoan/magnify
 	//we launch the magnify effect
