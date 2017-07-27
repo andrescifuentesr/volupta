@@ -103,3 +103,15 @@
 		}
 	}
 }
+
+.postid-892 {
+
+	.site-header {
+
+		background: url('img/bg-nav-bar--dragon.png') no-repeat left bottom;
+
+		&::after {
+			background: url('img/bg-nav-bar--bottom--dragon.png') no-repeat;
+		}
+	}
+}

@@ -59,12 +59,16 @@
 	$home_third_product_title = types_render_field( "third-product-title", array( ) );	
 	//call of custom third-product-content
 	$home_third_product_content = types_render_field( "third-product-content", array( ) );	
+	//call of custom fourth-product-title
+	$home_fourth_product_title = types_render_field( "fourth-product-title", array( ) );	
+	//call of custom fourth-product-content
+	$home_fourth_product_content = types_render_field( "fourth-product-content", array( ) );	
 ?>
 
 <section class="home-products product-item_1">
 	<div id="js-parallaxHome_1" class="home-products--wrapper">
 		<div id="js-parallaxContainer_1" class="home-products__image">
-			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
+			<a href="<?php echo esc_url( get_permalink(211) ); ?>" rel="bookmark">
 				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/mango-parralax-mix.png" alt="Seed">
 				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--mango.png" alt="Pouch">
 			</a>
@@ -99,7 +103,7 @@
 		</div><!--
 	
 	--><div id="js-parallaxContainer_2" class="home-products__image">
-			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
+			<a href="<?php echo esc_url( get_permalink(208) ); ?>" rel="bookmark">
 				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/beet-parralax-mix.png" alt="Seed">
 				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--beet.png" alt="Pouch">
 			</a>
@@ -108,15 +112,31 @@
 </section><!-- .home-products beet -->
 
 <section class="home-products product-item_3">
-	<div id="js-parallaxHome_3" class="home-products--wrapper">
-		<div id="js-parallaxContainer_3" class="home-products__image">
-			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
-				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
-				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="Pouch">
+	<div id="js-parallaxHome_4" class="home-products--wrapper">		
+		<div id="js-parallaxContainer_4" class="home-products__image">
+			<a href="<?php echo esc_url( get_permalink(892) ); ?>" rel="bookmark">
+				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/dragon-parralax-mix.png" alt="Seed">
+				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--dragon.png" alt="Pouch">
 			</a>
 		</div><!--
-		
+
 	--><div class="home-products__content">
+			<h3 class="home-products__title">
+				<?php echo $home_fourth_product_title; ?>
+			</h3>
+			<div class="home-products__description">
+				<?php echo $home_fourth_product_content; ?>
+			</div>
+			<a class="home-products__button" href="<?php echo esc_url( get_permalink(892) ); ?>" rel="bookmark">
+				<?php _e('View product', 'volupta') ?>
+			</a>
+		</div>
+	</div>
+</section><!-- .home-products dragon -->
+
+<section class="home-products product-item_4">
+	<div id="js-parallaxHome_3" class="home-products--wrapper">
+		<div class="home-products__content">
 			<h3 class="home-products__title">
 				<?php echo $home_third_product_title; ?>
 			</h3>
@@ -125,6 +145,13 @@
 			</div>
 			<a class="home-products__button" href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
 				<?php _e('View product', 'volupta') ?>
+			</a>
+		</div><!--
+
+	--><div id="js-parallaxContainer_3" class="home-products__image">
+			<a href="<?php echo esc_url( get_permalink(43) ); ?>" rel="bookmark">
+				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/AGB-parralax-mix.png" alt="Seed">
+				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product.png" alt="Pouch">
 			</a>
 		</div>
 	</div>

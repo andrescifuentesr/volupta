@@ -150,7 +150,7 @@
 		//animation 3
 		// build tween
 		var tweenPouch3 = TweenMax.fromTo("#js-parallaxContainer_3 .home-products__image-pouch", 1,
-										{left: '-100%'},
+										{left: '200%'},
 										{left: '50%', ease: Linear.easeOut}
 									);
 
@@ -161,7 +161,7 @@
 
 
 		var tweenSeed3 = TweenMax.fromTo("#js-parallaxContainer_3 .home-products__image-seed", 1,
-										{top: '-55%'},
+										{top: '-50%'},
 										{top: '40%', ease: Linear.easeOut}
 									);
 
@@ -179,7 +179,46 @@
 		var text3 = new ScrollMagic.Scene({
 								triggerElement: "#js-parallaxHome_3 .home-products__content", duration: 200, offset: -50 })
 							.setTween( tweenText3 ) // trigger a TweenMax.to tween
-							.addTo(controller);	
+							.addTo(controller);		
+
+
+		//=====================
+		// Home animations
+		//=====================
+		//animation 4
+		// build tween
+		var tweenPouch4 = TweenMax.fromTo("#js-parallaxContainer_4 .home-products__image-pouch", 1,
+										{left: '-100%'},
+										{left: '50%', ease: Linear.easeOut}
+									);
+
+		var pouch4 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_4 .home-products__image-pouch", duration: 1000, offset: -950 })
+							.setTween(tweenPouch4 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSeed4 = TweenMax.fromTo("#js-parallaxContainer_4 .home-products__image-seed", 1,
+										{top: '-55%'},
+										{top: '40%', ease: Linear.easeOut}
+									);
+
+		var seed4 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_4", duration: 450, offset: -50 })
+							.setTween(tweenSeed4) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText4 = TweenMax.fromTo("#js-parallaxHome_4 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeOut}
+									);
+
+		var text4 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_4 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText4 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+					
 	</script>
 
 <?php } ?>

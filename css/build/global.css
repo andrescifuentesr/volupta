@@ -1693,6 +1693,13 @@ html.magnifying > body {
   background: url("img/bg-nav-bar--bottom--beet.png") no-repeat;
 }
 
+.postid-892 .site-header {
+  background: url("img/bg-nav-bar--dragon.png") no-repeat left bottom;
+}
+.postid-892 .site-header::after {
+  background: url("img/bg-nav-bar--bottom--dragon.png") no-repeat;
+}
+
 .site-footer {
   text-align: center;
   background: #fff;
@@ -2133,6 +2140,9 @@ html.magnifying > body {
 }
 .main-navigation ul ul .menu-item-218 a, .main-navigation ul ul .menu-item-247 a {
   color: #459790;
+}
+.main-navigation ul ul .menu-item-904 a, .main-navigation ul ul .menu-item-905 a {
+  color: #f47ab1;
 }
 
 .main-navigation ul ul ul {
@@ -2895,7 +2905,7 @@ html.magnifying > body {
   font-size: 1.25em;
 }
 
-.product-item_3 .disclaimer {
+.product-item_4 .disclaimer {
   color: #959595;
 }
 
@@ -2941,16 +2951,40 @@ html.magnifying > body {
 }
 
 .product-item_3 {
-  background: url("img/HomePage_AGB_Corner-Image_40.png") no-repeat bottom right;
-}
-.product-item_3 .home-products__title {
-  color: #459790;
-}
-.product-item_3 .home-products__description {
-  color: #818285;
+  background: url("img/HomePage_DRAGON_Corner-Image_40.png") no-repeat bottom right #f47ab1;
 }
 .product-item_3 .home-products__button {
+  color: #f47ab1;
+}
+
+.product-item_4 {
+  background: url("img/HomePage_AGB_Corner-Image_40.png") no-repeat bottom right;
+  /* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+  /* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+}
+.product-item_4 .home-products__title {
+  color: #459790;
+}
+.product-item_4 .home-products__description {
+  color: #818285;
+}
+.product-item_4 .home-products__button {
   background: #459790;
+}
+.product-item_4 .home-products--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 850px) {
+  .product-item_4 .home-products--wrapper {
+    display: block;
+  }
+}
+.product-item_4 .home-products__content {
+  order: 2;
+}
+.product-item_4 .home-products__image {
+  order: 1;
 }
 
 .section-home__footer .home-products__button {
@@ -3689,6 +3723,7 @@ html.magnifying > body {
 }
 .product-kitchen .product-kitchen__recipes-wrapper {
   margin-top: 1em;
+  text-align: center;
 }
 @media (min-width: 700px) {
   .product-kitchen .product-kitchen__recipes-wrapper {

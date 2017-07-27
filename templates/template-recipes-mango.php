@@ -102,10 +102,10 @@ get_header(); ?>
 			 	</a>
 			</li><!--
 		
-		--><li clas="nav-item" style="color: #459790">
-			 	<a href="<?php echo esc_url( get_permalink( 9 ) ); ?>">
+		--><li clas="nav-item" style="color: #F47AB1 ">
+			 	<a href="<?php echo esc_url( get_permalink( 890 ) ); ?>">
 			 		<div>
-						<span><?php _e( "Ancient grains", "volupta") ?></span>
+						<span><?php _e( "Dragon fruit", "volupta") ?></span>
 						<span class="disclaimer-recipes"><?php _e( "recipes", "volupta") ?></span>
 					</div>
 				</a>

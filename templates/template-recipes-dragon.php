@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Recipes AGB
+Template Name: Template Recipes Dragon
 */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 								<?php
 									$args = array(
 										'post_type' 		=> 'product', 	//Costum type Recipe
-										'p'					=>   43, 		// Show the last one
+										'p'					=>   892, 		// Show the last one
 									
 									);
 
@@ -93,19 +93,19 @@ get_header(); ?>
 	<?php //we call the circular navigation template ?>
 	<nav class="nav-infinite">
 		<ul>
-			<li clas="nav-item" style="color: #F47AB1 ">
-			 	<a href="<?php echo esc_url( get_permalink( 890 ) ); ?>">
+			<li clas="nav-item" style="color: #EC9B16 ">
+			 	<a href="<?php echo esc_url( get_permalink( 242 ) ); ?>">
 			 		<div>
-						<span><?php _e( "Dragon fruit", "volupta") ?></span>
+						<span><?php _e( "Dried mango", "volupta") ?></span>
 						<span class="disclaimer-recipes"><?php _e( "recipes", "volupta") ?></span>
 					</div>
-				</a>
+			 	</a>
 			</li><!--
 		
-		--><li clas="nav-item" style="color: #BD3156">
-			 	<a href="<?php echo esc_url( get_permalink( 239 ) ); ?>">
+		--><li clas="nav-item" style="color: #459790">
+			 	<a href="<?php echo esc_url( get_permalink( 9 ) ); ?>">
 			 		<div>
-						<span><?php _e( "Dried beet", "volupta") ?></span>
+						<span><?php _e( "Ancient grains", "volupta") ?></span>
 						<span class="disclaimer-recipes"><?php _e( "recipes", "volupta") ?></span>
 					</div>
 				</a>
