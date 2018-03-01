@@ -32,7 +32,7 @@
 	*/
 	 ?>
 
-	<section class="section-hero product-hero" style="background-image:url('<?php echo types_render_field( "section-hero-background-image", array( "alt" => "", "url" => "true" ) ); ?>');">
+	<section class="section-hero product-hero <?php if ( is_single('organic-cacao-powder') ) { echo 'product-hero--cacao'; } ?>" style="background-image:url('<?php echo types_render_field( "section-hero-background-image", array( "alt" => "", "url" => "true" ) ); ?>');">
 		<div class="product-hero--wrapper">
 			<div class="section-hero__content product-hero__content">
 				<?php
@@ -41,6 +41,12 @@
 					//call of custom field section-product-description-hero
 					$section_product_description_hero = types_render_field( "section-product-description-hero", array( ) );
 				?>
+
+				<?php if ( is_single('organic-cacao-powder') ) { // add a left-right movement to cacao ?>
+					<div class="section-hero__logo">
+						<img src="<?php bloginfo('template_directory'); ?>/img/logos-fairtrade-cacao.png" alt="USDA organic and Fair trade">
+					</div>
+				<?php } ?>
 
 				<h2 class="section-hero__title"><?php echo $section_product_title_hero; ?></h2>
 				
@@ -75,12 +81,16 @@
 	<section id="js-product-description" class="product-description">
 
 		<div class="product-description--wrapper">
-			<div class="product-description__image">
+			<div class="product-description__image <?php if ( is_single('organic-cacao-powder') ) { echo 'product-description__image--spoon'; } ?>">
 
 				<div id="js-parallaxDescription" class="">
 					<div id="js-parallaxProduct" class="">
-						<img class="product-description__image-seed" src="<?php echo esc_html( $product_parallax_pouch_content ); ?>" alt="Seed">
-						<img class="product-description__image-pouch" src="<?php echo esc_html( $product_parallax_pouch_image ); ?>" alt="Pouch">
+						<?php if ( is_single('organic-cacao-powder') ) { // add a left-right movement to cacao ?>
+							<img class="product-description__image-spoon" src="<?php echo esc_html( $product_parallax_pouch_content ); ?>" alt="Seed">
+						<?php } else { ?>
+							<img class="product-description__image-seed" src="<?php echo esc_html( $product_parallax_pouch_content ); ?>" alt="Seed">
+						<?php } ?>
+						<img class="product-description__image-pouch <?php if ( is_single('organic-cacao-powder') ) { echo 'product-description__image-pouch--cacao'; } ?>" src="<?php echo esc_html( $product_parallax_pouch_image ); ?>" alt="Pouch">
 					</div>
 				</div>
 
@@ -126,7 +136,7 @@
 
 	<section class="product-ingredients">
 
-		<img class="home-product__ingredients" src="<?php echo types_render_field( "section-ingredients-background-left-image", array( "alt" => "", "url" => "true" ) ); ?>">
+		<img class="home-product__ingredients <?php if ( is_single('organic-cacao-powder') ) { echo 'home-product__ingredients--cacao'; } ?>" src="<?php echo types_render_field( "section-ingredients-background-left-image", array( "alt" => "", "url" => "true" ) ); ?>">
 
 		<div class="product-ingredients--wrapper">
 
@@ -364,4 +374,4 @@
 <?php wp_reset_postdata(); ?>
 
 <?php //we call the circular navigation template ?>
-<?php get_template_part( 'template-parts/content-circular-nav', get_post_format() ); ?>
+<?php get_template_part( 'template-parts/content-product-nav', get_post_format() ); ?>

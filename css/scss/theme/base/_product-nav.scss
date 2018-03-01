@@ -1,0 +1,52 @@
+.nav-products {
+	padding: 3em 0 1em;
+
+	.section-nav__title {
+		color: #fff;
+		font-family: 'Nexa Rust Script L W00_00';
+		font-size: 3em;
+		line-height: 1.1em;
+		margin: 0 0 .3em;
+		padding-bottom: .3em;
+		text-align: center;
+		background: url(img/bg-line-dot-separator-white.png) bottom center no-repeat;
+	}
+
+	ul {
+		list-style: none;
+		text-align: center;
+		padding: 0;
+		@include mq(tablet) { padding: 1.5em 0; }
+		@include mq(lap) { padding: 1.5em 5%; }
+		@include mq(desk) { padding: 0 4em 0;  max-width: $max-width; margin: 0 auto;  }	
+
+	}
+
+	li {
+		padding: 0 3em;
+		@include mq(mobile) { 
+			padding: 0 1em;
+			@include simple-grid( 2 , 5% );
+		}
+		@include mq(tablet) { 
+			padding: 0 3em; 
+		}
+		@include mq(lap) { 
+			padding: 0;
+			@include simple-grid( 3 , 5% );
+		}
+		@include mq(desk) {
+			padding: 0 1em; 
+		}
+
+	}
+
+	a {
+		position: relative;
+		display:block;
+		padding: 1em 0;	
+	}
+
+}
+
+

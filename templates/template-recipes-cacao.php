@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Recipes AGB
+Template Name: Template Recipes Cacao
 */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 								<?php
 									$args = array(
 										'post_type' 		=> 'product', 	//Costum type Recipe
-										'p'					=>   43, 		// Show the last one
+										'p'					=>   1118, 		// Cacao
 									
 									);
 
@@ -37,6 +37,7 @@ get_header(); ?>
 										//call of custom product-main-color from the product page
 										$main_color = types_render_field( "product-main-color", array( ) );
 									?>
+
 
 									<?php
 										// we create a for loop for callin all dishes children products: Ingredients

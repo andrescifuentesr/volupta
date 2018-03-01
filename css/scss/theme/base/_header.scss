@@ -115,3 +115,15 @@
 		}
 	}
 }
+
+.postid-1118 {
+
+	.site-header {
+
+		background: url('img/bg-nav-bar--cacao.png') no-repeat left bottom;
+
+		&::after {
+			background: url('img/bg-nav-bar--bottom--cacao.png') no-repeat;
+		}
+	}
+}

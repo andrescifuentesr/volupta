@@ -19,6 +19,14 @@
 		display: block;
 		line-height: 1;
 	}
+
+	.section-hero__logo {
+		width: 30%;
+		margin:0 auto 1.5em;
+		@include mq(tablet) { width: 20%; margin:0 auto 1em; }
+		@include mq(lap) { width: 30%; margin:0 auto 1.5em;}
+		@include mq(desk) { }
+	}
 }
 
 .fixedsticky { 
@@ -99,6 +107,20 @@
 		height: 400px;
 		@extend %col-2-5;
 
+		.product-description__image-spoon {
+			position: absolute;
+			z-index: 999;
+			top: 90%;
+			left:50%;
+			width: 120%;
+			transform: translate(-50%, -50%);
+			max-width: none;
+			@include mq(mobile) { top: 85.5%; width: 100%;}
+			@include mq(tablet) { top: 95%;  }
+			@include mq(lap) { top: 87.5%; }
+			@include mq(desk) { top: 87.5%; width: 135%;  }
+		}
+
 		.product-description__image-seed {
 			position: absolute;
 			// top: 30%;
@@ -123,6 +145,14 @@
 			@include mq(desk) { }
 		}
 
+		.product-description__image-pouch--cacao {
+			top: 50%;
+		}
+
+	}
+
+	.product-description__image--spoon {
+		margin-top: 1em;
 	}
 
 	.product-description__title {
@@ -153,7 +183,6 @@
 	}
 }
 
-
 // Section product-ingredients
 .product-ingredients {
 	position:relative;
@@ -169,8 +198,14 @@
 		display: none;
 		@include mq(tablet) { }
 		@include mq(lap) { display:block; max-width: 25%; }
-		@include mq(desk) { max-width: 20%; }				
+		@include mq(desk) { max-width: 20%; }
 	}
+
+		//background-image-cacao
+		.home-product__ingredients--cacao {
+			@include mq(lap) { max-width: 20%; }
+			@include mq(desk) { max-width: 15%; }
+		}	
 
 	.product-ingredients--wrapper {
 		padding: 2em 1em 1em;
