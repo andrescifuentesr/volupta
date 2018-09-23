@@ -1,58 +1,81 @@
-.nav-products {
-	padding: 3em 0 1em;
+.nav-recipes {
+	background: #9b8d7a;
 	border-top: 10px white solid;
-	@include mq(mobile) { padding: 3em 2em 1em; }
-	@include mq(tablet) { padding: 3em 2em 1em; }
-	@include mq(lap) { padding: 3em 3em 1em; }
-	@include mq(desk) { padding: 3em 4em 1em;}  
+	padding: 3em 1em 2em;
+	@include mq(mobile) { padding: 3em 2em 2em; }
+	@include mq(tablet) { padding: 3em 2em 2em; }
+	@include mq(lap) { padding: 3em 3em 2em; }
+	@include mq(desk) { padding: 3em 4em 2em;}  
 
 	.section-nav__title {
 		color: #fff;
 		font-family: 'Nexa Rust Script L W00_00';
 		font-size: 3em;
 		line-height: 1.1em;
-		margin: 0 0 .3em;
+		margin: 0 0 .5em;
 		padding-bottom: .3em;
 		text-align: center;
 		background: url(img/bg-line-dot-separator-white.png) bottom center no-repeat;
 	}
 
-	// a {
-	// 	position: relative;
-	// 	display:block;
-	// 	padding: 1em 0;	
-	// }	
+	ul {
+		list-style: none;
+		text-align: center;
+		padding: 0;
+		@include mq(tablet) { padding: 1.5em 0; }
+		@include mq(lap) { padding: 1.5em 0; }
+		@include mq(desk) { padding: 0 0 0;  }
+
+	}
+
+	.nav-recipes-item--link {
+		position: relative;
+		display: block;
+
+		img {
+			transition: .6s all;
+		}
+
+		&:hover {
+
+			img {
+				opacity: .2;
+			}
+
+			.nav-recipes-item--title {
+				opacity: 1;
+			}
+		}
+	}
+
+	.nav-recipes-item--title {
+		color: #fff;
+		opacity: 0;
+		transition: .4s all;
+		@extend %center;
+	}
+
 
 	//=============================
 	//=====   FlexSlider Horizontal
 	//=============================
-	.loading .flex-viewport {
-		max-height: 400px;
-	}
-
 	.flexslider-wrapper {
 		max-width: 1250px; margin: 0 auto;
-	}	
-
+	}
 
 	.flexslider .slides img {
-		width: auto;
+		// width: 100%;
 		display: block;
-		margin: 0 auto;
-		max-width: 60%;
-		@include mq(mobile) { max-width: 70%; }
-		@include mq(tablet) { }
-		@include mq(lap) { }
-		@include mq(desk) { }  		
+		width: auto; max-width: 100%; margin: 0 auto;
 	}
 
 	.flex-direction-nav a {
 		background: url('img/slider-arrow-small.svg') repeat;
-		top: 45%;
-		@include mq(mobile) { top: 40%; }
-		@include mq(tablet) { top: 45%; }
-		@include mq(lap) { }
-		@include mq(desk) { }  
+		top: 31%;
+		@include mq(mobile) { top: 28%;  }
+		@include mq(tablet) {  }
+		@include mq(lap) {  }
+		@include mq(desk) { top: 28%;  }  
 	}
 
 	.flex-direction-nav .flex-prev {
@@ -85,6 +108,7 @@
 		@include mq(lap) { }
 		@include mq(desk) { }      
 	}
+
 
 }
 

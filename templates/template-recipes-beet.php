@@ -86,32 +86,10 @@ get_header(); ?>
 
 			</div>
 
-			<?php wp_reset_postdata(); ?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 	<?php //we call the circular navigation template ?>
-	<nav class="nav-infinite">
-		<ul>
-			<li clas="nav-item" style="color: #b47d5e">
-			 	<a href="<?php echo esc_url( get_permalink( 1120 ) ); ?>">
-			 		<div>
-						<span><?php _e( "Cacao Powder", "volupta") ?></span>
-						<span class="disclaimer-recipes"><?php _e( "recipes", "volupta") ?></span>
-					</div>
-				</a>
-			</li><!--
-		
-		--><li clas="nav-item" style="color: #EC9B16 ">
-			 	<a href="<?php echo esc_url( get_permalink( 242 ) ); ?>">
-			 		<div>
-						<span><?php _e( "Dried mango", "volupta") ?></span>
-						<span class="disclaimer-recipes"><?php _e( "recipes", "volupta") ?></span>
-					</div>
-			 	</a>
-			</li>
-		</ul>
-	</nav>
+	<?php get_template_part( 'template-parts/content-recipes-nav', get_post_format() ); ?>
 
 <?php get_footer(); ?>

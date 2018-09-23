@@ -62,7 +62,11 @@
 	//call of custom fourth-product-title
 	$home_fourth_product_title = types_render_field( "fourth-product-title", array( ) );	
 	//call of custom fourth-product-content
-	$home_fourth_product_content = types_render_field( "fourth-product-content", array( ) );	
+	$home_fourth_product_content = types_render_field( "fourth-product-content", array( ) );
+	//call of custom fifth-product-title
+	$home_fifth_product_title = types_render_field( "fifth-product-title", array( ) );	
+	//call of custom fourth-product-content
+	$home_fifth_product_content = types_render_field( "fifth-product-content", array( ) );	
 ?>
 
 <section class="home-products product-item_5">
@@ -73,7 +77,8 @@
 				<img class="home-products__image-pouch home-products__image-pouch--cacao" src="<?php bloginfo('template_directory'); ?>/img/home-product--cacao.png" alt="Pouch">
 			</a>
 		</div><!--
-		
+	
+	
 	--><div class="home-products__content">
 			<h3 class="home-products__title">
 				<?php echo $home_third_product_title; ?>
@@ -86,7 +91,8 @@
 			</a>
 		</div>
 	</div>
-</section><!-- .home-products cocoa powder -->
+</section>
+<!-- .home-products cocoa powder -->
 
 <section class="home-products product-item_2">
 	<div id="js-parallaxHome_2" class="home-products--wrapper">
@@ -134,9 +140,39 @@
 	</div>
 </section><!-- .home-products mango -->
 
+<section class="home-products product-item_6">
+	<div id="js-parallaxHome_6" class="home-products--wrapper">
+		<div class="home-products__content">
+			<h3 class="home-products__title">
+				<?php echo $home_fifth_product_title; ?>
+			</h3>
+			<div class="home-products__description">
+				<?php echo $home_fifth_product_content; ?>
+			</div>
+			<a class="home-products__button" href="<?php echo esc_url( get_permalink(1158) ); ?>" rel="bookmark">
+				<?php _e('View product', 'volupta') ?>
+			</a>
+		</div><!--
+
+	--><div id="js-parallaxContainer_6" class="home-products__image">
+			<a href="<?php echo esc_url( get_permalink(1158) ); ?>" rel="bookmark">
+				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/white-dragon-parralax-mix.png" alt="White dragon seed">
+				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--white-dragon.png" alt="Pouch">
+			</a>
+		</div>
+	</div>
+</section><!-- .home-products white dragon -->
+
 <section class="home-products product-item_3">
 	<div id="js-parallaxHome_4" class="home-products--wrapper">
-		<div class="home-products__content">
+		<div id="js-parallaxContainer_4" class="home-products__image">
+			<a href="<?php echo esc_url( get_permalink(892) ); ?>" rel="bookmark">
+				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/dragon-parralax-mix.png" alt="Dragon seed">
+				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--dragon.png" alt="Pouch">
+			</a>
+		</div><!--
+		
+	--><div class="home-products__content">
 			<h3 class="home-products__title">
 				<?php echo $home_fourth_product_title; ?>
 			</h3>
@@ -145,13 +181,6 @@
 			</div>
 			<a class="home-products__button" href="<?php echo esc_url( get_permalink(892) ); ?>" rel="bookmark">
 				<?php _e('View product', 'volupta') ?>
-			</a>
-		</div><!--
-
-	--><div id="js-parallaxContainer_4" class="home-products__image">
-			<a href="<?php echo esc_url( get_permalink(892) ); ?>" rel="bookmark">
-				<img class="home-products__image-seed" src="<?php bloginfo('template_directory'); ?>/img/dragon-parralax-mix.png" alt="Seed">
-				<img class="home-products__image-pouch" src="<?php bloginfo('template_directory'); ?>/img/home-product--dragon.png" alt="Pouch">
 			</a>
 		</div>
 	</div>
@@ -174,7 +203,7 @@
 		<div class="section-home__footer__description">
 			<?php echo $home__recipes_content; ?>
 		</div>
-		<a class="home-products__button" href="<?php echo esc_url( get_permalink(1120) ); ?>" rel="bookmark">
+		<a class="home-products__button" href="<?php echo esc_url( get_permalink(239) ); ?>" rel="bookmark">
 			<?php _e('View recipes', 'volupta') ?>
 		</a>
 	</div>

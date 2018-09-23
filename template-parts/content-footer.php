@@ -130,7 +130,7 @@
 										{opacity: 1, ease: Linear.easeOut}
 									);
 
-		var text35 = new ScrollMagic.Scene({
+		var text55 = new ScrollMagic.Scene({
 								triggerElement: "#js-parallaxHome_5 .home-products__content", duration: 200, offset: -50 })
 							.setTween( tweenText5 ) // trigger a TweenMax.to tween
 							.addTo(controller);		
@@ -216,11 +216,49 @@
 		//=====================
 		// Home animations
 		//=====================
+		//animation 3: 
+		// White dragon
+		// build tween
+		var tweenPouch6 = TweenMax.fromTo("#js-parallaxContainer_6 .home-products__image-pouch", 1,
+										{left: '90%'},
+										{left: '50%', ease: Linear.easeOut}
+									);
+
+		var pouch6 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_6 .home-products__image-pouch", duration: 1200, offset: -950 })
+							.setTween(tweenPouch6 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSeed6 = TweenMax.fromTo("#js-parallaxContainer_6 .home-products__image-seed", 1,
+										{top: '-55%'},
+										{top: '40%', ease: Linear.easeOut}
+									);
+
+		var seed6 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_6", duration: 450, offset: -50 })
+							.setTween(tweenSeed6) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText6 = TweenMax.fromTo("#js-parallaxHome_6 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeOut}
+									);
+
+		var text6 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_6 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText6 ) // trigger a TweenMax.to tween
+							.addTo(controller);	
+
+		//=====================
+		// Home animations
+		//=====================
 		//animation 4: 
 		//Dragon
 		// build tween
 		var tweenPouch4 = TweenMax.fromTo("#js-parallaxContainer_4 .home-products__image-pouch", 1,
-										{left: '90%'},
+										{left: '10%'},
 										{left: '50%', ease: Linear.easeOut}
 									);
 
@@ -231,7 +269,7 @@
 
 
 		var tweenSeed4 = TweenMax.fromTo("#js-parallaxContainer_4 .home-products__image-seed", 1,
-										{top: '-55%'},
+										{top: '-50%'},
 										{top: '40%', ease: Linear.easeOut}
 									);
 

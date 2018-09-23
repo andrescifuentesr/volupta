@@ -210,21 +210,6 @@
 		color: $dragon;
 	}
 
-	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
-	.home-products--wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		@include mq(lap) { display: block; }
-	}
-
-	.home-products__content {
-		order: 2;
-	}
-
-	.home-products__image {
-		order: 1;
-	}
-	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */		
 }
 
 
@@ -266,6 +251,30 @@
 	.home-products__button {
 		color: $cacao;
 	}	
+}
+
+.product-item_6 {
+	background: url('img/HomePage_white-dragon_Corner-Image_40.png') no-repeat bottom left $white-dragon;
+
+	.home-products__button {
+		color: $white-dragon;
+	}
+
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+	.home-products--wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		@include mq(lap) { display: block; }
+	}
+
+	.home-products__content {
+		order: 2;
+	}
+
+	.home-products__image {
+		order: 1;
+	}
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */		
 }
 
 
