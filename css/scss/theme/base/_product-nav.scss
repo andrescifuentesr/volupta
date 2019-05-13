@@ -1,6 +1,6 @@
 .nav-products {
 	padding: 3em 0 1em;
-	border-top: 10px white solid;
+	// border-top: 10px white solid;
 	@include mq(mobile) { padding: 3em 2em 1em; }
 	@include mq(tablet) { padding: 3em 2em 1em; }
 	@include mq(lap) { padding: 3em 3em 1em; }

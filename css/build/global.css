@@ -1714,6 +1714,27 @@ html.magnifying > body {
   background: url("img/bg-nav-bar--bottom--cacao.png") no-repeat;
 }
 
+.postid-1207 .site-header {
+  background: url("img/bg-nav-bar--goji.png") no-repeat left bottom;
+}
+.postid-1207 .site-header::after {
+  background: url("img/bg-nav-bar--bottom--goji.png") no-repeat;
+}
+
+.postid-1208 .site-header {
+  background: url("img/bg-nav-bar--yeast.png") no-repeat left bottom;
+}
+.postid-1208 .site-header::after {
+  background: url("img/bg-nav-bar--bottom--yeast.png") no-repeat;
+}
+
+.postid-1209 .site-header {
+  background: url("img/bg-nav-bar--shitake.png") no-repeat left bottom;
+}
+.postid-1209 .site-header::after {
+  background: url("img/bg-nav-bar--bottom--shitake.png") no-repeat;
+}
+
 .site-footer {
   text-align: center;
   background: #fff;
@@ -2155,11 +2176,17 @@ html.magnifying > body {
 .main-navigation ul ul .menu-item-1159 a, .main-navigation ul ul .menu-item-905 a {
   color: #d61c5a;
 }
-.main-navigation ul ul .menu-item-904 a, .main-navigation ul ul .menu-item-905 a {
-  color: #f47ab1;
-}
 .main-navigation ul ul .menu-item-1198 a, .main-navigation ul ul .menu-item-1199 a {
   color: #b47d5e;
+}
+.main-navigation ul ul .menu-item-1279 a, .main-navigation ul ul .menu-item-1276 a {
+  color: #e43e30;
+}
+.main-navigation ul ul .menu-item-1278 a, .main-navigation ul ul .menu-item-1275 a {
+  color: #eba900;
+}
+.main-navigation ul ul .menu-item-1277 a, .main-navigation ul ul .menu-item-1274 a {
+  color: #99553b;
 }
 
 .main-navigation ul ul ul {
@@ -2557,7 +2584,6 @@ html.magnifying > body {
 
 .nav-products {
   padding: 3em 0 1em;
-  border-top: 10px white solid;
 }
 @media (min-width: 440px) {
   .nav-products {
@@ -3092,6 +3118,35 @@ html.magnifying > body {
     width: 150%;
   }
 }
+.home-products .home-products__image-yeast {
+  z-index: 9999;
+  top: 80%;
+  width: 120%;
+  max-width: none;
+}
+@media (min-width: 440px) {
+  .home-products .home-products__image-yeast {
+    top: 80%;
+    width: 80%;
+  }
+}
+@media (min-width: 700px) {
+  .home-products .home-products__image-yeast {
+    top: 75%;
+  }
+}
+@media (min-width: 850px) {
+  .home-products .home-products__image-yeast {
+    top: 72%;
+    width: 130%;
+  }
+}
+@media (min-width: 1200px) {
+  .home-products .home-products__image-yeast {
+    top: 75%;
+    width: 105%;
+  }
+}
 .home-products .home-products__image-pouch {
   position: absolute;
   top: 50%;
@@ -3126,7 +3181,7 @@ html.magnifying > body {
 }
 @media (min-width: 1200px) {
   .home-products .home-products__content {
-    padding: 0 9em 0 4em;
+    padding: 0 7em 0 4em;
   }
 }
 .home-products .home-products__title {
@@ -3278,6 +3333,61 @@ html.magnifying > body {
   order: 1;
 }
 
+.product-item_7 {
+  background: url("img/HomePage_Goji_Corner-Image_40-darker.png") no-repeat bottom left #e43e30;
+  /* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+  /* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+}
+.product-item_7 .home-products__button {
+  color: #e43e30;
+}
+.product-item_7 .home-products--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 850px) {
+  .product-item_7 .home-products--wrapper {
+    display: block;
+  }
+}
+.product-item_7 .home-products__content {
+  order: 2;
+}
+.product-item_7 .home-products__image {
+  order: 1;
+}
+
+.product-item_8 {
+  background: url("img/HomePage_Yeast_Corner-Image_40-darker.png") no-repeat bottom right #eba900;
+}
+.product-item_8 .home-products__button {
+  color: #eba900;
+}
+
+.product-item_9 {
+  background: url("img/HomePage_Shitake_Corner-Image_40-darker.png") no-repeat bottom left #99553b;
+  /* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+  /* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+}
+.product-item_9 .home-products__button {
+  color: #99553b;
+}
+.product-item_9 .home-products--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 850px) {
+  .product-item_9 .home-products--wrapper {
+    display: block;
+  }
+}
+.product-item_9 .home-products__content {
+  order: 2;
+}
+.product-item_9 .home-products__image {
+  order: 1;
+}
+
 .section-home__footer .home-products__button {
   color: #707070;
   margin-top: 1.8em;
@@ -3349,6 +3459,7 @@ html.magnifying > body {
     max-width: 1150px;
     margin: 0 auto;
     padding-bottom: 4em;
+    min-height: 750px;
   }
 }
 .site-recipes .flexslider .slides .slides-img {

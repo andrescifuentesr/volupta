@@ -11,7 +11,7 @@
 	.site-recipes--wrapper {
 		padding-bottom: 1em;
 		@include mq(lap) { padding-bottom: 2em; }
-		@include mq(desk) { max-width: $max-width; margin: 0 auto;  padding-bottom: 4em; }
+		@include mq(desk) { max-width: $max-width; margin: 0 auto;  padding-bottom: 4em; min-height: 750px; }
 	}
 
 	.flexslider .slides .slides-img {

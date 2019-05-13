@@ -66,6 +66,28 @@
 
 			</script>
 
+		<?php } elseif ( is_single('organic-nutritional-yeast') ) { // add a left-right movement to yeast ?>
+
+			<script>
+
+				//=====================
+				// Product animation
+				//=====================
+				//animation of the seed and pochet
+				// build tween
+				var producto1 = new TimelineMax ()
+					.add([
+						TweenMax.fromTo("#js-parallaxProduct .product-description__image-spoon", 1, {left: '-50%'}, {left: '15%', ease: Linear.easeIn}),
+						TweenMax.fromTo("#js-parallaxProduct .product-description__image-pouch", 1, {left: '30%'}, {left: '50%', ease: Linear.easeIn})
+
+					]);
+				// build scene
+				var sceneproducto1 = new ScrollMagic.Scene({triggerElement: "#js-parallaxDescription", duration: 1200, offset: -700})
+								.setTween(producto1)
+								.addTo(controller);
+
+			</script>
+
 		<?php } else { // regular up-down movement for product pagge ?>
 
 			<script>
@@ -130,7 +152,7 @@
 										{opacity: 1, ease: Linear.easeOut}
 									);
 
-		var text55 = new ScrollMagic.Scene({
+		var text5 = new ScrollMagic.Scene({
 								triggerElement: "#js-parallaxHome_5 .home-products__content", duration: 200, offset: -50 })
 							.setTween( tweenText5 ) // trigger a TweenMax.to tween
 							.addTo(controller);		
@@ -219,8 +241,9 @@
 		//animation 3: 
 		// White dragon
 		// build tween
+
 		var tweenPouch6 = TweenMax.fromTo("#js-parallaxContainer_6 .home-products__image-pouch", 1,
-										{left: '90%'},
+										{left: '10%'},
 										{left: '50%', ease: Linear.easeOut}
 									);
 
@@ -288,7 +311,123 @@
 								triggerElement: "#js-parallaxHome_4 .home-products__content", duration: 200, offset: -50 })
 							.setTween( tweenText4 ) // trigger a TweenMax.to tween
 							.addTo(controller);
-					
+
+		//=====================
+		// Home animations
+		//=====================
+		//animation 7
+		//Goji
+		// build tween
+
+		var tweenPouch7 = TweenMax.fromTo("#js-parallaxContainer_7 .home-products__image-pouch", 1,
+										{left: '90%'},
+										{left: '50%', ease: Linear.easeOut}
+									);
+
+		var pouch7 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_7 .home-products__image-pouch", duration: 1200, offset: -950 })
+							.setTween(tweenPouch7 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSeed7 = TweenMax.fromTo("#js-parallaxContainer_7 .home-products__image-seed", 1,
+										{top: '-50%'},
+										{top: '40%', ease: Linear.easeOut}
+									);
+
+		var seed7 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_7", duration: 450, offset: -50 })
+							.setTween(tweenSeed7) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText7 = TweenMax.fromTo("#js-parallaxHome_7 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeOut}
+									);
+
+		var text7 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_7 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText7 ) // trigger a TweenMax.to tween
+							.addTo(controller);	
+
+		//=====================
+		// Home animations
+		//=====================
+		//animation 8
+		//Nutritional Yeast
+		// build tween
+
+		var tweenPouch8 = TweenMax.fromTo("#js-parallaxContainer_8 .home-products__image-pouch", 1,
+										{left: '10%'},
+										{left: '50%', ease: Linear.easeOut}
+									);
+
+		var pouch8 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_8 .home-products__image-pouch", duration: 1200, offset: -950 })
+							.setTween(tweenPouch8 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSpoon = TweenMax.fromTo("#js-parallaxContainer_8 .home-products__image-seed", 1,
+										{left: '0'},
+										{left: '15%', ease: Linear.easeOut}
+									);
+
+		var spoon = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_8", duration: 900, offset: -200 })
+							.setTween(tweenSpoon) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText8 = TweenMax.fromTo("#js-parallaxHome_8 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeOut}
+									);
+
+		var text8 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_8 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText8 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+		//=====================
+		// Home animations
+		//=====================
+		//animation 9
+		//Shitake
+		// build tween
+
+		var tweenPouch9 = TweenMax.fromTo("#js-parallaxContainer_9 .home-products__image-pouch", 1,
+										{left: '90%'},
+										{left: '50%', ease: Linear.easeOut}
+									);
+
+		var pouch9 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_9 .home-products__image-pouch", duration: 1200, offset: -950 })
+							.setTween(tweenPouch9 ) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenSeed9 = TweenMax.fromTo("#js-parallaxContainer_9 .home-products__image-seed", 1,
+										{top: '-50%'},
+										{top: '40%', ease: Linear.easeOut}
+									);
+
+		var seed9 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_9", duration: 450, offset: -50 })
+							.setTween(tweenSeed9) // trigger a TweenMax.to tween
+							.addTo(controller);
+
+
+		var tweenText9 = TweenMax.fromTo("#js-parallaxHome_9 .home-products__content", 1,
+										{opacity: 0},
+										{opacity: 1, ease: Linear.easeOut}
+									);
+
+		var text9 = new ScrollMagic.Scene({
+								triggerElement: "#js-parallaxHome_9 .home-products__content", duration: 200, offset: -50 })
+							.setTween( tweenText9 ) // trigger a TweenMax.to tween
+							.addTo(controller);					
 	</script>
 
 <?php } ?>

@@ -105,6 +105,21 @@
 			@include mq(desk) { top:80%; width: 150%; }
 		}
 
+
+		//==========================
+		//modifcation jsut for the new Yeast product
+		//==========================
+		.home-products__image-yeast {
+			z-index: 9999;
+			top:80%;
+			width:120%;
+			max-width: none;
+			@include mq(mobile) { top:80%; width: 80%; }
+			@include mq(tablet) { top:75%; }
+			@include mq(lap) { top:72%; width: 130%;}
+			@include mq(desk) { top:75%; width: 105%; }
+		}		
+
 	.home-products__image-pouch {
 		position:absolute;
 		top: 50%;
@@ -130,7 +145,7 @@
 		@extend %col-3-5;
 		@include mq(tablet) { text-align: left; padding-bottom: 3em; margin-top: 1em;}
 		@include mq(lap) { }
-		@include mq(desk) { padding: 0 9em 0 4em; }
+		@include mq(desk) { padding: 0 7em 0 4em; }
 	}
 
 	.home-products__title {
@@ -277,6 +292,61 @@
 	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */		
 }
 
+.product-item_7 {
+	background: url('img/HomePage_Goji_Corner-Image_40-darker.png') no-repeat bottom left $goji;
+
+	.home-products__button {
+		color: $goji;
+	}
+
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+	.home-products--wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		@include mq(lap) { display: block; }
+	}
+
+	.home-products__content {
+		order: 2;
+	}
+
+	.home-products__image {
+		order: 1;
+	}
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */			
+}
+
+.product-item_8 {
+	background: url('img/HomePage_Yeast_Corner-Image_40-darker.png') no-repeat bottom right $yeast;
+
+	.home-products__button {
+		color: $yeast;
+	}	
+}
+
+.product-item_9 {
+	background: url('img/HomePage_Shitake_Corner-Image_40-darker.png') no-repeat bottom left $shitake;
+
+	.home-products__button {
+		color: $shitake;
+	}
+
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */
+	.home-products--wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		@include mq(lap) { display: block; }
+	}
+
+	.home-products__content {
+		order: 2;
+	}
+
+	.home-products__image {
+		order: 1;
+	}
+	/* we will invert with flexbox the order of the blocks of the 2nd product in mobile */			
+}
 
 .section-home__footer {
 

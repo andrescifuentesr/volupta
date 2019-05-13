@@ -81,16 +81,16 @@
 	<section id="js-product-description" class="product-description">
 
 		<div class="product-description--wrapper">
-			<div class="product-description__image <?php if ( is_single('organic-cacao-powder') ) { echo 'product-description__image--spoon'; } ?>">
+			<div class="product-description__image <?php if ( is_single('organic-cacao-powder') || is_single('organic-nutritional-yeast') ) { echo 'product-description__image--spoon'; } ?>">
 
 				<div id="js-parallaxDescription" class="">
 					<div id="js-parallaxProduct" class="">
-						<?php if ( is_single('organic-cacao-powder') ) { // add a left-right movement to cacao ?>
+						<?php if ( is_single('organic-cacao-powder') || is_single('organic-nutritional-yeast') ) { // add a left-right movement to cacao ?>
 							<img class="product-description__image-spoon" src="<?php echo esc_html( $product_parallax_pouch_content ); ?>" alt="Seed">
 						<?php } else { ?>
 							<img class="product-description__image-seed" src="<?php echo esc_html( $product_parallax_pouch_content ); ?>" alt="Seed">
 						<?php } ?>
-						<img class="product-description__image-pouch <?php if ( is_single('organic-cacao-powder') ) { echo 'product-description__image-pouch--cacao'; } ?>" src="<?php echo esc_html( $product_parallax_pouch_image ); ?>" alt="Pouch">
+						<img class="product-description__image-pouch <?php if ( is_single('organic-cacao-powder') || is_single('organic-nutritional-yeast') ) { echo 'product-description__image-pouch--cacao'; } ?>" src="<?php echo esc_html( $product_parallax_pouch_image ); ?>" alt="Pouch">
 					</div>
 				</div>
 

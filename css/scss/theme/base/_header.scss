@@ -139,3 +139,39 @@
 		}
 	}
 }
+
+.postid-1207 {
+
+	.site-header {
+
+		background: url('img/bg-nav-bar--goji.png') no-repeat left bottom;
+
+		&::after {
+			background: url('img/bg-nav-bar--bottom--goji.png') no-repeat;
+		}
+	}
+}
+
+.postid-1208 {
+
+	.site-header {
+
+		background: url('img/bg-nav-bar--yeast.png') no-repeat left bottom;
+
+		&::after {
+			background: url('img/bg-nav-bar--bottom--yeast.png') no-repeat;
+		}
+	}
+}
+
+.postid-1209 {
+
+	.site-header {
+
+		background: url('img/bg-nav-bar--shitake.png') no-repeat left bottom;
+
+		&::after {
+			background: url('img/bg-nav-bar--bottom--shitake.png') no-repeat;
+		}
+	}
+}
